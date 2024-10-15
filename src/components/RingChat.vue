@@ -9,6 +9,7 @@
         </div>
       </div>
       <dv-active-ring-chart :config="config" style="width:300px;height:300px"/>
+
     </div>
   </div>
 </template>

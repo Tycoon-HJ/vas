@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <dv-scroll-board :config="config" style="width:100%;height:80%" />
+    <dv-scroll-board :config="config" style="width:100%;height:100%" />
   </div>
 </template>
 <script>
@@ -36,7 +36,7 @@ export default {
 
 <style>
 .box{
-  width: 97%;
-  height: 97%;
+  width: 98%;
+  height: 60%;
 }
 </style>

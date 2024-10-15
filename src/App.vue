@@ -1,6 +1,5 @@
 <template>
   <dv-full-screen-container>
-
     <div class="row">
       <div class="cell">
         <dv-border-box-8 :reverse="true">
@@ -26,10 +25,14 @@
         </dv-border-box-8>
       </div>
       <div class="cell">
-        <dv-border-box-8 :reverse="true"></dv-border-box-8>
+        <dv-border-box-8 :reverse="true">
+          <ScrollRaking/>
+        </dv-border-box-8>
       </div>
       <div class="cell">
-        <dv-border-box-8 :reverse="true"></dv-border-box-8>
+        <dv-border-box-8 :reverse="true">
+            <BottomRightChart />
+        </dv-border-box-8>
       </div>
 
     </div>
@@ -43,13 +46,17 @@ import RingChat from "@/components/RingChat.vue";
 import CapsuleChat from "@/components/CapsuleChat.vue";
 import FlylineChat from "@/components/FlylineChat.vue";
 import ScrollBoard from "@/components/ScrollBoard.vue";
+import ScrollRaking from "@/components/ScrollRaking.vue";
+import BottomRightChart from "@/components/BottomRightChart.vue";
 
 export default {
   components: {
     RingChat,
     CapsuleChat,
     FlylineChat,
-    ScrollBoard
+    ScrollBoard,
+    ScrollRaking,
+    BottomRightChart
   }
 }
 </script>

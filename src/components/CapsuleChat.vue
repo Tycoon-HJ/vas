@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <dv-capsule-chart :config="config" style="width:300px;height:200px"/>
+    <dv-capsule-chart :config="config" style="width:100%;height:100%"/>
   </div>
 </template>
 <script>
