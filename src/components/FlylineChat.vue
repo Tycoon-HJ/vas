@@ -1,6 +1,8 @@
 <template>
   <div class="box">
     <dv-flyline-chart-enhanced :config="config" style="width:100%;height:100%;"/>
+    <dv-decoration-12 style="width:150px;height:150px;" />
+
   </div>
 </template>
 <script>

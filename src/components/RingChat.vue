@@ -8,7 +8,19 @@
           {{ item.name }}
         </div>
       </div>
-      <dv-active-ring-chart :config="config" style="width:300px;height:300px"/>
+        <div class="list">
+          <dv-active-ring-chart :config="config" style="width:300px;height:300px"/>
+        </div>
+        <div class="list">
+          <dv-decoration-1 style="width:200px;height:50px;" />
+          <dv-decoration-2 style="width:200px;height:5px;" />
+          <dv-decoration-2 :reverse="true" style="width:5px;height:150px;" />
+          <dv-decoration-3 style="width:250px;height:30px;" />
+          <dv-decoration-4 style="width:5px;height:150px;" />
+          <dv-decoration-4 style="width:5px;height:150px;" />
+
+        </div>
+
 
     </div>
   </div>

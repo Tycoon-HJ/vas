@@ -16,6 +16,11 @@
           <FlylineChat/>
         </dv-border-box-8>
       </div>
+      <div class="cell">
+        <dv-border-box-8 :reverse="true">
+          <DigitalFlop/>
+        </dv-border-box-8>
+      </div>
 
     </div>
     <div class="row">
@@ -34,6 +39,11 @@
             <BottomRightChart />
         </dv-border-box-8>
       </div>
+      <div class="cell">
+        <dv-border-box-8 :reverse="true">
+          <BottomLeftChart />
+        </dv-border-box-8>
+      </div>
 
     </div>
 
@@ -48,7 +58,8 @@ import FlylineChat from "@/components/FlylineChat.vue";
 import ScrollBoard from "@/components/ScrollBoard.vue";
 import ScrollRaking from "@/components/ScrollRaking.vue";
 import BottomRightChart from "@/components/BottomRightChart.vue";
-
+import BottomLeftChart from "@/components/BottomLeftChart.vue";
+import DigitalFlop from "@/components/DigitalFlop.vue";
 export default {
   components: {
     RingChat,
@@ -56,7 +67,9 @@ export default {
     FlylineChat,
     ScrollBoard,
     ScrollRaking,
-    BottomRightChart
+    BottomRightChart,
+    BottomLeftChart,
+    DigitalFlop
   }
 }
 </script>
