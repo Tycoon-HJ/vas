@@ -19,14 +19,14 @@ module.exports = {
         format: 'umd',
         name: 'imoocDatav',
         globals: {
-            'vue': 'vue'
+            'vue': 'Vue'
         }
     }, {
         file: outputEsPath,
         format: 'es',
         name: 'imoocDatav',
         globals: {
-            'vue': 'vue'
+            'vue': 'Vue'
         }
     }],
     plugins: [
