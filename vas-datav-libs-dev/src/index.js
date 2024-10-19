@@ -12,7 +12,8 @@
 
 import Test from './components/Test.vue';
 import Icon from "./components/Icon/Icon.vue";
+import SvgAnimation from "./components/SvgAnimation/SvgAnimation.vue";
 export default function (Vue){
     Vue.component(Test.name, Test);
-    Vue.component(Icon.name, Icon);
+    Vue.component(SvgAnimation.name, SvgAnimation);
 }

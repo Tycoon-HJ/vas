@@ -8,14 +8,14 @@
     <script src="//at.alicdn.com/t/c/font_4716721_de2j8wi2kw.js"></script>
 </head>
 <body>
-<div id="app">{{ message }}
+<div id="app">
     <test-component></test-component>
 </div>
 <script>
     const {createApp, ref} = Vue
     createApp({
         setup() {
-            const message = ref('dasdasdasdasd')
+            const message = ref('这个没啥')
             return {
                 message
             }
