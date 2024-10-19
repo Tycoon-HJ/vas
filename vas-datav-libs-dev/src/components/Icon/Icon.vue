@@ -1,26 +1,41 @@
-
 <template>
-<svg :style="{...style}">
-  <use :href="iconName"></use>
-</svg>
+  <div class="icon-wrapper" :style="{...style}">
+    <svg class="icon">
+      <use :href="iconName"></use>
+    </svg>
+  </div>
+
 </template>
 <script>
 
 export default {
   name: 'Icon',
-  props:{
-    name:String,
+  props: {
+    name: String,
+    prefix: {
+      type: String,
+      default: ''
+    },
     style: Object
   },
-  setup(ctx){
-    const  iconName = `#${ctx.name}`
-    return{
+  setup(ctx) {
+    const iconName = `#${ctx.prefix}${ctx.name}`
+    return {
       iconName
     }
   }
 }
 </script>
 
-<style scoped lang="scss">
-
+<style>
+.icon-wrapper{
+  display: inline-block;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
 </style>

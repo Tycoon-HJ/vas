@@ -46,7 +46,7 @@
     <Icon name="arrowRight" :style="{width:50,height:50,color:'green'}"></Icon>
     <Icon name="arrowRight" class="common-icon"></Icon>
     <Icon name="snow" class="common-icon"></Icon>
-    <Icon name="icon-xing" class="common-icon"></Icon>
+    <Icon prefix="icon-" name="xing" class="common-icon"></Icon>
     <div>
       message: {{ message }}
     </div>
