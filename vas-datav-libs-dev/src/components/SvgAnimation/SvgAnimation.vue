@@ -20,6 +20,13 @@
           </circle>
         </svg>
       </div>
+      <div class="container">
+        <svg width="200" height="200" viewBox="0 0 200 200">
+          <rect x="0" y="0" width="200" height="200" stroke-width="8" stroke="grey"  fill="none"></rect>
+          <rect class="rect-process" x="0" y="0" width="200" height="200" stroke-width="8" stroke="blue"  fill="none"
+                transform="matrix(0 1 -1 0 200 0)"></rect>
+        </svg>
+      </div>
     </div>
   </div>
 
@@ -44,6 +51,19 @@ export default {
 }
 
 @keyframes circle {
+  from{
+    stroke-dasharray: 0 800;
+  }
+  to{
+    stroke-dasharray: 800 0;
+  }
+}
+
+.rect-process{
+  animation: rect-process 5s linear infinite;
+}
+
+@keyframes rect-process {
   from{
     stroke-dasharray: 0 1257;
   }
