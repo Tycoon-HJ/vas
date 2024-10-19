@@ -11,10 +11,10 @@
     <test-component></test-component>
 </div>
 <script>
-    const {createApp} = Vue
+    const {createApp, ref} = Vue
     createApp({
         setup() {
-            const message = 'dasdasdasdasd'
+            const message = ref('dasdasdasdasd')
             return {
                 message
             }
