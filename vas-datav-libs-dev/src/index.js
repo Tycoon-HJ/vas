@@ -10,7 +10,9 @@
 // export default  {}
 
 
-import Test from './Test.vue';
+import Test from './components/Test.vue';
+import Icon from "./components/Icon/Icon.vue";
 export default function (Vue){
     Vue.component(Test.name, Test);
+    Vue.component(Icon.name, Icon);
 }
