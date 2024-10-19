@@ -13,9 +13,11 @@
       </svg>
 
       <div class="container">
-        <svg width="400" height="400">
-          <circle cx="200" cy="200" r="180" stroke-width="20" stroke="#d1d3d7" fill="none"></circle>
-          <circle class="circle" cx="200" cy="200" r="180" stroke-width="20" stroke="#00a5e0" fill="none"></circle>
+        <svg width="440" height="440" viewBox="0 0 440 440">
+          <circle cx="220" cy="220" r="200" stroke-width="20" stroke="#d1d3d7" fill="none"></circle>
+          <circle class="circle" cx="220" cy="220" r="200" stroke-width="20" stroke="#00a5e0" fill="none"
+          transform="matrix(0 -1 1 0 0 440)">
+          </circle>
         </svg>
       </div>
     </div>
@@ -43,10 +45,10 @@ export default {
 
 @keyframes circle {
   from{
-    stroke-dasharray: 0 1131;
+    stroke-dasharray: 0 1257;
   }
   to{
-    stroke-dasharray: 1131 0;
+    stroke-dasharray: 1257 0;
   }
 }
 </style>
