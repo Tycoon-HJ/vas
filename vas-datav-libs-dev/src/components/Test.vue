@@ -47,14 +47,16 @@
 <!--    <Icon name="arrowRight" class="common-icon"></Icon>-->
 <!--    <Icon name="snow" class="common-icon"></Icon>-->
 <!--    <Icon prefix="icon-" name="xing" class="common-icon"></Icon>-->
-    <svg-animation></svg-animation>
-    <div>
-      message: {{ message }}
-    </div>
-    <div>
-      doubleCount: {{ doubleCount }}
-    </div>
-    <button @click="add"> add count</button>
+<!--    <svg-animation></svg-animation>-->
+    <imooc-loading width="500" height="200" in-side-color="red" out-side-color="green"
+                   duration="10"> </imooc-loading>
+<!--    <div>-->
+<!--      message: {{ message }}-->
+<!--    </div>-->
+<!--    <div>-->
+<!--      doubleCount: {{ doubleCount }}-->
+<!--    </div>-->
+<!--    <button @click="add"> add count</button>-->
 
   </div>
 </template>
