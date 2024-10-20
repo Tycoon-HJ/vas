@@ -60,11 +60,12 @@
     <div class="container">
       <svg width="200" height="200">
         <circle r="30" cx="0" cy="0" stroke="black" stroke-width="1">
-<!--          <animate attributeName="cx" attributeType="XML" from="0" to="100" dur="5s" fill="freeze"-->
-<!--                   repeatCount="indefinite"></animate>-->
-<!--          <animate attributeName="cy" attributeType="XML" from="0" to="50" dur="5s" fill="freeze"-->
-<!--                   repeatCount="indefinite"></animate>-->
-          <animateTransform attributeName="transform" attributeType="XML" begin="0" dur="3s" type="scale" from="1" to="2" repeatCount="indefinite"></animateTransform>
+          <!--          <animate attributeName="cx" attributeType="XML" from="0" to="100" dur="5s" fill="freeze"-->
+          <!--                   repeatCount="indefinite"></animate>-->
+          <!--          <animate attributeName="cy" attributeType="XML" from="0" to="50" dur="5s" fill="freeze"-->
+          <!--                   repeatCount="indefinite"></animate>-->
+          <animateTransform attributeName="transform" attributeType="XML" begin="0" dur="3s" type="scale" from="1"
+                            to="2" repeatCount="indefinite"></animateTransform>
 
         </circle>
         /
@@ -73,8 +74,36 @@
     <div class="container">
       <svg width="400" height="400">
         <polygon points="30 30 70 30 90 70 10 70" fill="#fcc" stroke="black">
-          <animate attributeName="points" attributeType="XML" to="50 30 70 50 50 90 30 50" dur="5s" fill="freeze" repeatCount="1" />
+          <animate attributeName="points" attributeType="XML" to="50 30 70 50 50 90 30 50" dur="5s" fill="freeze"
+                   repeatCount="1"/>
         </polygon>
+      </svg>
+    </div>
+
+    <div class="container">
+      <svg width="200" height="200">
+        <rect x="0" y="0" fill="red" width="10" height="10">
+          <animateMotion
+              id="forward-rect"
+              path="M10 10 L110 10 L110 110 L10 110"
+              dur="2s"
+              rotate="0"
+              fill="freeze"
+              begin="0; backward-rect.end + 0.5s"
+          ></animateMotion>
+          <animateMotion
+              id="backward-rect"
+              path="M10 100 L110 100 L110 10 L10 10"
+              dur="2s"
+              rotate="0"
+              fill="freeze"
+              begin="forward-rect.end + 0.5s"
+          ></animateMotion>
+          <animate id="red-to-blue" attributeName="fill" attributeType="XML" from="red" to="blue" dur="2s" fill="freeze" begin="0; blue-to-red.end+0.5s"></animate>
+          <animate id="blue-to-red" attributeName="fill" attributeType="XML" from="blue" to="red" dur="2s" fill="freeze" begin="red-to-blue.end+0.5s"></animate>
+
+        </rect>
+        <path d="M10 10 L110 10 L110 110 L10 110" fill="none" stroke="green"></path>
       </svg>
     </div>
   </div>
