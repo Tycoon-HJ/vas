@@ -148,15 +148,33 @@
 
     </div>
 
-    <div class="container">
+    <div class="container bg-grey" >
       <svg width="400" height="400">
         <defs>
           <mask id="test-mask">
             <rect x="5" y="5" width="390" height="390" fill="green"></rect>
           </mask>
+          <linearGradient id="test-line-gradient">
+            <stop offset="0%" stop-color="red"></stop>
+            <stop offset="50%" stop-color="green"></stop>
+            <stop offset="100%" stop-color="blue" stop-opacity="0.5"></stop>
+          </linearGradient>
+          <radialGradient id="test-radialGradient"
+                          r="50%"
+                          cx="50%"
+                          cy="50%"
+                          fx="55%"
+                          fy="50%"
+
+
+          >
+            <stop offset="0%" stop-color="#fff" stop-opacity="1"></stop>
+            <stop offset="100%" stop-color="#fff" stop-opacity="0"></stop>
+          </radialGradient>
         </defs>
-        <rect x="5" y="5" width="390" height="390" fill="red"></rect>
-        <rect x="5" y="5" width="390" height="390" fill="blue" mask="url(#test-mask)"></rect>
+        <!--        <rect x="5" y="5" width="390" height="390" fill="url(#test-radialGradient)"></rect>-->
+        <circle cx="200" cy="200" r="150" fill="url(#test-radialGradient)"></circle>
+        <!--        <rect x="5" y="5" width="390" height="390" fill="blue" mask="url(#test-mask)"></rect>-->
       </svg>
     </div>
   </div>
@@ -177,6 +195,9 @@ export default {
 </script>
 
 <style lang="scss">
+.bg-grey{
+  background-color: grey;
+}
 .container {
   svg {
     border: 1px solid #000000;
