@@ -47,9 +47,11 @@
 <!--    <Icon name="arrowRight" class="common-icon"></Icon>-->
 <!--    <Icon name="snow" class="common-icon"></Icon>-->
 <!--    <Icon prefix="icon-" name="xing" class="common-icon"></Icon>-->
-<!--    <svg-animation></svg-animation>-->
+    <svg-animation></svg-animation>
     <imooc-loading width="500" height="200" in-side-color="red" out-side-color="green"
                    duration="10"> </imooc-loading>
+    <FlyBox></FlyBox>
+
 <!--    <div>-->
 <!--      message: {{ message }}-->
 <!--    </div>-->

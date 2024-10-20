@@ -147,6 +147,18 @@
       </svg>
 
     </div>
+
+    <div class="container">
+      <svg width="400" height="400">
+        <defs>
+          <mask id="test-mask">
+            <rect x="5" y="5" width="390" height="390" fill="green"></rect>
+          </mask>
+        </defs>
+        <rect x="5" y="5" width="390" height="390" fill="red"></rect>
+        <rect x="5" y="5" width="390" height="390" fill="blue" mask="url(#test-mask)"></rect>
+      </svg>
+    </div>
   </div>
 
 </template>
