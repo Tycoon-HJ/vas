@@ -60,12 +60,21 @@
     <div class="container">
       <svg width="200" height="200">
         <circle r="30" cx="0" cy="0" stroke="black" stroke-width="1">
-          <animate attributeName="cx" attributeType="XML" from="0" to="100" dur="5s" fill="freeze"
-                   repeatCount="indefinite"></animate>
-          <animate attributeName="cy" attributeType="XML" from="0" to="50" dur="5s" fill="freeze"
-                   repeatCount="indefinite"></animate>
+<!--          <animate attributeName="cx" attributeType="XML" from="0" to="100" dur="5s" fill="freeze"-->
+<!--                   repeatCount="indefinite"></animate>-->
+<!--          <animate attributeName="cy" attributeType="XML" from="0" to="50" dur="5s" fill="freeze"-->
+<!--                   repeatCount="indefinite"></animate>-->
+          <animateTransform attributeName="transform" attributeType="XML" begin="0" dur="3s" type="scale" from="1" to="2" repeatCount="indefinite"></animateTransform>
+
         </circle>
         /
+      </svg>
+    </div>
+    <div class="container">
+      <svg width="400" height="400">
+        <polygon points="30 30 70 30 90 70 10 70" fill="#fcc" stroke="black">
+          <animate attributeName="points" attributeType="XML" to="50 30 70 50 50 90 30 50" dur="5s" fill="freeze" repeatCount="1" />
+        </polygon>
       </svg>
     </div>
   </div>
