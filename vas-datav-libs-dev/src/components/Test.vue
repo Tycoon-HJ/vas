@@ -50,8 +50,10 @@
 <!--    <svg-animation></svg-animation>-->
     <imooc-loading width="500" height="200" in-side-color="red" out-side-color="green"
                    duration="10"> </imooc-loading>
-    <FlyBox></FlyBox>
-
+    <FlyBox>
+      <div>11111</div>
+      <div>11111</div>
+    </FlyBox>
 <!--    <div>-->
 <!--      message: {{ message }}-->
 <!--    </div>-->
