@@ -64,7 +64,8 @@
 </template>
 
 <script>
-import { computed, ref, onMounted, getCurrentInstance } from 'vue'
+import {computed, ref, onMounted, getCurrentInstance} from 'vue'
+import {v4 as uuidv4} from 'uuid'
 
 export default {
   name: 'FlyBox',
@@ -89,15 +90,15 @@ export default {
   },
 
   setup(ctx) {
-    const uuid= 'dasdasdasd'
+    const uuid = uuidv4()
     const width = ref(0)
     const height = ref(0)
-    const refName= 'imoocFlyBox'
-    const pathId= `${refName}-${uuid}`
-    const radialGradientId= `${refName}-gradient-${uuid}`
-    const maskId= `${refName}-mask-${uuid}`
+    const refName = 'imoocFlyBox'
+    const pathId = `${refName}-${uuid}`
+    const radialGradientId = `${refName}-gradient-${uuid}`
+    const maskId = `${refName}-mask-${uuid}`
     const dur = computed(() => `${ctx.duration}s`)
-    const path = computed(() => `M5 5 L${width.value-5} 5 L${width.value-5} ${height.value-5} L5 ${height.value-5} Z`)
+    const path = computed(() => `M5 5 L${width.value - 5} 5 L${width.value - 5} ${height.value - 5} L5 ${height.value - 5} Z`)
 
     const init = () => {
       const instance = getCurrentInstance()
@@ -129,6 +130,7 @@ export default {
   position: relative;
   height: 100%;
   width: 100%;
+
   svg {
     position: absolute;
     top: 0;
@@ -136,6 +138,7 @@ export default {
     height: 100%;
     width: 100%;
   }
+
   .imooc-fly-box-content {
     height: 100%;
     width: 100%;

@@ -6,6 +6,7 @@ const json = require('rollup-plugin-json')
 const vue = require('rollup-plugin-vue')
 const postcss = require('rollup-plugin-postcss')
 const {terser} = require('rollup-plugin-terser')
+const polyfills = require('rollup-plugin-node-polyfills')
 
 
 const inputPath = path.resolve(__dirname, './src/index.js')
@@ -31,7 +32,10 @@ module.exports = {
     }],
     plugins: [
         vue(), // plugin有序，插件引入顺序有误，vue插件需要放到commonjs插件之前。
-        resolve(),
+        resolve({
+            browser: true,
+        }),
+        polyfills(),
         commonjs(),
         babel({
             exclude: 'node_modules/**'

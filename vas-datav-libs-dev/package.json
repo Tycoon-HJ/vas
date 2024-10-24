@@ -26,5 +26,9 @@
     "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.80.1",
     "vue": "^3.5.12"
+  },
+  "dependencies": {
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "uuid": "^10.0.0"
   }
 }
