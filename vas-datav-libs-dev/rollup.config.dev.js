@@ -5,7 +5,6 @@ const babel = require('rollup-plugin-babel')
 const json = require('rollup-plugin-json')
 const vue = require('rollup-plugin-vue')
 const postcss = require('rollup-plugin-postcss')
-const {terser} = require('rollup-plugin-terser')
 const polyfills = require('rollup-plugin-node-polyfills')
 
 
@@ -38,7 +37,13 @@ module.exports = {
         polyfills(),
         commonjs(),
         babel({
-            exclude: 'node_modules/**'
+            exclude: 'node_modules/**',
+            runtimeHelpers: true,
+            plugins: [
+                ['@babel/transform-runtime', {
+                    regenerator: true
+                }]
+            ]
         }),
         json(),
         postcss({

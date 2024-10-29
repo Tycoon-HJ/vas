@@ -1,4 +1,10 @@
 <template>
+  <imooc-container :options="{
+    width: 3840,
+    height: 2160,
+  }">
+    <div style="font-size: 300px">你好啊啊啊啊啊啊</div>/
+  </imooc-container>
   <div class="test">
     <!--    <svg width="500" height="200" viewBox="0 0 50 20" style="border: 1px solid #000000">-->
     <!--      <rect x="20" y="10" width="10" height="5" style="stroke: #000000; fill:none;"/>-->
@@ -48,6 +54,7 @@
 <!--    <Icon name="snow" class="common-icon"></Icon>-->
 <!--    <Icon prefix="icon-" name="xing" class="common-icon"></Icon>-->
 <!--    <svg-animation></svg-animation>-->
+    <Map></Map>
     <imooc-loading width="500" height="200" in-side-color="red" out-side-color="green"
                    duration="10"> </imooc-loading>
     <FlyBox>
