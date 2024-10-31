@@ -61,10 +61,10 @@ export default {
       // 获取真实的视口尺寸
       const currentWidth = document.body.clientWidth
       const currentHeight = document.body.clientHeight
+      console.log(currentWidth, currentHeight)
       // 获取大屏最终的宽高
       const realWidth = width.value || originalWidth.value
       const realHeight = height.value || originalHeight.value
-      // console.log(currentWidth, currentHeight)
       const widthScale = currentWidth / realWidth
       const heightScale = currentHeight / realHeight
       dom && (dom.style.transform = `scale(${widthScale}, ${heightScale})`)

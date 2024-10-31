@@ -1,6 +1,9 @@
-import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import Screen from './components/Screen/index.js'
+createApp(App)
+    .use(ElementPlus)
+    .use(Screen).mount('#app')

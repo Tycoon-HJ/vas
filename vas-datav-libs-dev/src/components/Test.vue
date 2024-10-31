@@ -1,9 +1,10 @@
 <template>
   <imooc-container :options="{
     width: 3840,
-    height: 2160,
+    height: 2160
   }">
-    <div style="font-size: 300px">你好啊啊啊啊啊啊</div>/
+    <div style="width: 200px;height: 200px">你好啊啊啊啊啊啊</div>
+    <div style="width: 200px;height: 200px">你好啊啊啊啊啊啊</div>
   </imooc-container>
   <div class="test">
     <!--    <svg width="500" height="200" viewBox="0 0 50 20" style="border: 1px solid #000000">-->
@@ -95,7 +96,18 @@ export default {
   }
 }
 </script>
-<style scoped lang="scss">
+<style lang="scss">
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
 .test {
   color: red;
 }
