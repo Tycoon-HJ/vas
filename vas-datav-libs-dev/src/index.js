@@ -1,14 +1,3 @@
-// const data = require("sam-test-data");
-// console.log(data.random(), data.a, data.b);
-//
-// module.exports = {}
-
-// es6
-// import * as  data from 'sam-test-data'
-// console.log(data.random(), data.a, data.b);
-//
-// export default  {}
-
 
 import Test from './components/Test.vue';
 import Icon from "./components/Icon/Icon.vue";
@@ -17,6 +6,7 @@ import ImoocLoading from "./components/ImoocLoading/index";
 import FlyBox from "./components/FlyBox";
 import Map from "./components/Map";
 import Container from "./components/Container";
+import Logo from "./components/Logo";
 
 export default function (Vue) {
     Vue.component(Test.name, Test);
@@ -24,5 +14,6 @@ export default function (Vue) {
     Vue.use(ImoocLoading);
     Vue.use(FlyBox);
     Vue.use(Map);
+    Vue.use(Logo);
     Vue.use(Container);
 }
