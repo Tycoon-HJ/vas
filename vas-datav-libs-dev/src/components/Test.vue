@@ -3,7 +3,13 @@
     width: 3840,
     height: 2160
   }">
-
+<!--<Calendar></Calendar>-->
+    <Lines></Lines>
+    <Line></Line>
+<!--    <BarRace></BarRace>-->
+    <LineBar></LineBar>
+    <Gauge></Gauge>
+<!--    <Map style="width: 100px;height: 200px"></Map>-->
   </imooc-container>
 </template>
 <script>
