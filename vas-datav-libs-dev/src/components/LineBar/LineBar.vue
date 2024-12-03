@@ -6,7 +6,7 @@ export default {
   name: 'LineBar',
   setup() {
     onMounted(() => {
-      var chartDom = document.getElementById('main');
+      var chartDom = document.getElementById('LineBar');
       var myChart = echarts.init(chartDom);
       var option;
 
@@ -109,7 +109,7 @@ export default {
 </script>
 
 <template>
-  <div id="main" style="width: 600px;height: 200px"></div>
+  <div id="LineBar" style="width: 600px;height: 200px"></div>
 </template>
 
 <style scoped lang="scss">

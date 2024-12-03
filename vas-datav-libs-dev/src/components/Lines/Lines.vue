@@ -6,7 +6,7 @@ export default {
   name: 'Lines',
   setup() {
     onMounted(() => {
-      var chartDom = document.getElementById('main');
+      var chartDom = document.getElementById('Lines');
       var myChart = echarts.init(chartDom);
       var option;
 
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <template>
-  <div id="main" style="width: 100%;height: 100%"></div>
+  <div id="Lines" style="width: 100%;height: 100%"></div>
 </template>
 
 <style scoped lang="scss">

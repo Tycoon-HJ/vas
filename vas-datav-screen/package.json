@@ -9,8 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@jiaminghi/data-view": "^2.10.0",
     "core-js": "^3.39.0",
-    "vue": "^3.5.12"
+    "element-plus": "^2.9.0",
+    "vue": "^3.5.12",
+    "vue-data-ui": "^2.4.17",
+    "vue3-seamless-scroll": "^2.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",

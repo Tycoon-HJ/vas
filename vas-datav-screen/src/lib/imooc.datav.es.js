@@ -1,9 +1,10 @@
-import { ref, computed, resolveComponent, openBlock, createBlock, withCtx, createCommentVNode, createVNode as createVNode$1, onMounted, createElementBlock, createStaticVNode, createElementVNode, renderSlot, getCurrentInstance, onUnmounted, nextTick as nextTick$1 } from 'vue';
+import { ref, computed, resolveComponent, openBlock, createBlock, withCtx, createCommentVNode, createTextVNode, createVNode as createVNode$1, onMounted, createElementBlock, createStaticVNode, createElementVNode, renderSlot, getCurrentInstance, onUnmounted, nextTick as nextTick$1 } from 'vue';
 import 'core-js/modules/esnext.iterator.constructor.js';
 import 'core-js/modules/esnext.iterator.filter.js';
 import 'core-js/modules/esnext.iterator.for-each.js';
 import 'core-js/modules/es.array.sort.js';
 import 'core-js/modules/es.promise.js';
+import 'core-js/modules/es.number.to-fixed.js';
 
 var script$d = {
   name: 'TestComponent',
@@ -23,10 +24,7 @@ var script$d = {
 };
 
 function render$e(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_Lines = resolveComponent("Lines");
-  const _component_Line = resolveComponent("Line");
-  const _component_LineBar = resolveComponent("LineBar");
-  const _component_Gauge = resolveComponent("Gauge");
+  const _component_Map = resolveComponent("Map");
   const _component_imooc_container = resolveComponent("imooc-container");
   return openBlock(), createBlock(_component_imooc_container, {
     options: {
@@ -34,7 +32,12 @@ function render$e(_ctx, _cache, $props, $setup, $data, $options) {
       height: 2160
     }
   }, {
-    default: withCtx(() => [createCommentVNode("<Calendar></Calendar>"), createVNode$1(_component_Lines), createVNode$1(_component_Line), createCommentVNode("    <BarRace></BarRace>"), createVNode$1(_component_LineBar), createVNode$1(_component_Gauge), createCommentVNode("    <Map style=\"width: 100px;height: 200px\"></Map>")]),
+    default: withCtx(() => [createCommentVNode("<Calendar></Calendar>"), createCommentVNode("    <base-scroll-list :config=\"{}\" ></base-scroll-list>"), _cache[0] || (_cache[0] = createTextVNode(" < ")), createVNode$1(_component_Map, {
+      style: {
+        "width": "100px",
+        "height": "200px"
+      }
+    })]),
     _: 1 /* STABLE */
   });
 }
@@ -133743,7 +133746,7 @@ var script$6 = {
   name: 'Calendar',
   setup() {
     onMounted(() => {
-      var chartDom = document.getElementById('main');
+      var chartDom = document.getElementById('Calendar');
       var myChart = init$1(chartDom);
       var option;
       function getVirtualData(year) {
@@ -133796,7 +133799,7 @@ var script$6 = {
 };
 
 const _hoisted_1$6 = {
-  id: "main",
+  id: "Calendar",
   style: {
     "width": "100%",
     "height": "100%"
@@ -133817,7 +133820,7 @@ var script$5 = {
   name: 'Line',
   setup() {
     onMounted(() => {
-      var chartDom = document.getElementById('main');
+      var chartDom = document.getElementById('Line');
       var myChart = init$1(chartDom);
       var option;
       option = {
@@ -133839,7 +133842,7 @@ var script$5 = {
 };
 
 const _hoisted_1$5 = {
-  id: "main",
+  id: "Line",
   style: {
     "width": "100%",
     "height": "100%"
@@ -133860,7 +133863,7 @@ var script$4 = {
   name: 'Lines',
   setup() {
     onMounted(() => {
-      var chartDom = document.getElementById('main');
+      var chartDom = document.getElementById('Lines');
       var myChart = init$1(chartDom);
       var option;
       option = {
@@ -133925,7 +133928,7 @@ var script$4 = {
 };
 
 const _hoisted_1$4 = {
-  id: "main",
+  id: "Lines",
   style: {
     "width": "100%",
     "height": "100%"
@@ -133946,7 +133949,7 @@ var script$3 = {
   name: 'BarRace',
   setup() {
     onMounted(() => {
-      var chartDom = document.getElementById('main');
+      var chartDom = document.getElementById('BarRace');
       var myChart = init$1(chartDom);
       var option;
       const data = [];
@@ -134011,7 +134014,7 @@ var script$3 = {
 };
 
 const _hoisted_1$3 = {
-  id: "main",
+  id: "BarRace",
   style: {
     "width": "600px",
     "height": "200px"
@@ -134032,7 +134035,7 @@ var script$2 = {
   name: 'DatasetLink',
   setup() {
     onMounted(() => {
-      var chartDom = document.getElementById('main');
+      var chartDom = document.getElementById('DatasetLink');
       var myChart = init$1(chartDom);
       var option;
       setTimeout(function () {
@@ -134126,7 +134129,7 @@ var script$2 = {
 };
 
 const _hoisted_1$2 = {
-  id: "main",
+  id: "DatasetLink",
   style: {
     "width": "600px",
     "height": "200px"
@@ -134147,7 +134150,7 @@ var script$1 = {
   name: 'LineBar',
   setup() {
     onMounted(() => {
-      var chartDom = document.getElementById('main');
+      var chartDom = document.getElementById('LineBar');
       var myChart = init$1(chartDom);
       var option;
       option = {
@@ -134243,7 +134246,7 @@ var script$1 = {
 };
 
 const _hoisted_1$1 = {
-  id: "main",
+  id: "LineBar",
   style: {
     "width": "600px",
     "height": "200px"
@@ -134264,39 +134267,114 @@ var script = {
   name: 'Gauge',
   setup() {
     onMounted(() => {
-      var chartDom = document.getElementById('main');
+      var chartDom = document.getElementById('Gauge');
       var myChart = init$1(chartDom);
       var option;
-      option = {
-        tooltip: {
-          formatter: '{a} <br/>{b} : {c}%'
+      const gaugeData = [{
+        value: 20,
+        name: 'Perfect',
+        title: {
+          offsetCenter: ['0%', '-30%']
         },
+        detail: {
+          valueAnimation: true,
+          offsetCenter: ['0%', '-20%']
+        }
+      }, {
+        value: 40,
+        name: 'Good',
+        title: {
+          offsetCenter: ['0%', '0%']
+        },
+        detail: {
+          valueAnimation: true,
+          offsetCenter: ['0%', '10%']
+        }
+      }, {
+        value: 60,
+        name: 'Commonly',
+        title: {
+          offsetCenter: ['0%', '30%']
+        },
+        detail: {
+          valueAnimation: true,
+          offsetCenter: ['0%', '40%']
+        }
+      }];
+      option = {
         series: [{
-          name: 'Pressure',
           type: 'gauge',
+          startAngle: 90,
+          endAngle: -270,
+          pointer: {
+            show: false
+          },
           progress: {
-            show: true
+            show: true,
+            overlap: false,
+            roundCap: true,
+            clip: false,
+            itemStyle: {
+              borderWidth: 1,
+              borderColor: '#464646'
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              width: 20
+            }
+          },
+          splitLine: {
+            show: false,
+            distance: 0,
+            length: 10
+          },
+          axisTick: {
+            show: false
+          },
+          axisLabel: {
+            show: false,
+            distance: 50
+          },
+          data: gaugeData,
+          title: {
+            fontSize: 14
           },
           detail: {
-            valueAnimation: true,
-            formatter: '{value}'
-          },
-          data: [{
-            value: 50,
-            name: 'SCORE'
-          }]
+            width: 25,
+            height: 12,
+            fontSize: 7,
+            color: 'inherit',
+            borderColor: 'inherit',
+            borderRadius: 20,
+            borderWidth: 1,
+            formatter: '{value}%'
+          }
         }]
       };
+      setInterval(function () {
+        gaugeData[0].value = +(Math.random() * 100).toFixed(2);
+        gaugeData[1].value = +(Math.random() * 100).toFixed(2);
+        gaugeData[2].value = +(Math.random() * 100).toFixed(2);
+        myChart.setOption({
+          series: [{
+            data: gaugeData,
+            pointer: {
+              show: false
+            }
+          }]
+        });
+      }, 2000);
       option && myChart.setOption(option);
     });
   }
 };
 
 const _hoisted_1 = {
-  id: "main",
+  id: "Gauge",
   style: {
-    "width": "600px",
-    "height": "200px"
+    "width": "50%",
+    "height": "50%"
   }
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
