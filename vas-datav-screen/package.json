@@ -10,8 +10,13 @@
   },
   "dependencies": {
     "@jiaminghi/data-view": "^2.10.0",
+    "autoprefixer": "^10.4.20",
     "core-js": "^3.39.0",
+    "countup.js": "^2.8.0",
     "element-plus": "^2.9.0",
+    "naive-ui": "^2.40.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
     "vue": "^3.5.12",
     "vue-data-ui": "^2.4.17",
     "vue3-seamless-scroll": "^2.0.1"

@@ -10,6 +10,7 @@ import Lines from "@/components/Screen/index.js";
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import { VueUiRadar } from "vue-data-ui"
+import './style.css'
 
 createApp(App).use(Container).use(Screen).use(Map)
     .use(Calendar)

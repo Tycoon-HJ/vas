@@ -1,5 +1,5 @@
 <script>
-
+import {ref} from "vue"
 import CarouseLTable from "@/components/CarouseLTable/CarouseLTable.vue";
 import Kpi from "@/components/Kpi/Kpi.vue";
 import CarouseLTables from "@/components/CarouseLTables/CarouseLTables.vue";
@@ -7,7 +7,21 @@ import Block from "@/components/Block/Block.vue";
 
 export default {
   name: 'Screen',
-  components: {Block, CarouseLTables, Kpi, CarouseLTable},
+  components: { Block, CarouseLTables, Kpi, CarouseLTable},
+  setup() {
+    let totalData = ref({
+      "total": "6794739",
+      "hb": "87788",
+      "db": "65446",
+      "hd": "76456",
+      "zn": "42135",
+      "xn": "74564",
+      "xb": "75753"
+    })
+    return {
+      totalData
+    }
+  }
 }
 </script>
 
@@ -15,10 +29,10 @@ export default {
   <imooc-container>
     <div class="parent">
       <div class="div1">
-      <Logo style="width: 100%;height: 100%"></Logo>
+        <Logo style="width: 100%;height: 100%"></Logo>
       </div>
-      <div class="div2">
-        <Kpi style="width: 100%;height: 100%"></Kpi>
+      <div class=" div2">
+          <Kpi class="opacity-50 bg-slate-800 " :data="totalData"/>
       </div>
       <div class="div3">
         <Map style="width: 100%;height: 100%"></Map>
@@ -27,7 +41,7 @@ export default {
         <Gauge style="width: 100%;height: 100%"></Gauge>
       </div>
       <div class="div5">
-      <CarouseLTable style="width: 100%;height: 100%"></CarouseLTable>
+        <CarouseLTable style="width: 100%;height: 100%"></CarouseLTable>
       </div>
       <div class="div6">
         <CarouseLTables style="width: 100%;height: 100%"></CarouseLTables>
@@ -46,7 +60,7 @@ export default {
         <Lines style="width: 100%;height: 100%"></Lines>
       </div>
       <div class="div11">
-      <DatasetLink style="width: 100%;height: 100%"></DatasetLink>
+        <DatasetLink style="width: 100%;height: 100%"></DatasetLink>
       </div>
       <div class="div12">
         <div style="display: flex;">
@@ -96,6 +110,9 @@ export default {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   border: black solid 1px;
+  //color: white;
+
+  //background-color: rgb(58, 60, 61);
 }
 
 .div1 {

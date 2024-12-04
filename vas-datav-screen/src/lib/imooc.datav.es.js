@@ -133331,8 +133331,8 @@ var script$9 = {
       optionXyMap01.options.push({
         backgroundColor: '#424446',
         title: [{
-          text: '慕课外卖销售大盘',
-          subtext: '数据由慕课外卖大数据提供',
+          text: '增值服务监控',
+          subtext: '数据由上清所大数据提供',
           left: '2%',
           top: '2%',
           textStyle: {
@@ -133342,7 +133342,7 @@ var script$9 = {
           }
         }, {
           id: 'statistic',
-          text: year[n] + '销售额统计情况',
+          text: year[n] + '资金统计情况',
           left: '75%',
           top: '8%',
           textStyle: {
