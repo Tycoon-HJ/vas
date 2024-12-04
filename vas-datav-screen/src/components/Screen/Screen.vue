@@ -38,7 +38,7 @@ export default {
         <Map style="width: 100%;height: 100%"></Map>
       </div>
       <div class="div4">
-        <Gauge style="width: 100%;height: 100%"></Gauge>
+        <Gauge color="#4595eb" size="200"  style="width: 100%;height: 100%"></Gauge>
       </div>
       <div class="div5">
         <CarouseLTable style="width: 100%;height: 100%"></CarouseLTable>

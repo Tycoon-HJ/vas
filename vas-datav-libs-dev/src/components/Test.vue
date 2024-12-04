@@ -6,7 +6,7 @@
 <!--<Calendar></Calendar>-->
 
 <!--    <base-scroll-list :config="{}" ></base-scroll-list>-->
-<
+<!--<Gauge color="#4595eb" size="150" :percentSize="43" :unitSize="26" :padding="[10, 0, 0, 0]"></Gauge>-->
     <Map style="width: 100px;height: 200px"></Map>
   </imooc-container>
 </template>

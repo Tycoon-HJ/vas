@@ -1,4 +1,4 @@
-import { ref, computed, resolveComponent, openBlock, createBlock, withCtx, createCommentVNode, createTextVNode, createVNode as createVNode$1, onMounted, createElementBlock, createStaticVNode, createElementVNode, renderSlot, getCurrentInstance, onUnmounted, nextTick as nextTick$1 } from 'vue';
+import { ref, computed, resolveComponent, openBlock, createBlock, withCtx, createCommentVNode, createVNode as createVNode$1, onMounted, createElementBlock, createStaticVNode, createElementVNode, renderSlot, getCurrentInstance, onUnmounted, nextTick as nextTick$1, watch, normalizeStyle as normalizeStyle$1 } from 'vue';
 import 'core-js/modules/esnext.iterator.constructor.js';
 import 'core-js/modules/esnext.iterator.filter.js';
 import 'core-js/modules/esnext.iterator.for-each.js';
@@ -32,7 +32,7 @@ function render$e(_ctx, _cache, $props, $setup, $data, $options) {
       height: 2160
     }
   }, {
-    default: withCtx(() => [createCommentVNode("<Calendar></Calendar>"), createCommentVNode("    <base-scroll-list :config=\"{}\" ></base-scroll-list>"), _cache[0] || (_cache[0] = createTextVNode(" < ")), createVNode$1(_component_Map, {
+    default: withCtx(() => [createCommentVNode("<Calendar></Calendar>"), createCommentVNode("    <base-scroll-list :config=\"{}\" ></base-scroll-list>"), createCommentVNode("<Gauge color=\"#4595eb\" size=\"150\" :percentSize=\"43\" :unitSize=\"26\" :padding=\"[10, 0, 0, 0]\"></Gauge>"), createVNode$1(_component_Map, {
       style: {
         "width": "100px",
         "height": "200px"
@@ -69,8 +69,8 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$5 = "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n#app {\n  width: 100%;\n  height: 100%;\n}\n\n.test {\n  color: red;\n}\n\n.common-icon {\n  color: red;\n}";
-styleInject(css_248z$5);
+var css_248z$6 = "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n#app {\n  width: 100%;\n  height: 100%;\n}\n\n.test {\n  color: red;\n}\n\n.common-icon {\n  color: red;\n}";
+styleInject(css_248z$6);
 
 script$d.render = render$e;
 script$d.__file = "src/components/Test.vue";
@@ -141,8 +141,8 @@ module.exports = _defineProperty, module.exports.__esModule = true, module.expor
 
 unwrapExports(defineProperty$4);
 
-var css_248z$4 = "\n.icon-wrapper{\n  display: inline-block;\n}\n.icon {\n  width: 100%;\n  height: 100%;\n  vertical-align: -0.15em;\n  fill: currentColor;\n  overflow: hidden;\n}\n";
-styleInject(css_248z$4);
+var css_248z$5 = "\n.icon-wrapper{\n  display: inline-block;\n}\n.icon {\n  width: 100%;\n  height: 100%;\n  vertical-align: -0.15em;\n  fill: currentColor;\n  overflow: hidden;\n}\n";
+styleInject(css_248z$5);
 
 var script$c = {
   name: 'SvgAnimation',
@@ -174,8 +174,8 @@ function render$d(_ctx, _cache, $props, $setup, $data, $options) {
   })])], -1 /* HOISTED */), createStaticVNode("<div class=\"container\"><svg class=\"line-container\" viewBox=\"0 0 400 400\" width=\"400\" height=\"400\"><line class=\"line\" x1=\"0\" y1=\"20\" x2=\"400\" y2=\"20\" fill=\"none\" stroke-width=\"20\" stroke=\"red\"></line> / </svg></div><div class=\"container\"><svg width=\"200\" height=\"200\"><rect x=\"0\" y=\"0\" fill=\"red\" width=\"100\" height=\"50\"><set attributeName=\"x\" attributeType=\"XML\" to=\"10\" begin=\"1s\"></set><set attributeName=\"x\" attributeType=\"XML\" to=\"20\" begin=\"2s\"></set><set attributeName=\"fill\" attributeType=\"XML\" to=\"blue\" begin=\"2s\"></set></rect></svg></div><div class=\"container\"><svg width=\"200\" height=\"200\"><circle r=\"30\" cx=\"0\" cy=\"0\" stroke=\"black\" stroke-width=\"1\"><!--          &lt;animate attributeName=&quot;cx&quot; attributeType=&quot;XML&quot; from=&quot;0&quot; to=&quot;100&quot; dur=&quot;5s&quot; fill=&quot;freeze&quot;--><!--                   repeatCount=&quot;indefinite&quot;&gt;&lt;/animate&gt;--><!--          &lt;animate attributeName=&quot;cy&quot; attributeType=&quot;XML&quot; from=&quot;0&quot; to=&quot;50&quot; dur=&quot;5s&quot; fill=&quot;freeze&quot;--><!--                   repeatCount=&quot;indefinite&quot;&gt;&lt;/animate&gt;--><animateTransform attributeName=\"transform\" attributeType=\"XML\" begin=\"0\" dur=\"3s\" type=\"scale\" from=\"1\" to=\"2\" repeatCount=\"indefinite\"></animateTransform></circle> / </svg></div><div class=\"container\"><svg width=\"400\" height=\"400\"><polygon points=\"30 30 70 30 90 70 10 70\" fill=\"#fcc\" stroke=\"black\"><animate attributeName=\"points\" attributeType=\"XML\" to=\"50 30 70 50 50 90 30 50\" dur=\"5s\" fill=\"freeze\" repeatCount=\"1\"></animate></polygon></svg></div><div class=\"container\"><svg width=\"200\" height=\"200\"><rect x=\"0\" y=\"0\" fill=\"red\" width=\"10\" height=\"10\"><animateMotion id=\"forward-rect\" path=\"M10 10 L110 10 L110 110 L10 110\" dur=\"2s\" rotate=\"0\" fill=\"freeze\" begin=\"0; backward-rect.end + 0.5s\"></animateMotion><animateMotion id=\"backward-rect\" path=\"M10 100 L110 100 L110 10 L10 10\" dur=\"2s\" rotate=\"0\" fill=\"freeze\" begin=\"forward-rect.end + 0.5s\"></animateMotion><animate id=\"red-to-blue\" attributeName=\"fill\" attributeType=\"XML\" from=\"red\" to=\"blue\" dur=\"2s\" fill=\"freeze\" begin=\"0; blue-to-red.end+0.5s\"></animate><animate id=\"blue-to-red\" attributeName=\"fill\" attributeType=\"XML\" from=\"blue\" to=\"red\" dur=\"2s\" fill=\"freeze\" begin=\"red-to-blue.end+0.5s\"></animate></rect><path d=\"M10 10 L110 10 L110 110 L10 110\" fill=\"none\" stroke=\"green\"></path></svg></div><div class=\"container\"><svg viewBox=\"0 0 200 200\" width=\"200\" height=\"200\"><g id=\"rect1\"><rect x=\"0\" y=\"0\" rx=\"0\" ry=\"0\" width=\"100\" height=\"100\" fill=\"red\"><animate attributeType=\"XML\" attributeName=\"fill\" from=\"red\" to=\"green\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\"></animate></rect></g><animateTransform attributeType=\"XML\" attributeName=\"transform\" type=\"translate\" from=\"0, 0\" to=\"50, 50\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\"></animateTransform><rect x=\"0\" y=\"100\" width=\"100\" height=\"100\" fill=\"blue\"><animate attributeType=\"XML\" attributeName=\"fill\" from=\"blue\" to=\"green\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\"></animate></rect></svg></div><div class=\"container bg-grey\"><svg width=\"400\" height=\"400\"><defs><mask id=\"test-mask\"><rect x=\"5\" y=\"5\" width=\"390\" height=\"390\" fill=\"green\"></rect></mask><linearGradient id=\"test-line-gradient\"><stop offset=\"0%\" stop-color=\"red\"></stop><stop offset=\"50%\" stop-color=\"green\"></stop><stop offset=\"100%\" stop-color=\"blue\" stop-opacity=\"0.5\"></stop></linearGradient><radialGradient id=\"test-radialGradient\" r=\"50%\" cx=\"50%\" cy=\"50%\" fx=\"55%\" fy=\"50%\"><stop offset=\"0%\" stop-color=\"#fff\" stop-opacity=\"1\"></stop><stop offset=\"100%\" stop-color=\"#fff\" stop-opacity=\"0\"></stop></radialGradient></defs><!--        &lt;rect x=&quot;5&quot; y=&quot;5&quot; width=&quot;390&quot; height=&quot;390&quot; fill=&quot;url(#test-radialGradient)&quot;&gt;&lt;/rect&gt;--><circle cx=\"200\" cy=\"200\" r=\"150\" fill=\"url(#test-radialGradient)\"></circle><!--        &lt;rect x=&quot;5&quot; y=&quot;5&quot; width=&quot;390&quot; height=&quot;390&quot; fill=&quot;blue&quot; mask=&quot;url(#test-mask)&quot;&gt;&lt;/rect&gt;--></svg></div>", 7)]));
 }
 
-var css_248z$3 = ".bg-grey {\n  background-color: grey;\n}\n\n.container svg {\n  border: 1px solid #000000;\n}\n\n.rect {\n  stroke-dasharray: 10 20 30;\n}\n\n.circle {\n  animation: circle 5s linear infinite;\n}\n\n@keyframes circle {\n  from {\n    stroke-dasharray: 0 800;\n  }\n  to {\n    stroke-dasharray: 800 0;\n  }\n}\n.rect-process {\n  animation: rect-process 5s linear infinite;\n}\n\n@keyframes rect-process {\n  from {\n    stroke-dasharray: 0 1257;\n  }\n  to {\n    stroke-dasharray: 1257 0;\n  }\n}\n.logo {\n  fill: none;\n  stroke: #333;\n  stroke-width: 5;\n  animation: logo 5s linear 1 forwards;\n}\n\n@keyframes logo {\n  0% {\n    fill: white;\n    stroke-dasharray: 3908;\n    stroke-dashoffset: 3908;\n  }\n  50% {\n    fill: white;\n    stroke-dasharray: 3908;\n    stroke-dashoffset: 0;\n  }\n  75% {\n    fill: red;\n  }\n  100% {\n    fill: cyan;\n  }\n}\n.line {\n  stroke-dasharray: 400;\n  stroke-dashoffset: 400;\n  transition: stroke-dashoffset 0.5s ease-out;\n}\n\n.line-container:hover .line {\n  stroke-dashoffset: 0;\n}";
-styleInject(css_248z$3);
+var css_248z$4 = ".bg-grey {\n  background-color: grey;\n}\n\n.container svg {\n  border: 1px solid #000000;\n}\n\n.rect {\n  stroke-dasharray: 10 20 30;\n}\n\n.circle {\n  animation: circle 5s linear infinite;\n}\n\n@keyframes circle {\n  from {\n    stroke-dasharray: 0 800;\n  }\n  to {\n    stroke-dasharray: 800 0;\n  }\n}\n.rect-process {\n  animation: rect-process 5s linear infinite;\n}\n\n@keyframes rect-process {\n  from {\n    stroke-dasharray: 0 1257;\n  }\n  to {\n    stroke-dasharray: 1257 0;\n  }\n}\n.logo {\n  fill: none;\n  stroke: #333;\n  stroke-width: 5;\n  animation: logo 5s linear 1 forwards;\n}\n\n@keyframes logo {\n  0% {\n    fill: white;\n    stroke-dasharray: 3908;\n    stroke-dashoffset: 3908;\n  }\n  50% {\n    fill: white;\n    stroke-dasharray: 3908;\n    stroke-dashoffset: 0;\n  }\n  75% {\n    fill: red;\n  }\n  100% {\n    fill: cyan;\n  }\n}\n.line {\n  stroke-dasharray: 400;\n  stroke-dashoffset: 400;\n  transition: stroke-dashoffset 0.5s ease-out;\n}\n\n.line-container:hover .line {\n  stroke-dashoffset: 0;\n}";
+styleInject(css_248z$4);
 
 script$c.render = render$d;
 script$c.__file = "src/components/SvgAnimation/SvgAnimation.vue";
@@ -455,8 +455,8 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8 /* PROPS */, _hoisted_8)], 8 /* PROPS */, _hoisted_1$9)), createElementVNode("div", _hoisted_9, [renderSlot(_ctx.$slots, "default")])], 512 /* NEED_PATCH */);
 }
 
-var css_248z$2 = ".imooc-fly-box[data-v-513cc2e2] {\n  position: relative;\n  height: 100%;\n  width: 100%;\n}\n.imooc-fly-box svg[data-v-513cc2e2] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n}\n.imooc-fly-box .imooc-fly-box-content[data-v-513cc2e2] {\n  height: 100%;\n  width: 100%;\n  padding: 2px;\n  box-sizing: border-box;\n}";
-styleInject(css_248z$2);
+var css_248z$3 = ".imooc-fly-box[data-v-513cc2e2] {\n  position: relative;\n  height: 100%;\n  width: 100%;\n}\n.imooc-fly-box svg[data-v-513cc2e2] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n}\n.imooc-fly-box .imooc-fly-box-content[data-v-513cc2e2] {\n  height: 100%;\n  width: 100%;\n  padding: 2px;\n  box-sizing: border-box;\n}";
+styleInject(css_248z$3);
 
 script$a.render = render$b;
 script$a.__scopeId = "data-v-513cc2e2";
@@ -8214,7 +8214,7 @@ function adjustTextY(y, height, verticalAlign) {
 function getLineHeight(font) {
     return getWidth('国', font);
 }
-function parsePercent$1(value, maxValue) {
+function parsePercent$2(value, maxValue) {
     if (typeof value === 'string') {
         if (value.lastIndexOf('%') >= 0) {
             return parseFloat(value) / 100 * maxValue;
@@ -8234,8 +8234,8 @@ function calculateTextPosition(out, opts, rect) {
     var textAlign = 'left';
     var textVerticalAlign = 'top';
     if (textPosition instanceof Array) {
-        x += parsePercent$1(textPosition[0], rect.width);
-        y += parsePercent$1(textPosition[1], rect.height);
+        x += parsePercent$2(textPosition[0], rect.width);
+        y += parsePercent$2(textPosition[1], rect.height);
         textAlign = null;
         textVerticalAlign = null;
     }
@@ -8411,8 +8411,8 @@ var Element = (function () {
                         relOriginY = layoutRect.height * 0.5;
                     }
                     else {
-                        relOriginX = parsePercent$1(textOrigin[0], layoutRect.width);
-                        relOriginY = parsePercent$1(textOrigin[1], layoutRect.height);
+                        relOriginX = parsePercent$2(textOrigin[0], layoutRect.width);
+                        relOriginY = parsePercent$2(textOrigin[1], layoutRect.height);
                     }
                     innerOrigin = true;
                     innerTransformable.originX = -innerTransformable.x + relOriginX + (isLocal ? 0 : layoutRect.x);
@@ -9889,7 +9889,7 @@ function linearMap$2(val, domain, range, clamp) {
  * Convert a percent string to absolute number.
  * Returns NaN if percent is not a valid string or number
  */
-function parsePercent(percent, all) {
+function parsePercent$1(percent, all) {
   switch (percent) {
     case 'center':
     case 'middle':
@@ -11703,7 +11703,7 @@ function pushTokens(block, str, style, wrapInfo, styleName) {
         var tokenPadding = tokenStyle.padding;
         var tokenPaddingH = tokenPadding ? tokenPadding[1] + tokenPadding[3] : 0;
         if (tokenStyle.width != null && tokenStyle.width !== 'auto') {
-            var outerWidth_1 = parsePercent$1(tokenStyle.width, wrapInfo.width) + tokenPaddingH;
+            var outerWidth_1 = parsePercent$2(tokenStyle.width, wrapInfo.width) + tokenPaddingH;
             if (lines.length > 0) {
                 if (outerWidth_1 + wrapInfo.accumWidth > wrapInfo.width) {
                     strLines = str.split('\n');
@@ -17542,7 +17542,7 @@ function setLabelStyle(targetEl, labelStatesModels, opt, stateSpecified
     var labelStatesTexts = getLabelText(opt, labelStatesModels);
     var normalModel = labelStatesModels.normal;
     var showNormal = !!normalModel.getShallow('show');
-    var normalStyle = createTextStyle(normalModel, stateSpecified && stateSpecified.normal, opt, false, !isSetOnText);
+    var normalStyle = createTextStyle$1(normalModel, stateSpecified && stateSpecified.normal, opt, false, !isSetOnText);
     normalStyle.text = labelStatesTexts.normal;
     if (!isSetOnText) {
       // Always create new
@@ -17557,7 +17557,7 @@ function setLabelStyle(targetEl, labelStatesModels, opt, stateSpecified
         if (stateShow !== showNormal) {
           stateObj.ignore = !stateShow;
         }
-        stateObj.style = createTextStyle(stateModel, stateSpecified && stateSpecified[stateName], opt, true, !isSetOnText);
+        stateObj.style = createTextStyle$1(stateModel, stateSpecified && stateSpecified[stateName], opt, true, !isSetOnText);
         stateObj.style.text = labelStatesTexts[stateName];
         if (!isSetOnText) {
           var targetElEmphasisState = targetEl.ensureState(stateName);
@@ -17606,7 +17606,7 @@ function getLabelStatesModels(itemModel, labelName) {
 /**
  * Set basic textStyle properties.
  */
-function createTextStyle(textStyleModel, specifiedTextStyle,
+function createTextStyle$1(textStyleModel, specifiedTextStyle,
 // Fixed style in the code. Can't be set by model.
 opt, isNotNormal, isAttached // If text is attached on an element. If so, auto color will handling in zrender.
 ) {
@@ -19098,10 +19098,10 @@ curry$1(boxLayout, 'horizontal');
 function getAvailableSize(positionInfo, containerRect, margin) {
   var containerWidth = containerRect.width;
   var containerHeight = containerRect.height;
-  var x = parsePercent(positionInfo.left, containerWidth);
-  var y = parsePercent(positionInfo.top, containerHeight);
-  var x2 = parsePercent(positionInfo.right, containerWidth);
-  var y2 = parsePercent(positionInfo.bottom, containerHeight);
+  var x = parsePercent$1(positionInfo.left, containerWidth);
+  var y = parsePercent$1(positionInfo.top, containerHeight);
+  var x2 = parsePercent$1(positionInfo.right, containerWidth);
+  var y2 = parsePercent$1(positionInfo.bottom, containerHeight);
   (isNaN(x) || isNaN(parseFloat(positionInfo.left))) && (x = 0);
   (isNaN(x2) || isNaN(parseFloat(positionInfo.right))) && (x2 = containerWidth);
   (isNaN(y) || isNaN(parseFloat(positionInfo.top))) && (y = 0);
@@ -19119,12 +19119,12 @@ function getLayoutRect(positionInfo, containerRect, margin) {
   margin = normalizeCssArray(margin || 0);
   var containerWidth = containerRect.width;
   var containerHeight = containerRect.height;
-  var left = parsePercent(positionInfo.left, containerWidth);
-  var top = parsePercent(positionInfo.top, containerHeight);
-  var right = parsePercent(positionInfo.right, containerWidth);
-  var bottom = parsePercent(positionInfo.bottom, containerHeight);
-  var width = parsePercent(positionInfo.width, containerWidth);
-  var height = parsePercent(positionInfo.height, containerHeight);
+  var left = parsePercent$1(positionInfo.left, containerWidth);
+  var top = parsePercent$1(positionInfo.top, containerHeight);
+  var right = parsePercent$1(positionInfo.right, containerWidth);
+  var bottom = parsePercent$1(positionInfo.bottom, containerHeight);
+  var width = parsePercent$1(positionInfo.width, containerWidth);
+  var height = parsePercent$1(positionInfo.height, containerHeight);
   var verticalMargin = margin[2] + margin[0];
   var horizontalMargin = margin[1] + margin[3];
   var aspect = positionInfo.aspect;
@@ -27597,7 +27597,7 @@ function normalizeSymbolOffset(symbolOffset, symbolSize) {
   if (!isArray$2(symbolOffset)) {
     symbolOffset = [symbolOffset, symbolOffset];
   }
-  return [parsePercent(symbolOffset[0], symbolSize[0]) || 0, parsePercent(retrieve2(symbolOffset[1], symbolOffset[0]), symbolSize[1]) || 0];
+  return [parsePercent$1(symbolOffset[0], symbolSize[0]) || 0, parsePercent$1(retrieve2(symbolOffset[1], symbolOffset[0]), symbolSize[1]) || 0];
 }
 
 function isSafeNum(num) {
@@ -33703,9 +33703,9 @@ function makeColumnLayout(barSeries) {
       var data = seriesModel.getData();
       bandWidth = Math.abs(axisExtent[1] - axisExtent[0]) / data.count();
     }
-    var barWidth = parsePercent(seriesModel.get('barWidth'), bandWidth);
-    var barMaxWidth = parsePercent(seriesModel.get('barMaxWidth'), bandWidth);
-    var barMinWidth = parsePercent(
+    var barWidth = parsePercent$1(seriesModel.get('barWidth'), bandWidth);
+    var barMaxWidth = parsePercent$1(seriesModel.get('barMaxWidth'), bandWidth);
+    var barMinWidth = parsePercent$1(
     // barMinWidth by default is 0.5 / 1 in cartesian. Because in value axis,
     // the auto-calculated bar width might be less than 0.5 / 1.
     seriesModel.get('barMinWidth') || (isInLargeMode(seriesModel) ? 0.5 : 1), bandWidth);
@@ -33780,8 +33780,8 @@ function doCalBarWidthAndOffset(seriesInfoList) {
       // the spaces between group is smaller. Or the column will be too thin.
       categoryGapPercent = Math.max(35 - columnCount * 4, 15) + '%';
     }
-    var categoryGap = parsePercent(categoryGapPercent, bandWidth);
-    var barGapPercent = parsePercent(columnsOnAxis.gap, 1);
+    var categoryGap = parsePercent$1(categoryGapPercent, bandWidth);
+    var barGapPercent = parsePercent$1(columnsOnAxis.gap, 1);
     var remainedWidth = columnsOnAxis.remainedWidth;
     var autoWidthCount = columnsOnAxis.autoWidthCount;
     var autoWidth = (remainedWidth - categoryGap) / (autoWidthCount + (autoWidthCount - 1) * barGapPercent);
@@ -34634,7 +34634,7 @@ var ScaleRawExtentInfo = /** @class */function () {
         }
         this._boundaryGapInner = [0, 0];
       } else {
-        this._boundaryGapInner = [parsePercent$1(boundaryGapArr[0], 1), parsePercent$1(boundaryGapArr[1], 1)];
+        this._boundaryGapInner = [parsePercent$2(boundaryGapArr[0], 1), parsePercent$2(boundaryGapArr[1], 1)];
       }
     }
   };
@@ -35178,6 +35178,10 @@ function createScale(dataExtent, option) {
  */
 function mixinAxisModelCommonMethods(Model) {
   mixin(Model, AxisModelCommonMixin);
+}
+function createTextStyle(textStyleModel, opts) {
+  opts = opts || {};
+  return createTextStyle$1(textStyleModel, null, null, opts.state !== 'normal');
 }
 
 var EPSILON$1 = 1e-8;
@@ -36077,6 +36081,17 @@ function fixOnBandTicksCoords(axis, ticksCoords, alignWithLabel, clamp) {
     b = round$3(b);
     return inverse ? a > b : a < b;
   }
+}
+
+function extendSeriesModel(proto) {
+  var Model = SeriesModel.extend(proto);
+  SeriesModel.registerClass(Model);
+  return Model;
+}
+function extendChartView(proto) {
+  var View = ChartView.extend(proto);
+  ChartView.registerClass(View);
+  return View;
 }
 
 var PI2$2 = Math.PI * 2;
@@ -37002,7 +37017,7 @@ var LabelManager = /** @class */function () {
       var needsUpdateLabelLine = false;
       if (layoutOption.x != null) {
         // TODO width of chart view.
-        label.x = parsePercent(layoutOption.x, width);
+        label.x = parsePercent$1(layoutOption.x, width);
         label.setStyle('x', 0); // Ignore movement in style. TODO: origin.
         needsUpdateLabelLine = true;
       } else {
@@ -37011,7 +37026,7 @@ var LabelManager = /** @class */function () {
       }
       if (layoutOption.y != null) {
         // TODO height of chart view.
-        label.y = parsePercent(layoutOption.y, height);
+        label.y = parsePercent$1(layoutOption.y, height);
         label.setStyle('y', 0); // Ignore movement in style.
         needsUpdateLabelLine = true;
       } else {
@@ -42607,7 +42622,7 @@ function getSectorCornerRadius(model, shape, zeroIfNull) {
   var dr = Math.abs(shape.r || 0 - shape.r0 || 0);
   return {
     cornerRadius: map$1(cornerRadius, function (cr) {
-      return parsePercent$1(cr, dr);
+      return parsePercent$2(cr, dr);
     })
   };
 }
@@ -43492,11 +43507,11 @@ function getBasicPieLayout(seriesModel, api) {
   if (!isArray$2(radius)) {
     radius = [0, radius];
   }
-  var width = parsePercent(viewRect.width, api.getWidth());
-  var height = parsePercent(viewRect.height, api.getHeight());
+  var width = parsePercent$1(viewRect.width, api.getWidth());
+  var height = parsePercent$1(viewRect.height, api.getHeight());
   var size = Math.min(width, height);
-  var r0 = parsePercent(radius[0], size / 2);
-  var r = parsePercent(radius[1], size / 2);
+  var r0 = parsePercent$1(radius[0], size / 2);
+  var r = parsePercent$1(radius[1], size / 2);
   var cx;
   var cy;
   var coordSys = seriesModel.coordinateSystem;
@@ -43509,8 +43524,8 @@ function getBasicPieLayout(seriesModel, api) {
     if (!isArray$2(center)) {
       center = [center, center];
     }
-    cx = parsePercent(center[0], width) + viewRect.x;
-    cy = parsePercent(center[1], height) + viewRect.y;
+    cx = parsePercent$1(center[0], width) + viewRect.x;
+    cy = parsePercent$1(center[1], height) + viewRect.y;
   }
   return {
     cx: cx,
@@ -43994,13 +44009,13 @@ function pieLabelLayout(seriesModel) {
     var labelPosition = labelModel.get('position') || itemModel.get(['emphasis', 'label', 'position']);
     var labelDistance = labelModel.get('distanceToLabelLine');
     var labelAlignTo = labelModel.get('alignTo');
-    var edgeDistance = parsePercent(labelModel.get('edgeDistance'), viewWidth);
+    var edgeDistance = parsePercent$1(labelModel.get('edgeDistance'), viewWidth);
     var bleedMargin = labelModel.get('bleedMargin');
     var labelLineModel = itemModel.getModel('labelLine');
     var labelLineLen = labelLineModel.get('length');
-    labelLineLen = parsePercent(labelLineLen, viewWidth);
+    labelLineLen = parsePercent$1(labelLineLen, viewWidth);
     var labelLineLen2 = labelLineModel.get('length2');
-    labelLineLen2 = parsePercent(labelLineLen2, viewWidth);
+    labelLineLen2 = parsePercent$1(labelLineLen2, viewWidth);
     if (Math.abs(sectorShape.endAngle - sectorShape.startAngle) < minShowLabelRadian) {
       each$f(label.states, setNotShow);
       label.ignore = true;
@@ -46450,7 +46465,7 @@ var builders = {
       y: pos[1],
       rotation: labelLayout.rotation,
       silent: AxisBuilder.isLabelSilent(axisModel),
-      style: createTextStyle(textStyleModel, {
+      style: createTextStyle$1(textStyleModel, {
         text: name,
         font: textFont,
         overflow: 'truncate',
@@ -46693,7 +46708,7 @@ function buildAxisLabel(group, transformGroup, axisModel, opt) {
       rotation: labelLayout.rotation,
       silent: silent,
       z2: 10 + (labelItem.level || 0),
-      style: createTextStyle(itemLabelModel, {
+      style: createTextStyle$1(itemLabelModel, {
         text: formattedLabel,
         align: index === 0 ? alignMin : index === labels.length - 1 ? alignMax : align,
         verticalAlign: index === 0 ? verticalAlignMin : index === labels.length - 1 ? verticalAlignMax : verticalAlign,
@@ -48033,16 +48048,16 @@ var Radar = /** @class */function () {
     var viewWidth = api.getWidth();
     var viewHeight = api.getHeight();
     var viewSize = Math.min(viewWidth, viewHeight) / 2;
-    this.cx = parsePercent(center[0], viewWidth);
-    this.cy = parsePercent(center[1], viewHeight);
+    this.cx = parsePercent$1(center[0], viewWidth);
+    this.cy = parsePercent$1(center[1], viewHeight);
     this.startAngle = radarModel.get('startAngle') * Math.PI / 180;
     // radius may be single value like `20`, `'80%'`, or array like `[10, '80%']`
     var radius = radarModel.get('radius');
     if (isString(radius) || isNumber(radius)) {
       radius = [0, radius];
     }
-    this.r0 = parsePercent(radius[0], viewSize);
-    this.r = parsePercent(radius[1], viewSize);
+    this.r0 = parsePercent$1(radius[0], viewSize);
+    this.r = parsePercent$1(radius[1], viewSize);
     each$f(this._indicatorAxes, function (indicatorAxis, idx) {
       indicatorAxis.setExtent(this.r0, this.r);
       var angle = this.startAngle + idx * Math.PI * 2 / this._indicatorAxes.length;
@@ -50833,7 +50848,7 @@ var View = /** @class */function (_super) {
     if (!centerCoord) {
       return;
     }
-    this._center = [parsePercent(centerCoord[0], api.getWidth()), parsePercent(centerCoord[1], api.getHeight())];
+    this._center = [parsePercent$1(centerCoord[0], api.getWidth()), parsePercent$1(centerCoord[1], api.getHeight())];
     this._updateCenterAndZoom();
   };
   View.prototype.setZoom = function (zoom) {
@@ -51189,8 +51204,8 @@ function resizeGeo(geoModel, api) {
   var center;
   var size;
   if (centerOption && sizeOption) {
-    center = [parsePercent(centerOption[0], viewWidth), parsePercent(centerOption[1], viewHeight)];
-    size = parsePercent(sizeOption, Math.min(viewWidth, viewHeight));
+    center = [parsePercent$1(centerOption[0], viewWidth), parsePercent$1(centerOption[1], viewHeight)];
+    size = parsePercent$1(sizeOption, Math.min(viewWidth, viewHeight));
     if (!isNaN(center[0]) && !isNaN(center[1]) && !isNaN(size)) {
       useCenterAndSize = true;
     } else {
@@ -51992,7 +52007,7 @@ var TreePath = /** @class */function (_super) {
     var orient = shape.orient;
     var forkDim = orient === 'TB' || orient === 'BT' ? 0 : 1;
     var otherDim = 1 - forkDim;
-    var forkPosition = parsePercent(shape.forkPosition, 1);
+    var forkPosition = parsePercent$1(shape.forkPosition, 1);
     var tmpPoint = [];
     tmpPoint[forkDim] = parentPoint[forkDim];
     tmpPoint[otherDim] = parentPoint[otherDim] + (lastChildPos[otherDim] - parentPoint[otherDim]) * forkPosition;
@@ -53800,7 +53815,7 @@ var Breadcrumb = /** @class */function () {
           lineJoin: 'bevel'
         }),
         textContent: new ZRText({
-          style: createTextStyle(textStyleModel, {
+          style: createTextStyle$1(textStyleModel, {
             text: text
           })
         }),
@@ -53811,7 +53826,7 @@ var Breadcrumb = /** @class */function () {
         onclick: curry$1(onSelect, itemNode)
       });
       el.disableLabelAnimation = true;
-      el.getTextContent().ensureState('emphasis').style = createTextStyle(emphasisTextStyleModel, {
+      el.getTextContent().ensureState('emphasis').style = createTextStyle$1(emphasisTextStyleModel, {
         text: text
       });
       el.ensureState('emphasis').style = emphasisItemStyle;
@@ -55396,8 +55411,8 @@ var treemapLayout = {
       height: api.getHeight()
     });
     var size = seriesOption.size || []; // Compatible with ec2.
-    var containerWidth = parsePercent(retrieveValue(layoutInfo.width, size[0]), ecWidth);
-    var containerHeight = parsePercent(retrieveValue(layoutInfo.height, size[1]), ecHeight);
+    var containerWidth = parsePercent$1(retrieveValue(layoutInfo.width, size[0]), ecWidth);
+    var containerHeight = parsePercent$1(retrieveValue(layoutInfo.height, size[1]), ecHeight);
     // Fetch payload info.
     var payloadType = payload && payload.type;
     var types = ['treemapZoomToNode', 'treemapRootToNode'];
@@ -58357,9 +58372,9 @@ function parsePosition(seriesModel, api) {
   var width = api.getWidth();
   var height = api.getHeight();
   var size = Math.min(width, height);
-  var cx = parsePercent(center[0], api.getWidth());
-  var cy = parsePercent(center[1], api.getHeight());
-  var r = parsePercent(seriesModel.get('radius'), size / 2);
+  var cx = parsePercent$1(center[0], api.getWidth());
+  var cy = parsePercent$1(center[1], api.getHeight());
+  var r = parsePercent$1(seriesModel.get('radius'), size / 2);
   return {
     cx: cx,
     cy: cy,
@@ -58471,8 +58486,8 @@ var GaugeView = /** @class */function (_super) {
     var labelModel = seriesModel.getModel('axisLabel');
     var splitNumber = seriesModel.get('splitNumber');
     var subSplitNumber = tickModel.get('splitNumber');
-    var splitLineLen = parsePercent(splitLineModel.get('length'), r);
-    var tickLen = parsePercent(tickModel.get('length'), r);
+    var splitLineLen = parsePercent$1(splitLineModel.get('length'), r);
+    var tickLen = parsePercent$1(tickModel.get('length'), r);
     var angle = startAngle;
     var step = (endAngle - startAngle) / splitNumber;
     var subStep = step / subSplitNumber;
@@ -58525,7 +58540,7 @@ var GaugeView = /** @class */function (_super) {
         }
         if (rotate === 0) {
           group.add(new ZRText({
-            style: createTextStyle(labelModel, {
+            style: createTextStyle$1(labelModel, {
               text: label,
               x: textStyleX,
               y: textStyleY,
@@ -58538,7 +58553,7 @@ var GaugeView = /** @class */function (_super) {
           }));
         } else {
           group.add(new ZRText({
-            style: createTextStyle(labelModel, {
+            style: createTextStyle$1(labelModel, {
               text: label,
               x: textStyleX,
               y: textStyleY,
@@ -58602,12 +58617,12 @@ var GaugeView = /** @class */function (_super) {
     function createPointer(idx, angle) {
       var itemModel = data.getItemModel(idx);
       var pointerModel = itemModel.getModel('pointer');
-      var pointerWidth = parsePercent(pointerModel.get('width'), posInfo.r);
-      var pointerLength = parsePercent(pointerModel.get('length'), posInfo.r);
+      var pointerWidth = parsePercent$1(pointerModel.get('width'), posInfo.r);
+      var pointerLength = parsePercent$1(pointerModel.get('length'), posInfo.r);
       var pointerStr = seriesModel.get(['pointer', 'icon']);
       var pointerOffset = pointerModel.get('offsetCenter');
-      var pointerOffsetX = parsePercent(pointerOffset[0], posInfo.r);
-      var pointerOffsetY = parsePercent(pointerOffset[1], posInfo.r);
+      var pointerOffsetX = parsePercent$1(pointerOffset[0], posInfo.r);
+      var pointerOffsetY = parsePercent$1(pointerOffset[1], posInfo.r);
       var pointerKeepAspect = pointerModel.get('keepAspect');
       var pointer;
       // not exist icon type will be set 'rect'
@@ -58757,7 +58772,7 @@ var GaugeView = /** @class */function (_super) {
       var anchorType = anchorModel.get('icon');
       var offsetCenter = anchorModel.get('offsetCenter');
       var anchorKeepAspect = anchorModel.get('keepAspect');
-      var anchor = createSymbol$1(anchorType, posInfo.cx - anchorSize / 2 + parsePercent(offsetCenter[0], posInfo.r), posInfo.cy - anchorSize / 2 + parsePercent(offsetCenter[1], posInfo.r), anchorSize, anchorSize, null, anchorKeepAspect);
+      var anchor = createSymbol$1(anchorType, posInfo.cx - anchorSize / 2 + parsePercent$1(offsetCenter[0], posInfo.r), posInfo.cy - anchorSize / 2 + parsePercent$1(offsetCenter[1], posInfo.r), anchorSize, anchorSize, null, anchorKeepAspect);
       anchor.z2 = anchorModel.get('showAbove') ? 1 : 0;
       anchor.setStyle(anchorModel.getModel('itemStyle').getItemStyle());
       this.group.add(anchor);
@@ -58793,12 +58808,12 @@ var GaugeView = /** @class */function (_super) {
       var itemTitleModel = itemModel.getModel('title');
       if (itemTitleModel.get('show')) {
         var titleOffsetCenter = itemTitleModel.get('offsetCenter');
-        var titleX = posInfo.cx + parsePercent(titleOffsetCenter[0], posInfo.r);
-        var titleY = posInfo.cy + parsePercent(titleOffsetCenter[1], posInfo.r);
+        var titleX = posInfo.cx + parsePercent$1(titleOffsetCenter[0], posInfo.r);
+        var titleY = posInfo.cy + parsePercent$1(titleOffsetCenter[1], posInfo.r);
         var labelEl = newTitleEls[idx];
         labelEl.attr({
           z2: showPointerAbove ? 0 : 2,
-          style: createTextStyle(itemTitleModel, {
+          style: createTextStyle$1(itemTitleModel, {
             x: titleX,
             y: titleY,
             text: data.getName(idx),
@@ -58813,16 +58828,16 @@ var GaugeView = /** @class */function (_super) {
       var itemDetailModel = itemModel.getModel('detail');
       if (itemDetailModel.get('show')) {
         var detailOffsetCenter = itemDetailModel.get('offsetCenter');
-        var detailX = posInfo.cx + parsePercent(detailOffsetCenter[0], posInfo.r);
-        var detailY = posInfo.cy + parsePercent(detailOffsetCenter[1], posInfo.r);
-        var width = parsePercent(itemDetailModel.get('width'), posInfo.r);
-        var height = parsePercent(itemDetailModel.get('height'), posInfo.r);
+        var detailX = posInfo.cx + parsePercent$1(detailOffsetCenter[0], posInfo.r);
+        var detailY = posInfo.cy + parsePercent$1(detailOffsetCenter[1], posInfo.r);
+        var width = parsePercent$1(itemDetailModel.get('width'), posInfo.r);
+        var height = parsePercent$1(itemDetailModel.get('height'), posInfo.r);
         var detailColor = seriesModel.get(['progress', 'show']) ? data.getItemVisual(idx, 'style').fill : autoColor;
         var labelEl = newDetailEls[idx];
         var formatter_1 = itemDetailModel.get('formatter');
         labelEl.attr({
           z2: showPointerAbove ? 0 : 2,
-          style: createTextStyle(itemDetailModel, {
+          style: createTextStyle$1(itemDetailModel, {
             x: detailX,
             y: detailY,
             text: formatLabel(value, formatter_1),
@@ -59440,7 +59455,7 @@ function funnelLayout(ecModel, api) {
     var indices = getSortedIndices(data, sort);
     var x = viewRect.x;
     var y = viewRect.y;
-    var sizeExtent = orient === 'horizontal' ? [parsePercent(seriesModel.get('minSize'), viewHeight), parsePercent(seriesModel.get('maxSize'), viewHeight)] : [parsePercent(seriesModel.get('minSize'), viewWidth), parsePercent(seriesModel.get('maxSize'), viewWidth)];
+    var sizeExtent = orient === 'horizontal' ? [parsePercent$1(seriesModel.get('minSize'), viewHeight), parsePercent$1(seriesModel.get('maxSize'), viewHeight)] : [parsePercent$1(seriesModel.get('minSize'), viewWidth), parsePercent$1(seriesModel.get('maxSize'), viewWidth)];
     var dataExtent = data.getDataExtent(valueDim);
     var min = seriesModel.get('min');
     var max = seriesModel.get('max');
@@ -59509,7 +59524,7 @@ function funnelLayout(ecModel, api) {
         if (width == null) {
           width = itemSize;
         } else {
-          width = parsePercent(width, viewWidth);
+          width = parsePercent$1(width, viewWidth);
           if (sort === 'ascending') {
             width = -width;
           }
@@ -59525,7 +59540,7 @@ function funnelLayout(ecModel, api) {
         if (height == null) {
           height = itemSize;
         } else {
-          height = parsePercent(height, viewHeight);
+          height = parsePercent$1(height, viewHeight);
           if (sort === 'ascending') {
             height = -height;
           }
@@ -62885,7 +62900,7 @@ function calculateBase(groupItem) {
     if (!isArray$2(boxWidthBound)) {
       boxWidthBound = [boxWidthBound, boxWidthBound];
     }
-    boundList.push([parsePercent(boxWidthBound[0], bandWidth) || 0, parsePercent(boxWidthBound[1], bandWidth) || 0]);
+    boundList.push([parsePercent$1(boxWidthBound[0], bandWidth) || 0, parsePercent$1(boxWidthBound[1], bandWidth) || 0]);
   });
   var availableWidth = bandWidth * 0.8 - 2;
   var boxGap = availableWidth / seriesCount * 0.3;
@@ -63594,10 +63609,10 @@ function calculateCandleWidth(seriesModel, data) {
   var baseAxis = seriesModel.getBaseAxis();
   var extent;
   var bandWidth = baseAxis.type === 'category' ? baseAxis.getBandWidth() : (extent = baseAxis.getExtent(), Math.abs(extent[1] - extent[0]) / data.count());
-  var barMaxWidth = parsePercent(retrieve2(seriesModel.get('barMaxWidth'), bandWidth), bandWidth);
-  var barMinWidth = parsePercent(retrieve2(seriesModel.get('barMinWidth'), 1), bandWidth);
+  var barMaxWidth = parsePercent$1(retrieve2(seriesModel.get('barMaxWidth'), bandWidth), bandWidth);
+  var barMinWidth = parsePercent$1(retrieve2(seriesModel.get('barMinWidth'), 1), bandWidth);
   var barWidth = seriesModel.get('barWidth');
-  return barWidth != null ? parsePercent(barWidth, bandWidth)
+  return barWidth != null ? parsePercent$1(barWidth, bandWidth)
   // Put max outer to ensure bar visible in spite of overlap.
   : Math.max(Math.min(bandWidth / 2, barMaxWidth), barMinWidth);
 }
@@ -65579,8 +65594,8 @@ function prepareSymbolSize(data, dataIndex, layout, symbolRepeat, symbolClip, bo
   // to complicated to calculate real percent value if considering scaled lineWidth.
   // So the actual size will bigger than layout size if lineWidth is bigger than zero,
   // which can be tolerated in pictorial chart.
-  parsedSymbolSize[categoryDim.index] = parsePercent(parsedSymbolSize[categoryDim.index], categorySize);
-  parsedSymbolSize[valueDim.index] = parsePercent(parsedSymbolSize[valueDim.index], symbolRepeat ? categorySize : Math.abs(boundingLength));
+  parsedSymbolSize[categoryDim.index] = parsePercent$1(parsedSymbolSize[categoryDim.index], categorySize);
+  parsedSymbolSize[valueDim.index] = parsePercent$1(parsedSymbolSize[valueDim.index], symbolRepeat ? categorySize : Math.abs(boundingLength));
   outputSymbolMeta.symbolSize = parsedSymbolSize;
   // If x or y is less than zero, show reversed shape.
   var symbolScale = outputSymbolMeta.symbolScale = [parsedSymbolSize[0] / symbolPatternSize, parsedSymbolSize[1] / symbolPatternSize];
@@ -65621,7 +65636,7 @@ function prepareLayoutInfo(itemModel, symbolSize, layout, symbolRepeat, symbolCl
       hasEndGap = true;
       symbolMargin = symbolMargin.slice(0, symbolMargin.length - 1);
     }
-    var symbolMarginNumeric = parsePercent(symbolMargin, symbolSize[valueDim.index]);
+    var symbolMarginNumeric = parsePercent$1(symbolMargin, symbolSize[valueDim.index]);
     var uLenWithMargin = Math.max(unitLength + symbolMarginNumeric * 2, 0);
     // When symbol margin is less than 0, margin at both ends will be subtracted
     // to ensure that all of the symbols will not be overflow the given area.
@@ -66375,13 +66390,13 @@ function themeRiverLayout(ecModel, api) {
     var axis = single.getAxis();
     layoutInfo.boundaryGap = boundaryGap;
     if (axis.orient === 'horizontal') {
-      boundaryGap[0] = parsePercent(boundaryGap[0], rect.height);
-      boundaryGap[1] = parsePercent(boundaryGap[1], rect.height);
+      boundaryGap[0] = parsePercent$1(boundaryGap[0], rect.height);
+      boundaryGap[1] = parsePercent$1(boundaryGap[1], rect.height);
       var height = rect.height - boundaryGap[0] - boundaryGap[1];
       doThemeRiverLayout(data, seriesModel, height);
     } else {
-      boundaryGap[0] = parsePercent(boundaryGap[0], rect.width);
-      boundaryGap[1] = parsePercent(boundaryGap[1], rect.width);
+      boundaryGap[0] = parsePercent$1(boundaryGap[0], rect.width);
+      boundaryGap[1] = parsePercent$1(boundaryGap[1], rect.width);
       var width = rect.width - boundaryGap[0] - boundaryGap[1];
       doThemeRiverLayout(data, seriesModel, width);
     }
@@ -66587,7 +66602,7 @@ var SunburstPiece = /** @class */function (_super) {
       if (isNormal) {
         text = text || _this.node.name;
       }
-      state.style = createTextStyle(labelStateModel, {}, null, stateName !== 'normal', true);
+      state.style = createTextStyle$1(labelStateModel, {}, null, stateName !== 'normal', true);
       if (text) {
         state.style.text = text;
       }
@@ -67049,10 +67064,10 @@ function sunburstLayout(seriesType, ecModel, api) {
     var width = api.getWidth();
     var height = api.getHeight();
     var size = Math.min(width, height);
-    var cx = parsePercent(center[0], width);
-    var cy = parsePercent(center[1], height);
-    var r0 = parsePercent(radius[0], size / 2);
-    var r = parsePercent(radius[1], size / 2);
+    var cx = parsePercent$1(center[0], width);
+    var cy = parsePercent$1(center[1], height);
+    var r0 = parsePercent$1(radius[0], size / 2);
+    var r = parsePercent$1(radius[1], size / 2);
     var startAngle = -seriesModel.get('startAngle') * RADIAN;
     var minAngle = seriesModel.get('minAngle') * RADIAN;
     var virtualRoot = seriesModel.getData().tree.root;
@@ -67112,8 +67127,8 @@ function sunburstLayout(seriesType, ecModel, api) {
             r0_1 = radius_1[0];
             r_1 = radius_1[1];
           }
-          r0_1 != null && (rStart = parsePercent(r0_1, size / 2));
-          r_1 != null && (rEnd = parsePercent(r_1, size / 2));
+          r0_1 != null && (rStart = parsePercent$1(r0_1, size / 2));
+          r_1 != null && (rEnd = parsePercent$1(r_1, size / 2));
         }
         node.setLayout({
           angle: angle,
@@ -68648,7 +68663,7 @@ function makeRenderItem(customSeries, data, ecModel, api) {
     // Now that the feature of "auto adjust text fill/stroke" has been migrated to zrender
     // since ec5, we should set `isAttached` as `false` here and make compat in
     // `convertToEC4StyleForCustomSerise`.
-    var textStyle = createTextStyle(labelModel, null, opt, false, true);
+    var textStyle = createTextStyle$1(labelModel, null, opt, false, true);
     textStyle.text = labelModel.getShallow('show') ? retrieve2(customSeries.getFormattedLabel(dataIndexInside, NORMAL), getDefaultLabel(data, dataIndexInside)) : null;
     var textConfig = createTextConfig(labelModel, opt, false);
     preFetchFromExtra(userProps, itemStyle);
@@ -68669,7 +68684,7 @@ function makeRenderItem(customSeries, data, ecModel, api) {
     dataIndexInside == null && (dataIndexInside = currDataIndexInside);
     var itemStyle = getItemStyleModel(dataIndexInside, EMPHASIS).getItemStyle();
     var labelModel = getLabelModel(dataIndexInside, EMPHASIS);
-    var textStyle = createTextStyle(labelModel, null, null, true, true);
+    var textStyle = createTextStyle$1(labelModel, null, null, true, true);
     textStyle.text = labelModel.getShallow('show') ? retrieve3(customSeries.getFormattedLabel(dataIndexInside, EMPHASIS), customSeries.getFormattedLabel(dataIndexInside, NORMAL), getDefaultLabel(data, dataIndexInside)) : null;
     var textConfig = createTextConfig(labelModel, null, true);
     preFetchFromExtra(userProps, itemStyle);
@@ -69470,7 +69485,7 @@ function buildLabelElOption(elOption, axisModel, axisPointerModel, api, labelPos
     // shape: {x: 0, y: 0, width: width, height: height, r: labelModel.get('borderRadius')},
     x: position[0],
     y: position[1],
-    style: createTextStyle(labelModel, {
+    style: createTextStyle$1(labelModel, {
       text: text,
       font: font,
       fill: labelModel.getTextColor(),
@@ -70700,8 +70715,8 @@ function resizePolar(polar, polarModel, api) {
   var center = polarModel.get('center');
   var width = api.getWidth();
   var height = api.getHeight();
-  polar.cx = parsePercent(center[0], width);
-  polar.cy = parsePercent(center[1], height);
+  polar.cx = parsePercent$1(center[0], width);
+  polar.cy = parsePercent$1(center[1], height);
   var radiusAxis = polar.getRadiusAxis();
   var size = Math.min(width, height) / 2;
   var radius = polarModel.get('radius');
@@ -70711,7 +70726,7 @@ function resizePolar(polar, polarModel, api) {
     // r0 = 0
     radius = [0, radius];
   }
-  var parsedRadius = [parsePercent(radius[0], size), parsePercent(radius[1], size)];
+  var parsedRadius = [parsePercent$1(radius[0], size), parsePercent$1(radius[1], size)];
   radiusAxis.inverse ? radiusAxis.setExtent(parsedRadius[1], parsedRadius[0]) : radiusAxis.setExtent(parsedRadius[0], parsedRadius[1]);
 }
 /**
@@ -70963,7 +70978,7 @@ var angelAxisElementsBuilders = {
       }
       var textEl = new ZRText({
         silent: AxisBuilder.isLabelSilent(angleAxisModel),
-        style: createTextStyle(labelModel, {
+        style: createTextStyle$1(labelModel, {
           x: p[0],
           y: p[1],
           fill: labelModel.getTextColor() || angleAxisModel.get(['axisLine', 'lineStyle', 'color']),
@@ -71378,8 +71393,8 @@ function calRadialBar(barSeries) {
       width: 0,
       maxWidth: 0
     };
-    var barWidth = parsePercent(seriesModel.get('barWidth'), bandWidth);
-    var barMaxWidth = parsePercent(seriesModel.get('barMaxWidth'), bandWidth);
+    var barWidth = parsePercent$1(seriesModel.get('barWidth'), bandWidth);
+    var barMaxWidth = parsePercent$1(seriesModel.get('barMaxWidth'), bandWidth);
     var barGap = seriesModel.get('barGap');
     var barCategoryGap = seriesModel.get('barCategoryGap');
     if (barWidth && !stacks[stackId].width) {
@@ -71396,8 +71411,8 @@ function calRadialBar(barSeries) {
     result[coordSysName] = {};
     var stacks = columnsOnAxis.stacks;
     var bandWidth = columnsOnAxis.bandWidth;
-    var categoryGap = parsePercent(columnsOnAxis.categoryGap, bandWidth);
-    var barGapPercent = parsePercent(columnsOnAxis.gap, 1);
+    var categoryGap = parsePercent$1(columnsOnAxis.categoryGap, bandWidth);
+    var barGapPercent = parsePercent$1(columnsOnAxis.gap, 1);
     var remainedWidth = columnsOnAxis.remainedWidth;
     var autoWidthCount = columnsOnAxis.autoWidthCount;
     var autoWidth = (remainedWidth - categoryGap) / (autoWidthCount + (autoWidthCount - 1) * barGapPercent);
@@ -72297,7 +72312,7 @@ var CalendarView = /** @class */function (_super) {
     var content = this._formatterLabel(formatter, params);
     var yearText = new ZRText({
       z2: 30,
-      style: createTextStyle(yearLabel, {
+      style: createTextStyle$1(yearLabel, {
         text: content
       })
     });
@@ -72376,7 +72391,7 @@ var CalendarView = /** @class */function (_super) {
       var content = this._formatterLabel(formatter, params);
       var monthText = new ZRText({
         z2: 30,
-        style: extend$1(createTextStyle(monthLabel, {
+        style: extend$1(createTextStyle$1(monthLabel, {
           text: content
         }), this._monthTextPositionControl(tmp, isCenter, orient, pos, margin))
       });
@@ -72427,7 +72442,7 @@ var CalendarView = /** @class */function (_super) {
     }
     var start = coordSys.getNextNDay(rangeData.end.time, 7 - rangeData.lweek).time;
     var cellSize = [coordSys.getCellWidth(), coordSys.getCellHeight()];
-    margin = parsePercent(margin, Math.min(cellSize[1], cellSize[0]));
+    margin = parsePercent$1(margin, Math.min(cellSize[1], cellSize[0]));
     if (pos === 'start') {
       start = coordSys.getNextNDay(rangeData.start.time, -(7 + rangeData.fweek)).time;
       margin = -margin;
@@ -72439,7 +72454,7 @@ var CalendarView = /** @class */function (_super) {
       day = Math.abs((i + firstDayOfWeek) % 7);
       var weekText = new ZRText({
         z2: 30,
-        style: extend$1(createTextStyle(dayLabel, {
+        style: extend$1(createTextStyle$1(dayLabel, {
           text: nameMap[day]
         }), this._weekTextPositionControl(point, orient, pos, margin, cellSize))
       });
@@ -73162,8 +73177,8 @@ var GraphicComponentView = /** @class */function (_super) {
       // Like 'position:absolut' in css, default 0.
       var elInner = inner$7(el);
       var parentElInner = inner$7(parentEl);
-      elInner.width = parsePercent(elInner.option.width, isParentRoot ? apiWidth : parentElInner.width) || 0;
-      elInner.height = parsePercent(elInner.option.height, isParentRoot ? apiHeight : parentElInner.height) || 0;
+      elInner.width = parsePercent$1(elInner.option.width, isParentRoot ? apiWidth : parentElInner.width) || 0;
+      elInner.height = parsePercent$1(elInner.option.height, isParentRoot ? apiHeight : parentElInner.height) || 0;
     }
     // Bottom-up tranvese all elements (consider ec resize) to locate elements.
     for (var i = elOptions.length - 1; i >= 0; i--) {
@@ -77100,8 +77115,8 @@ var TooltipView = /** @class */function (_super) {
       });
     }
     if (isArray$2(positionExpr)) {
-      x = parsePercent(positionExpr[0], viewWidth);
-      y = parsePercent(positionExpr[1], viewHeight);
+      x = parsePercent$1(positionExpr[0], viewWidth);
+      y = parsePercent$1(positionExpr[1], viewHeight);
     } else if (isObject$3(positionExpr)) {
       var boxLayoutPosition = positionExpr;
       boxLayoutPosition.width = contentSize[0];
@@ -78186,7 +78201,7 @@ var TitleView = /** @class */function (_super) {
     var textAlign = titleModel.get('textAlign');
     var textVerticalAlign = retrieve2(titleModel.get('textBaseline'), titleModel.get('textVerticalAlign'));
     var textEl = new ZRText({
-      style: createTextStyle(textStyleModel, {
+      style: createTextStyle$1(textStyleModel, {
         text: titleModel.get('text'),
         fill: textStyleModel.getTextColor()
       }, {
@@ -78197,7 +78212,7 @@ var TitleView = /** @class */function (_super) {
     var textRect = textEl.getBoundingRect();
     var subText = titleModel.get('subtext');
     var subTextEl = new ZRText({
-      style: createTextStyle(subtextStyleModel, {
+      style: createTextStyle$1(subtextStyleModel, {
         text: subText,
         fill: subtextStyleModel.getTextColor(),
         y: textRect.height + titleModel.get('itemGap'),
@@ -78901,14 +78916,14 @@ var SliderTimelineView = /** @class */function (_super) {
         rotation: layoutInfo.labelRotation - layoutInfo.rotation,
         onclick: bind$1(_this._changeTimeline, _this, dataIndex),
         silent: false,
-        style: createTextStyle(normalLabelModel, {
+        style: createTextStyle$1(normalLabelModel, {
           text: labelItem.formattedLabel,
           align: layoutInfo.labelAlign,
           verticalAlign: layoutInfo.labelBaseline
         })
       });
-      textEl.ensureState('emphasis').style = createTextStyle(hoverLabelModel);
-      textEl.ensureState('progress').style = createTextStyle(progressLabelModel);
+      textEl.ensureState('emphasis').style = createTextStyle$1(hoverLabelModel);
+      textEl.ensureState('progress').style = createTextStyle$1(progressLabelModel);
       group.add(textEl);
       enableHoverEmphasis(textEl);
       labelDataIndexStore(textEl).dataIndex = dataIndex;
@@ -78929,7 +78944,7 @@ var SliderTimelineView = /** @class */function (_super) {
       if (!position) {
         return;
       }
-      var iconSize = parsePercent$1(retrieve2(timelineModel.get(['controlStyle', iconName + 'BtnSize']), controlSize), controlSize);
+      var iconSize = parsePercent$2(retrieve2(timelineModel.get(['controlStyle', iconName + 'BtnSize']), controlSize), controlSize);
       var rect = [0, -iconSize / 2, iconSize, iconSize];
       var btn = makeControlIcon(timelineModel, iconName + 'Icon', rect, {
         x: position[0],
@@ -79669,8 +79684,8 @@ function updateMarkerLayout(mpData, seriesModel, api) {
   mpData.each(function (idx) {
     var itemModel = mpData.getItemModel(idx);
     var point;
-    var xPx = parsePercent(itemModel.get('x'), api.getWidth());
-    var yPx = parsePercent(itemModel.get('y'), api.getHeight());
+    var xPx = parsePercent$1(itemModel.get('x'), api.getWidth());
+    var yPx = parsePercent$1(itemModel.get('y'), api.getHeight());
     if (!isNaN(xPx) && !isNaN(yPx)) {
       point = [xPx, yPx];
     }
@@ -79949,8 +79964,8 @@ function updateSingleMarkerEndLayout(data, idx, isFrom, seriesModel, api) {
   var coordSys = seriesModel.coordinateSystem;
   var itemModel = data.getItemModel(idx);
   var point;
-  var xPx = parsePercent(itemModel.get('x'), api.getWidth());
-  var yPx = parsePercent(itemModel.get('y'), api.getHeight());
+  var xPx = parsePercent$1(itemModel.get('x'), api.getWidth());
+  var yPx = parsePercent$1(itemModel.get('y'), api.getHeight());
   if (!isNaN(xPx) && !isNaN(yPx)) {
     point = [xPx, yPx];
   } else {
@@ -80285,8 +80300,8 @@ function getSingleMarkerEndPoint(data, idx, dims, seriesModel, api) {
   var coordSys = seriesModel.coordinateSystem;
   var itemModel = data.getItemModel(idx);
   var point;
-  var xPx = parsePercent(itemModel.get(dims[0]), api.getWidth());
-  var yPx = parsePercent(itemModel.get(dims[1]), api.getHeight());
+  var xPx = parsePercent$1(itemModel.get(dims[0]), api.getWidth());
+  var yPx = parsePercent$1(itemModel.get(dims[1]), api.getHeight());
   if (!isNaN(xPx) && !isNaN(yPx)) {
     point = [xPx, yPx];
   } else {
@@ -81045,7 +81060,7 @@ var LegendView = /** @class */function (_super) {
     }
     var textColor = isSelected ? textStyleModel.getTextColor() : legendItemModel.get('inactiveColor');
     itemGroup.add(new ZRText({
-      style: createTextStyle(textStyleModel, {
+      style: createTextStyle$1(textStyleModel, {
         text: content,
         x: textX,
         y: itemHeight / 2,
@@ -82707,7 +82722,7 @@ var SliderZoomView = /** @class */function (_super) {
       });
       var bRect = path.getBoundingRect();
       var handleSize = dataZoomModel.get('handleSize');
-      this._handleHeight = parsePercent(handleSize, this._size[1]);
+      this._handleHeight = parsePercent$1(handleSize, this._size[1]);
       this._handleWidth = bRect.width / bRect.height * this._handleHeight;
       path.setStyle(dataZoomModel.getModel('handleStyle').getItemStyle());
       path.style.strokeNoScale = true;
@@ -82724,7 +82739,7 @@ var SliderZoomView = /** @class */function (_super) {
       thisGroup.add(handleLabels[handleIndex] = new ZRText({
         silent: true,
         invisible: true,
-        style: createTextStyle(textStyleModel, {
+        style: createTextStyle$1(textStyleModel, {
           x: 0,
           y: 0,
           text: '',
@@ -82739,7 +82754,7 @@ var SliderZoomView = /** @class */function (_super) {
     // Handle to move. Only visible when brushSelect is set true.
     var actualMoveZone = filler;
     if (brushSelect) {
-      var moveHandleHeight = parsePercent(dataZoomModel.get('moveHandleSize'), size[1]);
+      var moveHandleHeight = parsePercent$1(dataZoomModel.get('moveHandleSize'), size[1]);
       var moveHandle_1 = displayables.moveHandle = new Rect$2({
         style: dataZoomModel.getModel('moveHandleStyle').getItemStyle(),
         silent: true,
@@ -83925,7 +83940,7 @@ var ContinuousView = /** @class */function (_super) {
     var orient = this._orient;
     var textStyleModel = this.visualMapModel.textStyleModel;
     this.group.add(new ZRText({
-      style: createTextStyle(textStyleModel, {
+      style: createTextStyle$1(textStyleModel, {
         x: position[0],
         y: position[1],
         verticalAlign: orient === 'horizontal' ? 'middle' : align,
@@ -83973,7 +83988,7 @@ var ContinuousView = /** @class */function (_super) {
   ContinuousView.prototype._createHandle = function (visualMapModel, mainGroup, handleIndex, itemSize, textSize, orient) {
     var onDrift = bind$1(this._dragHandle, this, handleIndex, false);
     var onDragEnd = bind$1(this._dragHandle, this, handleIndex, true);
-    var handleSize = parsePercent$1(visualMapModel.get('handleSize'), itemSize[0]);
+    var handleSize = parsePercent$2(visualMapModel.get('handleSize'), itemSize[0]);
     var handleThumb = createSymbol$1(visualMapModel.get('handleIcon'), -handleSize / 2, -handleSize / 2, handleSize, handleSize, null, true);
     var cursor = getCursor(this._orient);
     handleThumb.attr({
@@ -84009,7 +84024,7 @@ var ContinuousView = /** @class */function (_super) {
         stop(e.event);
       },
       ondragend: onDragEnd,
-      style: createTextStyle(textStyleModel, {
+      style: createTextStyle$1(textStyleModel, {
         x: 0,
         y: 0,
         text: ''
@@ -84029,7 +84044,7 @@ var ContinuousView = /** @class */function (_super) {
     shapes.handleLabels[handleIndex] = handleLabel;
   };
   ContinuousView.prototype._createIndicator = function (visualMapModel, mainGroup, itemSize, textSize, orient) {
-    var scale = parsePercent$1(visualMapModel.get('indicatorSize'), itemSize[0]);
+    var scale = parsePercent$2(visualMapModel.get('indicatorSize'), itemSize[0]);
     var indicator = createSymbol$1(visualMapModel.get('indicatorIcon'), -scale / 2, -scale / 2, scale, scale, null, true);
     indicator.attr({
       cursor: 'move',
@@ -84056,7 +84071,7 @@ var ContinuousView = /** @class */function (_super) {
     var indicatorLabel = new ZRText({
       silent: true,
       invisible: true,
-      style: createTextStyle(textStyleModel, {
+      style: createTextStyle$1(textStyleModel, {
         x: 0,
         y: 0,
         text: ''
@@ -85132,7 +85147,7 @@ var PiecewiseVisualMapView = /** @class */function (_super) {
     var itemGroup = new Group$3();
     var textStyleModel = this.visualMapModel.textStyleModel;
     itemGroup.add(new ZRText({
-      style: createTextStyle(textStyleModel, {
+      style: createTextStyle$1(textStyleModel, {
         x: showLabel ? itemAlign === 'right' ? itemSize[0] : 0 : itemSize[0] / 2,
         y: itemSize[1] / 2,
         verticalAlign: 'middle',
@@ -114211,7 +114226,7 @@ Grid3DAxis.prototype.update = function (grid3DModel, axisLabelSurface, api) {
 
       var textColor = firstNotNull$1(itemTextStyleModel.get('color'), axisLineColor);
       var textEl = new ZRText({
-        style: createTextStyle(itemTextStyleModel, {
+        style: createTextStyle$1(itemTextStyleModel, {
           text: formattedLabel,
           fill: typeof textColor === 'function' ? textColor( // (1) In category axis with data zoom, tick is not the original
           // index of axis.data. So tick should not be exposed to user
@@ -114244,7 +114259,7 @@ Grid3DAxis.prototype.update = function (grid3DModel, axisLabelSurface, api) {
     p[idx] = p[idx] = (extent[0] + extent[1]) / 2;
     p[otherIdx] = axisModel.get('nameGap');
     var textEl = new ZRText({
-      style: createTextStyle(nameTextStyleModel, {
+      style: createTextStyle$1(nameTextStyleModel, {
         text: axisModel.get('name'),
         fill: labelColor,
         stroke: strokeColor,
@@ -114817,7 +114832,7 @@ var Grid3DView = ComponentView.extend({
 
       var labelColor = labelModel.get('color');
       var textEl = new ZRText({
-        style: createTextStyle(labelModel, {
+        style: createTextStyle$1(labelModel, {
           text: text,
           fill: labelColor || lineColor,
           align: 'left',
@@ -121100,7 +121115,7 @@ LabelsBuilder.prototype.updateLabels = function (highlightDataIndices) {
 
 
     var textEl = new ZRText({
-      style: createTextStyle(labelModel, {
+      style: createTextStyle$1(labelModel, {
         text: text,
         fill: labelModel.get('color') || getItemVisualColor(data, dataIndex) || '#000',
         align: 'left',
@@ -133534,8 +133549,8 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, -1 /* HOISTED */)]));
 }
 
-var css_248z$1 = "#earth[data-v-10712789] {\n  width: 100%;\n  height: 100%;\n}";
-styleInject(css_248z$1);
+var css_248z$2 = "#earth[data-v-10712789] {\n  width: 100%;\n  height: 100%;\n}";
+styleInject(css_248z$2);
 
 script$9.render = render$9;
 script$9.__scopeId = "data-v-10712789";
@@ -133661,8 +133676,8 @@ function render$8(_ctx, _cache, $props, $setup, $data, $options) {
   }) : createCommentVNode("v-if", true)], 512 /* NEED_PATCH */);
 }
 
-var css_248z = "#imooc-container {\n  position: fixed;\n  top: 0;\n  left: 0;\n  overflow: hidden;\n  transform-origin: left top;\n  z-index: 999;\n}";
-styleInject(css_248z);
+var css_248z$1 = "#imooc-container {\n  position: fixed;\n  top: 0;\n  left: 0;\n  overflow: hidden;\n  transform-origin: left top;\n  z-index: 999;\n}";
+styleInject(css_248z$1);
 
 script$8.render = render$8;
 script$8.__file = "src/components/Container/Container.vue";
@@ -134263,125 +134278,893 @@ function LineBar (Vue) {
   Vue.component(script$1.name, script$1);
 }
 
+extendSeriesModel({
+
+    type: 'series.liquidFill',
+
+    optionUpdated: function () {
+        var option = this.option;
+        option.gridSize = Math.max(Math.floor(option.gridSize), 4);
+    },
+
+    getInitialData: function (option, ecModel) {
+        var dimensions = createDimensions(option.data, {
+            coordDimensions: ['value']
+        });
+        var list = new SeriesData(dimensions, this);
+        list.initData(option.data);
+        return list;
+    },
+
+    defaultOption: {
+        color: ['#294D99', '#156ACF', '#1598ED', '#45BDFF'],
+        center: ['50%', '50%'],
+        radius: '50%',
+        amplitude: '8%',
+        waveLength: '80%',
+        phase: 'auto',
+        period: 'auto',
+        direction: 'right',
+        shape: 'circle',
+
+        waveAnimation: true,
+        animationEasing: 'linear',
+        animationEasingUpdate: 'linear',
+        animationDuration: 2000,
+        animationDurationUpdate: 1000,
+
+        outline: {
+            show: true,
+            borderDistance: 8,
+            itemStyle: {
+                color: 'none',
+                borderColor: '#294D99',
+                borderWidth: 8,
+                shadowBlur: 20,
+                shadowColor: 'rgba(0, 0, 0, 0.25)'
+            }
+        },
+
+        backgroundStyle: {
+            color: '#E3F7FF'
+        },
+
+        itemStyle: {
+            opacity: 0.95,
+            shadowBlur: 50,
+            shadowColor: 'rgba(0, 0, 0, 0.4)'
+        },
+
+        label: {
+            show: true,
+            color: '#294D99',
+            insideColor: '#fff',
+            fontSize: 50,
+            fontWeight: 'bold',
+
+            align: 'center',
+            baseline: 'middle',
+            position: 'inside'
+        },
+
+        emphasis: {
+            itemStyle: {
+                opacity: 0.8
+            }
+        }
+    }
+});
+
+var LiquidShape = extendShape({
+    type: 'ec-liquid-fill',
+
+    shape: {
+        waveLength: 0,
+        radius: 0,
+        radiusY: 0,
+        cx: 0,
+        cy: 0,
+        waterLevel: 0,
+        amplitude: 0,
+        phase: 0,
+        inverse: false
+    },
+
+    buildPath: function (ctx, shape) {
+        if (shape.radiusY == null) {
+            shape.radiusY = shape.radius;
+        }
+
+        /**
+         * We define a sine wave having 4 waves, and make sure at least 8 curves
+         * is drawn. Otherwise, it may cause blank area for some waves when
+         * wave length is large enough.
+         */
+        var curves = Math.max(
+            Math.ceil(2 * shape.radius / shape.waveLength * 4) * 2,
+            8
+        );
+
+        // map phase to [-Math.PI * 2, 0]
+        while (shape.phase < -Math.PI * 2) {
+            shape.phase += Math.PI * 2;
+        }
+        while (shape.phase > 0) {
+            shape.phase -= Math.PI * 2;
+        }
+        var phase = shape.phase / Math.PI / 2 * shape.waveLength;
+
+        var left = shape.cx - shape.radius + phase - shape.radius * 2;
+
+        /**
+         * top-left corner as start point
+         *
+         * draws this point
+         *  |
+         * \|/
+         *  ~~~~~~~~
+         *  |      |
+         *  +------+
+         */
+        ctx.moveTo(left, shape.waterLevel);
+
+        /**
+         * top wave
+         *
+         * ~~~~~~~~ <- draws this sine wave
+         * |      |
+         * +------+
+         */
+        var waveRight = 0;
+        for (var c = 0; c < curves; ++c) {
+            var stage = c % 4;
+            var pos = getWaterPositions(c * shape.waveLength / 4, stage,
+                shape.waveLength, shape.amplitude);
+            ctx.bezierCurveTo(pos[0][0] + left, -pos[0][1] + shape.waterLevel,
+                pos[1][0] + left, -pos[1][1] + shape.waterLevel,
+                pos[2][0] + left, -pos[2][1] + shape.waterLevel);
+
+            if (c === curves - 1) {
+                waveRight = pos[2][0];
+            }
+        }
+
+        if (shape.inverse) {
+            /**
+             * top-right corner
+             *                  2. draws this line
+             *                          |
+             *                       +------+
+             * 3. draws this line -> |      | <- 1. draws this line
+             *                       ~~~~~~~~
+             */
+            ctx.lineTo(waveRight + left, shape.cy - shape.radiusY);
+            ctx.lineTo(left, shape.cy - shape.radiusY);
+            ctx.lineTo(left, shape.waterLevel);
+        }
+        else {
+            /**
+             * top-right corner
+             *
+             *                       ~~~~~~~~
+             * 3. draws this line -> |      | <- 1. draws this line
+             *                       +------+
+             *                          ^
+             *                          |
+             *                  2. draws this line
+             */
+            ctx.lineTo(waveRight + left, shape.cy + shape.radiusY);
+            ctx.lineTo(left, shape.cy + shape.radiusY);
+            ctx.lineTo(left, shape.waterLevel);
+        }
+
+        ctx.closePath();
+    }
+});
+
+
+
+/**
+ * Using Bezier curves to fit sine wave.
+ * There is 4 control points for each curve of wave,
+ * which is at 1/4 wave length of the sine wave.
+ *
+ * The control points for a wave from (a) to (d) are a-b-c-d:
+ *          c *----* d
+ *     b *
+ *       |
+ * ... a * ..................
+ *
+ * whose positions are a: (0, 0), b: (0.5, 0.5), c: (1, 1), d: (PI / 2, 1)
+ *
+ * @param {number} x          x position of the left-most point (a)
+ * @param {number} stage      0-3, stating which part of the wave it is
+ * @param {number} waveLength wave length of the sine wave
+ * @param {number} amplitude  wave amplitude
+ */
+function getWaterPositions(x, stage, waveLength, amplitude) {
+    if (stage === 0) {
+        return [
+            [x + 1 / 2 * waveLength / Math.PI / 2, amplitude / 2],
+            [x + 1 / 2 * waveLength / Math.PI,     amplitude],
+            [x + waveLength / 4,                   amplitude]
+        ];
+    }
+    else if (stage === 1) {
+        return [
+            [x + 1 / 2 * waveLength / Math.PI / 2 * (Math.PI - 2),
+            amplitude],
+            [x + 1 / 2 * waveLength / Math.PI / 2 * (Math.PI - 1),
+            amplitude / 2],
+            [x + waveLength / 4,                   0]
+        ]
+    }
+    else if (stage === 2) {
+        return [
+            [x + 1 / 2 * waveLength / Math.PI / 2, -amplitude / 2],
+            [x + 1 / 2 * waveLength / Math.PI,     -amplitude],
+            [x + waveLength / 4,                   -amplitude]
+        ]
+    }
+    else {
+        return [
+            [x + 1 / 2 * waveLength / Math.PI / 2 * (Math.PI - 2),
+            -amplitude],
+            [x + 1 / 2 * waveLength / Math.PI / 2 * (Math.PI - 1),
+            -amplitude / 2],
+            [x + waveLength / 4,                   0]
+        ]
+    }
+}
+
+var parsePercent = parsePercent$1;
+
+function isPathSymbol(symbol) {
+    return symbol && symbol.indexOf('path://') === 0
+}
+
+extendChartView({
+
+    type: 'liquidFill',
+
+    render: function (seriesModel, ecModel, api) {
+        var self = this;
+        var group = this.group;
+        group.removeAll();
+
+        var data = seriesModel.getData();
+
+        var itemModel = data.getItemModel(0);
+
+        var center = itemModel.get('center');
+        var radius = itemModel.get('radius');
+
+        var width = api.getWidth();
+        var height = api.getHeight();
+        var size = Math.min(width, height);
+        // itemStyle
+        var outlineDistance = 0;
+        var outlineBorderWidth = 0;
+        var showOutline = seriesModel.get('outline.show');
+
+        if (showOutline) {
+            outlineDistance = seriesModel.get('outline.borderDistance');
+            outlineBorderWidth = parsePercent(
+                seriesModel.get('outline.itemStyle.borderWidth'), size
+            );
+        }
+
+        var cx = parsePercent(center[0], width);
+        var cy = parsePercent(center[1], height);
+
+        var outterRadius;
+        var innerRadius;
+        var paddingRadius;
+
+        var isFillContainer = false;
+
+        var symbol = seriesModel.get('shape');
+        if (symbol === 'container') {
+            // a shape that fully fills the container
+            isFillContainer = true;
+
+            outterRadius = [
+                width / 2,
+                height / 2
+            ];
+            innerRadius = [
+                outterRadius[0] - outlineBorderWidth / 2,
+                outterRadius[1] - outlineBorderWidth / 2
+            ];
+            paddingRadius = [
+                parsePercent(outlineDistance, width),
+                parsePercent(outlineDistance, height)
+            ];
+
+            radius = [
+                Math.max(innerRadius[0] - paddingRadius[0], 0),
+                Math.max(innerRadius[1] - paddingRadius[1], 0)
+            ];
+        }
+        else {
+            outterRadius = parsePercent(radius, size) / 2;
+            innerRadius = outterRadius - outlineBorderWidth / 2;
+            paddingRadius = parsePercent(outlineDistance, size);
+
+            radius = Math.max(innerRadius - paddingRadius, 0);
+        }
+
+        if (showOutline) {
+            var outline = getOutline();
+            outline.style.lineWidth = outlineBorderWidth;
+            group.add(getOutline());
+        }
+
+        var left = isFillContainer ? 0 : cx - radius;
+        var top = isFillContainer ? 0 : cy - radius;
+
+        var wavePath = null;
+
+        group.add(getBackground());
+
+        // each data item for a wave
+        var oldData = this._data;
+        var waves = [];
+        data.diff(oldData)
+            .add(function (idx) {
+                var wave = getWave(idx, false);
+
+                var waterLevel = wave.shape.waterLevel;
+                wave.shape.waterLevel = isFillContainer ? height / 2 : radius;
+                initProps(wave, {
+                    shape: {
+                        waterLevel: waterLevel
+                    }
+                }, seriesModel);
+
+                wave.z2 = 2;
+                setWaveAnimation(idx, wave, null);
+
+                group.add(wave);
+                data.setItemGraphicEl(idx, wave);
+                waves.push(wave);
+            })
+            .update(function (newIdx, oldIdx) {
+                var waveElement = oldData.getItemGraphicEl(oldIdx);
+
+                // new wave is used to calculate position, but not added
+                var newWave = getWave(newIdx, false, waveElement);
+
+                // changes with animation
+                var shape = {};
+                var shapeAttrs = ['amplitude', 'cx', 'cy', 'phase', 'radius', 'radiusY', 'waterLevel', 'waveLength'];
+                for (var i = 0; i < shapeAttrs.length; ++i) {
+                    var attr = shapeAttrs[i];
+                    if (newWave.shape.hasOwnProperty(attr)) {
+                        shape[attr] = newWave.shape[attr];
+                    }
+                }
+
+                var style = {};
+                var styleAttrs = ['fill', 'opacity', 'shadowBlur', 'shadowColor'];
+                for (var i = 0; i < styleAttrs.length; ++i) {
+                    var attr = styleAttrs[i];
+                    if (newWave.style.hasOwnProperty(attr)) {
+                        style[attr] = newWave.style[attr];
+                    }
+                }
+
+                if (isFillContainer) {
+                    shape.radiusY = height / 2;
+                }
+
+                // changes with animation
+                updateProps$1(waveElement, {
+                    shape: shape,
+                    x: newWave.x,
+                    y: newWave.y
+                }, seriesModel);
+
+                if (seriesModel.isUniversalTransitionEnabled && seriesModel.isUniversalTransitionEnabled()) {
+                    updateProps$1(waveElement, {
+                        style: style
+                    }, seriesModel);
+                }
+                else {
+                    waveElement.useStyle(style);
+                }
+
+                // instant changes
+                var oldWaveClipPath = waveElement.getClipPath();
+                var newWaveClipPath = newWave.getClipPath();
+
+                waveElement.setClipPath(newWave.getClipPath());
+                waveElement.shape.inverse = newWave.inverse;
+
+                if (oldWaveClipPath && newWaveClipPath
+                    && self._shape === symbol
+                    // TODO use zrender morphing to apply complex symbol animation.
+                    && !isPathSymbol(symbol)
+                ) {
+                    // Can be animated.
+                    updateProps$1(newWaveClipPath, {
+                        shape: oldWaveClipPath.shape
+                    }, seriesModel, { isFrom: true });
+                }
+
+                setWaveAnimation(newIdx, waveElement, waveElement);
+                group.add(waveElement);
+                data.setItemGraphicEl(newIdx, waveElement);
+                waves.push(waveElement);
+            })
+            .remove(function (idx) {
+                var wave = oldData.getItemGraphicEl(idx);
+                group.remove(wave);
+            })
+            .execute();
+
+        if (itemModel.get('label.show')) {
+            group.add(getText(waves));
+        }
+
+        this._shape = symbol;
+        this._data = data;
+
+        /**
+         * Get path for outline, background and clipping
+         *
+         * @param {number} r outter radius of shape
+         * @param {boolean|undefined} isForClipping if the shape is used
+         *                                          for clipping
+         */
+        function getPath(r, isForClipping) {
+            if (symbol) {
+                // customed symbol path
+                if (isPathSymbol(symbol)) {
+                    var path = makePath$1(symbol.slice(7), {});
+                    var bouding = path.getBoundingRect();
+                    var w = bouding.width;
+                    var h = bouding.height;
+                    if (w > h) {
+                        h = r * 2 / w * h;
+                        w = r * 2;
+                    }
+                    else {
+                        w = r * 2 / h * w;
+                        h = r * 2;
+                    }
+
+                    var left = isForClipping ? 0 : cx - w / 2;
+                    var top = isForClipping ? 0 : cy - h / 2;
+                    path = makePath$1(
+                        symbol.slice(7),
+                        {},
+                        new BoundingRect(left, top, w, h)
+                    );
+                    if (isForClipping) {
+                        path.x = -w / 2;
+                        path.y = -h / 2;
+                    }
+                    return path;
+                }
+                else if (isFillContainer) {
+                    // fully fill the container
+                    var x = isForClipping ? -r[0] : cx - r[0];
+                    var y = isForClipping ? -r[1] : cy - r[1];
+                    return createSymbol$1(
+                        'rect', x, y, r[0] * 2, r[1] * 2
+                    );
+                }
+                else {
+                    var x = isForClipping ? -r : cx - r;
+                    var y = isForClipping ? -r : cy - r;
+                    if (symbol === 'pin') {
+                        y += r;
+                    }
+                    else if (symbol === 'arrow') {
+                        y -= r;
+                    }
+                    return createSymbol$1(symbol, x, y, r * 2, r * 2);
+                }
+            }
+
+            return new Circle({
+                shape: {
+                    cx: isForClipping ? 0 : cx,
+                    cy: isForClipping ? 0 : cy,
+                    r: r
+                }
+            });
+        }
+        /**
+         * Create outline
+         */
+        function getOutline() {
+            var outlinePath = getPath(outterRadius);
+            outlinePath.style.fill = null;
+
+            outlinePath.setStyle(seriesModel.getModel('outline.itemStyle')
+                .getItemStyle());
+
+            return outlinePath;
+        }
+
+        /**
+         * Create background
+         */
+        function getBackground() {
+            // Seperate stroke and fill, so we can use stroke to cover the alias of clipping.
+            var strokePath = getPath(radius);
+            strokePath.setStyle(seriesModel.getModel('backgroundStyle')
+                .getItemStyle());
+            strokePath.style.fill = null;
+
+            // Stroke is front of wave
+            strokePath.z2 = 5;
+
+            var fillPath = getPath(radius);
+            fillPath.setStyle(seriesModel.getModel('backgroundStyle')
+                .getItemStyle());
+            fillPath.style.stroke = null;
+
+            var group = new Group$3();
+            group.add(strokePath);
+            group.add(fillPath);
+
+            return group;
+        }
+
+        /**
+         * wave shape
+         */
+        function getWave(idx, isInverse, oldWave) {
+            var radiusX = isFillContainer ? radius[0] : radius;
+            var radiusY = isFillContainer ? height / 2 : radius;
+
+            var itemModel = data.getItemModel(idx);
+            var itemStyleModel = itemModel.getModel('itemStyle');
+            var phase = itemModel.get('phase');
+            var amplitude = parsePercent(itemModel.get('amplitude'),
+                radiusY * 2);
+            var waveLength = parsePercent(itemModel.get('waveLength'),
+                radiusX * 2);
+
+            var value = data.get('value', idx);
+            var waterLevel = radiusY - value * radiusY * 2;
+            phase = oldWave ? oldWave.shape.phase
+                : (phase === 'auto' ? idx * Math.PI / 4 : phase);
+            var normalStyle = itemStyleModel.getItemStyle();
+            if (!normalStyle.fill) {
+                var seriesColor = seriesModel.get('color');
+                var id = idx % seriesColor.length;
+                normalStyle.fill = seriesColor[id];
+            }
+
+            var x = radiusX * 2;
+            var wave = new LiquidShape({
+                shape: {
+                    waveLength: waveLength,
+                    radius: radiusX,
+                    radiusY: radiusY,
+                    cx: x,
+                    cy: 0,
+                    waterLevel: waterLevel,
+                    amplitude: amplitude,
+                    phase: phase,
+                    inverse: isInverse
+                },
+                style: normalStyle,
+                x: cx,
+                y: cy,
+            });
+            wave.shape._waterLevel = waterLevel;
+
+            var hoverStyle = itemModel.getModel('emphasis.itemStyle')
+                .getItemStyle();
+            hoverStyle.lineWidth = 0;
+
+            wave.ensureState('emphasis').style = hoverStyle;
+            enableHoverEmphasis(wave);
+
+            // clip out the part outside the circle
+            var clip = getPath(radius, true);
+            // set fill for clipPath, otherwise it will not trigger hover event
+            clip.setStyle({
+                fill: 'white'
+            });
+            wave.setClipPath(clip);
+
+            return wave;
+        }
+
+        function setWaveAnimation(idx, wave, oldWave) {
+            var itemModel = data.getItemModel(idx);
+
+            var maxSpeed = itemModel.get('period');
+            var direction = itemModel.get('direction');
+
+            var value = data.get('value', idx);
+
+            var phase = itemModel.get('phase');
+            phase = oldWave ? oldWave.shape.phase
+                : (phase === 'auto' ? idx * Math.PI / 4 : phase);
+
+            var defaultSpeed = function (maxSpeed) {
+                var cnt = data.count();
+                return cnt === 0 ? maxSpeed : maxSpeed *
+                    (0.2 + (cnt - idx) / cnt * 0.8);
+            };
+            var speed = 0;
+            if (maxSpeed === 'auto') {
+                speed = defaultSpeed(5000);
+            }
+            else {
+                speed = typeof maxSpeed === 'function'
+                    ? maxSpeed(value, idx) : maxSpeed;
+            }
+
+            // phase for moving left/right
+            var phaseOffset = 0;
+            if (direction === 'right' || direction == null) {
+                phaseOffset = Math.PI;
+            }
+            else if (direction === 'left') {
+                phaseOffset = -Math.PI;
+            }
+            else if (direction === 'none') {
+                phaseOffset = 0;
+            }
+            else {
+                console.error('Illegal direction value for liquid fill.');
+            }
+
+            // wave animation of moving left/right
+            if (direction !== 'none' && itemModel.get('waveAnimation')) {
+                wave
+                    .animate('shape', true)
+                    .when(0, {
+                        phase: phase
+                    })
+                    .when(speed / 2, {
+                        phase: phaseOffset + phase
+                    })
+                    .when(speed, {
+                        phase: phaseOffset * 2 + phase
+                    })
+                    .during(function () {
+                        if (wavePath) {
+                            wavePath.dirty(true);
+                        }
+                    })
+                    .start();
+            }
+        }
+
+        /**
+         * text on wave
+         */
+        function getText(waves) {
+            var labelModel = itemModel.getModel('label');
+
+            function formatLabel() {
+                var formatted = seriesModel.getFormattedLabel(0, 'normal');
+                var defaultVal = (data.get('value', 0) * 100);
+                var defaultLabel = data.getName(0) || seriesModel.name;
+                if (!isNaN(defaultVal)) {
+                    defaultLabel = defaultVal.toFixed(0) + '%';
+                }
+                return formatted == null ? defaultLabel : formatted;
+            }
+
+            var textRectOption = {
+                z2: 10,
+                shape: {
+                    x: left,
+                    y: top,
+                    width: (isFillContainer ? radius[0] : radius) * 2,
+                    height: (isFillContainer ? radius[1] : radius) * 2
+                },
+                style: {
+                    fill: 'transparent'
+                },
+                textConfig: {
+                    position: labelModel.get('position') || 'inside'
+                },
+                silent: true
+            };
+            var textOption = {
+                style: {
+                    text: formatLabel(),
+                    textAlign: labelModel.get('align'),
+                    textVerticalAlign: labelModel.get('baseline')
+                }
+            };
+            Object.assign(textOption.style, createTextStyle(labelModel));
+
+            var outsideTextRect = new Rect$2(textRectOption);
+            var insideTextRect = new Rect$2(textRectOption);
+            insideTextRect.disableLabelAnimation = true;
+            outsideTextRect.disableLabelAnimation = true;
+
+            var outsideText = new ZRText(textOption);
+            var insideText = new ZRText(textOption);
+            outsideTextRect.setTextContent(outsideText);
+
+            insideTextRect.setTextContent(insideText);
+            var insColor = labelModel.get('insideColor');
+            insideText.style.fill = insColor;
+
+            var group = new Group$3();
+            group.add(outsideTextRect);
+            group.add(insideTextRect);
+
+            // clip out waves for insideText
+            var boundingCircle = getPath(radius, true);
+
+            wavePath = new CompoundPath({
+                shape: {
+                    paths: waves
+                },
+                x: cx,
+                y: cy
+            });
+
+            wavePath.setClipPath(boundingCircle);
+            insideTextRect.setClipPath(wavePath);
+
+            return group;
+        }
+    },
+
+    dispose: function () {
+        // dispose nothing here
+    }
+});
+
 var script = {
   name: 'Gauge',
-  setup() {
+  props: {
+    percentage: {
+      type: Number,
+      required: true,
+      default: 50
+    },
+    size: {
+      type: Number,
+      required: true,
+      default: 214
+    },
+    color: {
+      type: String,
+      default: '#37cc5b'
+    },
+    labelNumber: {
+      type: String,
+      default: ''
+    },
+    percentSize: {
+      type: Number,
+      default: 60
+    },
+    unitSize: {
+      type: Number,
+      default: 36
+    },
+    padding: {
+      type: Array,
+      default: () => [0, 0, 0, 0]
+    }
+  },
+  setup(props) {
+    const chartContainer = ref(null);
     onMounted(() => {
-      var chartDom = document.getElementById('Gauge');
-      var myChart = init$1(chartDom);
-      var option;
-      const gaugeData = [{
-        value: 20,
-        name: 'Perfect',
-        title: {
-          offsetCenter: ['0%', '-30%']
-        },
-        detail: {
-          valueAnimation: true,
-          offsetCenter: ['0%', '-20%']
-        }
-      }, {
-        value: 40,
-        name: 'Good',
-        title: {
-          offsetCenter: ['0%', '0%']
-        },
-        detail: {
-          valueAnimation: true,
-          offsetCenter: ['0%', '10%']
-        }
-      }, {
-        value: 60,
-        name: 'Commonly',
-        title: {
-          offsetCenter: ['0%', '30%']
-        },
-        detail: {
-          valueAnimation: true,
-          offsetCenter: ['0%', '40%']
-        }
-      }];
-      option = {
+      drawWaterball(props.percentage);
+    });
+    watch(() => props.percentage, newValue => {
+      drawWaterball(newValue);
+    });
+    const drawWaterball = percentage => {
+      const chart = init$1(chartContainer.value);
+      const option = {
         series: [{
-          type: 'gauge',
-          startAngle: 90,
-          endAngle: -270,
-          pointer: {
-            show: false
-          },
-          progress: {
-            show: true,
-            overlap: false,
-            roundCap: true,
-            clip: false,
-            itemStyle: {
-              borderWidth: 1,
-              borderColor: '#464646'
+          type: 'liquidFill',
+          data: [percentage / 100],
+          // 百分比的值，取值范围为0到1
+          color: [props.color],
+          radius: '85%',
+          // 水球图的半径，可以根据需要调整
+          label: {
+            formatter(param) {
+              return ["{a|".concat(props.labelNumber || (param.value * 100).toFixed(0), "}"), '{b|%}'].join('');
+            },
+            rich: {
+              a: {
+                fontSize: props.percentSize,
+                color: '#FFFFFF',
+                fontFamily: 'DINPro',
+                fontWeight: 400
+              },
+              b: {
+                fontSize: props.unitSize,
+                color: '#FFFFFF',
+                fontFamily: 'DINPro-Regular',
+                fontWeight: 400,
+                padding: props.padding
+              }
             }
           },
-          axisLine: {
-            lineStyle: {
-              width: 20
-            }
-          },
-          splitLine: {
-            show: false,
-            distance: 0,
-            length: 10
-          },
-          axisTick: {
-            show: false
-          },
-          axisLabel: {
-            show: false,
-            distance: 50
-          },
-          data: gaugeData,
           title: {
-            fontSize: 14
+            text: "".concat((0.2 * 100).toFixed(0), "{a|%}"),
+            textStyle: {
+              fontSize: 12,
+              fontFamily: 'Microsoft Yahei',
+              fontWeight: 'normal',
+              color: '#bcb8fb',
+              rich: {
+                a: {
+                  fontSize: 10
+                }
+              }
+            },
+            x: 'center',
+            y: '35%'
           },
-          detail: {
-            width: 25,
-            height: 12,
-            fontSize: 7,
-            color: 'inherit',
-            borderColor: 'inherit',
-            borderRadius: 20,
-            borderWidth: 1,
-            formatter: '{value}%'
+          backgroundStyle: {
+            color: {
+              type: 'radial',
+              x: 0.5,
+              y: 0.5,
+              r: 0.8,
+              colorStops: [{
+                offset: 0,
+                color: 'rgba(255, 255, 255, 0)' // 0% 处的颜色
+              }, {
+                offset: 0.5,
+                color: 'rgba(255, 255, 255, 0)' // 0% 处的颜色
+              }, {
+                offset: 1,
+                color: 'rgba(255, 255, 255, 1)' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            }
+          },
+          outline: {
+            borderDistance: 5,
+            itemStyle: {
+              borderWidth: 2,
+              borderColor: props.color,
+              shadowBlur: 30,
+              shadowColor: 'red'
+            }
           }
         }]
       };
-      setInterval(function () {
-        gaugeData[0].value = +(Math.random() * 100).toFixed(2);
-        gaugeData[1].value = +(Math.random() * 100).toFixed(2);
-        gaugeData[2].value = +(Math.random() * 100).toFixed(2);
-        myChart.setOption({
-          series: [{
-            data: gaugeData,
-            pointer: {
-              show: false
-            }
-          }]
-        });
-      }, 2000);
-      option && myChart.setOption(option);
-    });
+      chart.setOption(option);
+    };
+    return {
+      chartContainer
+    };
   }
 };
 
 const _hoisted_1 = {
-  id: "Gauge",
-  style: {
-    "width": "50%",
-    "height": "50%"
-  }
+  class: "waterball-chart"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1);
+  return openBlock(), createElementBlock("div", null, [createElementVNode("div", _hoisted_1, [createCommentVNode(" 用于渲染ECharts图表的DOM元素 "), createElementVNode("div", {
+    ref: "chartContainer",
+    style: normalizeStyle$1({
+      width: $props.size + 'px',
+      height: $props.size + 'px'
+    })
+  }, null, 4 /* STYLE */)])]);
 }
 
+var css_248z = ".waterball-chart[data-v-82bb067a] {\n  display: inline-block;\n  position: relative;\n  width: 214px;\n  height: 214px;\n}";
+styleInject(css_248z);
+
 script.render = render;
+script.__scopeId = "data-v-82bb067a";
 script.__file = "src/components/Gauge/Gauge.vue";
 
 function Gauge (Vue) {

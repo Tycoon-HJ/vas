@@ -1,131 +1,165 @@
+<template>
+  <div>
+    <div class="waterball-chart">
+      <!-- 用于渲染ECharts图表的DOM元素 -->
+      <div ref="chartContainer" :style="{ width: size + 'px', height: size + 'px' }"></div>
+    </div>
+  </div>
+</template>
+
 <script>
-import {onMounted} from 'vue'
+import { ref, onMounted, watch } from 'vue';
 import * as echarts from 'echarts';
+import 'echarts-liquidfill';
 
 export default {
   name: 'Gauge',
-  setup() {
-    onMounted(() => {
-      var chartDom = document.getElementById('Gauge');
-      var myChart = echarts.init(chartDom);
-      var option;
+  props: {
+    percentage: {
+      type: Number,
+      required: true,
+      default: 50,
+    },
+    size: {
+      type: Number,
+      required: true,
+      default: 214,
+    },
+    color: {
+      type: String,
+      default: '#37cc5b',
+    },
+    labelNumber: {
+      type: String,
+      default: '',
+    },
+    percentSize: {
+      type: Number,
+      default: 60,
+    },
+    unitSize: {
+      type: Number,
+      default: 36,
+    },
+    padding: {
+      type: Array,
+      default: () => [0, 0, 0, 0],
+    },
+  },
+  setup(props) {
+    const chartContainer = ref(null);
 
-      const gaugeData = [
-        {
-          value: 20,
-          name: 'Perfect',
-          title: {
-            offsetCenter: ['0%', '-30%']
-          },
-          detail: {
-            valueAnimation: true,
-            offsetCenter: ['0%', '-20%']
-          }
-        },
-        {
-          value: 40,
-          name: 'Good',
-          title: {
-            offsetCenter: ['0%', '0%']
-          },
-          detail: {
-            valueAnimation: true,
-            offsetCenter: ['0%', '10%']
-          }
-        },
-        {
-          value: 60,
-          name: 'Commonly',
-          title: {
-            offsetCenter: ['0%', '30%']
-          },
-          detail: {
-            valueAnimation: true,
-            offsetCenter: ['0%', '40%']
-          }
+    onMounted(() => {
+      drawWaterball(props.percentage);
+    });
+
+    watch(
+        () => props.percentage,
+        (newValue) => {
+          drawWaterball(newValue);
         }
-      ];
-      option = {
+    );
+
+    const drawWaterball = (percentage) => {
+      const chart = echarts.init(chartContainer.value);
+
+      const option = {
         series: [
           {
-            type: 'gauge',
-            startAngle: 90,
-            endAngle: -270,
-            pointer: {
-              show: false
+            type: 'liquidFill',
+            data: [percentage / 100], // 百分比的值，取值范围为0到1
+            color: [props.color],
+            radius: '85%', // 水球图的半径，可以根据需要调整
+            label: {
+              formatter(param) {
+                return [`{a|${props.labelNumber || (param.value * 100).toFixed(0)}}`, '{b|%}'].join('');
+              },
+              rich: {
+                a: {
+                  fontSize: props.percentSize,
+                  color: '#FFFFFF',
+                  fontFamily: 'DINPro',
+                  fontWeight: 400,
+                },
+                b: {
+                  fontSize: props.unitSize,
+                  color: '#FFFFFF',
+                  fontFamily: 'DINPro-Regular',
+                  fontWeight: 400,
+                  padding: props.padding,
+                },
+              },
             },
-            progress: {
-              show: true,
-              overlap: false,
-              roundCap: true,
-              clip: false,
-              itemStyle: {
-                borderWidth: 1,
-                borderColor: '#464646'
-              }
-            },
-            axisLine: {
-              lineStyle: {
-                width: 20
-              }
-            },
-            splitLine: {
-              show: false,
-              distance: 0,
-              length: 10
-            },
-            axisTick: {
-              show: false
-            },
-            axisLabel: {
-              show: false,
-              distance: 50
-            },
-            data: gaugeData,
             title: {
-              fontSize: 14
+              text: `${(0.2 * 100).toFixed(0)}{a|%}`,
+              textStyle: {
+                fontSize: 12,
+                fontFamily: 'Microsoft Yahei',
+                fontWeight: 'normal',
+                color: '#bcb8fb',
+                rich: {
+                  a: {
+                    fontSize: 10,
+                  },
+                },
+              },
+              x: 'center',
+              y: '35%',
             },
-            detail: {
-              width: 25,
-              height: 12,
-              fontSize: 7,
-              color: 'inherit',
-              borderColor: 'inherit',
-              borderRadius: 20,
-              borderWidth: 1,
-              formatter: '{value}%'
-            }
-          }
-        ]
+
+            backgroundStyle: {
+              color: {
+                type: 'radial',
+                x: 0.5,
+                y: 0.5,
+                r: 0.8,
+                colorStops: [
+                  {
+                    offset: 0,
+                    color: 'rgba(255, 255, 255, 0)', // 0% 处的颜色
+                  },
+                  {
+                    offset: 0.5,
+                    color: 'rgba(255, 255, 255, 0)', // 0% 处的颜色
+                  },
+                  {
+                    offset: 1,
+                    color: 'rgba(255, 255, 255, 1)', // 100% 处的颜色
+                  },
+                ],
+                globalCoord: false, // 缺省为 false
+              },
+            },
+
+            outline: {
+              borderDistance: 5,
+              itemStyle: {
+                borderWidth: 2,
+                borderColor: props.color,
+                shadowBlur: 30,
+                shadowColor: 'red',
+              },
+            },
+          },
+        ],
       };
-      setInterval(function () {
-        gaugeData[0].value = +(Math.random() * 100).toFixed(2);
-        gaugeData[1].value = +(Math.random() * 100).toFixed(2);
-        gaugeData[2].value = +(Math.random() * 100).toFixed(2);
-        myChart.setOption({
-          series: [
-            {
-              data: gaugeData,
-              pointer: {
-                show: false
-              }
-            }
-          ]
-        });
-      }, 2000);
 
-      option && myChart.setOption(option);
+      chart.setOption(option);
+    };
 
-
-    });
-  }
-}
+    return {
+      chartContainer,
+    };
+  },
+};
 </script>
 
-<template>
-  <div id="Gauge" style="width: 50%;height: 50%"></div>
-</template>
-
-<style scoped lang="scss">
-
+<style lang="scss" scoped>
+.waterball-chart {
+  display: inline-block;
+  position: relative;
+  width: 214px;
+  height: 214px;
+}
 </style>
+
