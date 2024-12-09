@@ -63,36 +63,62 @@ export default {
         <DatasetLink style="width: 100%;height: 100%"></DatasetLink>
       </div>
       <div class="div12">
-        <div style="display: flex;">
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
         </div>
-        <div style="display: flex;">
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
         </div>
-        <div style="display: flex;">
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
         </div>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+        </div>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+        </div>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+        </div>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+        </div>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+        </div>
+
 
       </div>
       <div class="div13">
-        <div style="display: flex;">
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" ></Block>
         </div>
-        <div style="display: flex;">
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" ></Block>
         </div>
-        <div style="display: flex;">
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" ></Block>
         </div>
-        <div style="display: flex;">
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
-          <Block style="width: 100%;height: 100%;margin: 20px"></Block>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" ></Block>
+        </div>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" ></Block>
+        </div>
+
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" ></Block>
+        </div>
+        <div style="display: flex">
+          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" ></Block>
         </div>
       </div>
     </div>
