@@ -136,9 +136,8 @@ export default {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   border: black solid 1px;
-  //color: white;
-
-  //background-color: rgb(58, 60, 61);
+  color: white;
+  background-color: rgb(30, 43, 38);
 }
 
 .div1 {

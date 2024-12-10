@@ -1,20 +1,20 @@
 <template>
-  <table border="0" cellspacing="0" cellpadding="0">
+  <table>
+    <!-- 设置列宽 -->
     <thead>
-    <tr class="head">
-      <th width="15%">债券代码</th>
-      <th width="20%">债券金额</th>
-    </tr>
+    <th>债券代码</th>
+    <th>债券简称</th>
+    <th>债券面额</th>
     </thead>
   </table>
-
-
-  <vue3-seamless-scroll :list="list" class="scroll">
-
-    <div class="item" v-for="(item, index) in list" :key="index">
-      <span style="margin-left: 30px">{{item.title}}</span>
-      <span style="margin-right: 80px">{{item.date}}</span>
-    </div>
+  <vue3-seamless-scroll :step="0.3" :list="list" class="seamless-warp">
+    <ul>
+      <li v-for="item in list" class="liStyle">
+        <span class="title1 text_align">{{ item.bondCode }}</span>
+        <span class="title2 text_align">{{ item.bondSname }}</span>
+        <span class="title3 text_align">{{ item.bondValue }}</span>
+      </li>
+    </ul>
   </vue3-seamless-scroll>
 </template>
 <script>
@@ -29,40 +29,44 @@ export default defineComponent({
   setup() {
     const list = ref([
       {
-        title: "31726434424",
-        date: 2312.00,
+        bondCode: "233565",
+        bondSname: "24重庆46",
+        bondValue: "2312.00元",
       },
       {
-        title: "31726434424",
-        date: 3453.00,
+        bondCode: "233571",
+        bondSname: "24山西51",
+        bondValue: "13534.00元",
       },
       {
-        title: "31726434",
-        date: 32423,
+        bondCode: "241996",
+        bondSname: "24国金05",
+        bondValue: "8745.00元",
       },
       {
-        title: "31726434",
-        date: 5345,
+        bondCode: "242028",
+        bondSname: "24信投10",
+        bondValue: "6643.00元",
       },
       {
-        title: "31726434",
-        date: 3424,
+        bondCode: "242029",
+        bondSname: "24信投11",
+        bondValue: "897.00元",
       },
       {
-        title: "31726434",
-        date: 5324534,
+        bondCode: "242076",
+        bondSname: "24晋中03",
+        bondValue: "5512.00元",
       },
       {
-        title: "31726434",
-        date: 2352352,
+        bondCode: "242095",
+        bondSname: "24穗投11",
+        bondValue: "262.00元",
       },
       {
-        title: "31726434",
-        date: 674567,
-      },
-      {
-        title: "31726434",
-        date: 657474,
+        bondCode: "256507",
+        bondSname: "24抚旅01",
+        bondValue: "3635.00元",
       },
     ]);
     return { list };
@@ -71,16 +75,46 @@ export default defineComponent({
 </script>
 
 <style>
-.scroll {
-  height: 90%;
-  width: 100%;
-  overflow: hidden;
+
+
+ul {
+  list-style: none;
 }
 
-.scroll .item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 3px 0;
+table {
+  width: 100%;
+  text-align: center;
+  table-layout: fixed;
+}
+
+th {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: rgba(180, 181, 198, 0.1);
+}
+
+.seamless-warp {
+  height: 150px;
+  overflow: hidden;
+
+  .liStyle {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    display: flex;
+    .title1 {
+      width: 33%;
+    }
+    .title2 {
+      width: 33%;
+    }
+    .title3 {
+      width: 33%;
+    }
+    .text_align {
+      text-align: center;
+    }
+  }
 }
 </style>
