@@ -14,6 +14,7 @@ import BarRace from "./components/BarRace";
 import DatasetLink from "./components/DatasetLink";
 import LineBar from "./components/LineBar";
 import Gauge from "./components/Gauge";
+import Radar from "./components/Radar";
 
 export default function (Vue) {
     Vue.component(Test.name, Test);
@@ -29,5 +30,6 @@ export default function (Vue) {
     Vue.use(DatasetLink);
     Vue.use(LineBar);
     Vue.use(Gauge);
+    Vue.use(Radar);
     Vue.use(Container);
 }

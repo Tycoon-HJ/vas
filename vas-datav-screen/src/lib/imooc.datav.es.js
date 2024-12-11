@@ -6,7 +6,7 @@ import 'core-js/modules/es.array.sort.js';
 import 'core-js/modules/es.promise.js';
 import 'core-js/modules/es.number.to-fixed.js';
 
-var script$d = {
+var script$e = {
   name: 'TestComponent',
   setup() {
     const message = 'hello';
@@ -23,14 +23,9 @@ var script$d = {
   }
 };
 
-function render$e(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_Map = resolveComponent("Map");
-  return openBlock(), createElementBlock(Fragment, null, [createCommentVNode("    <imooc-container :options=\"{"), createCommentVNode("      width: 3840,"), createCommentVNode("      height: 2160"), createCommentVNode("    }\">"), createCommentVNode("  &lt;!&ndash;<Calendar></Calendar>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;    <base-scroll-list :config=\"{}\" ></base-scroll-list>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;<Gauge color=\"#4595eb\" size=\"150\" :percentSize=\"43\" :unitSize=\"26\" :padding=\"[10, 0, 0, 0]\"></Gauge>&ndash;&gt;"), createCommentVNode("    </imooc-container>"), createVNode$1(_component_Map, {
-    style: {
-      "width": "100%",
-      "height": "200%"
-    }
-  })], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
+function render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_Radar = resolveComponent("Radar");
+  return openBlock(), createElementBlock(Fragment, null, [createCommentVNode("    <imooc-container :options=\"{"), createCommentVNode("      width: 3840,"), createCommentVNode("      height: 2160"), createCommentVNode("    }\">"), createCommentVNode("  &lt;!&ndash;<Calendar></Calendar>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;    <base-scroll-list :config=\"{}\" ></base-scroll-list>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;<Gauge color=\"#4595eb\" size=\"150\" :percentSize=\"43\" :unitSize=\"26\" :padding=\"[10, 0, 0, 0]\"></Gauge>&ndash;&gt;"), createCommentVNode("    </imooc-container>"), createCommentVNode("  <Map style=\"width: 100%;height: 200%\"></Map>"), createVNode$1(_component_Radar)], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
 }
 
 function styleInject(css, ref) {
@@ -63,8 +58,8 @@ function styleInject(css, ref) {
 var css_248z$6 = "html, body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n#app {\n  width: 100%;\n  height: 100%;\n}\n\n.test {\n  color: red;\n}\n\n.common-icon {\n  color: red;\n}";
 styleInject(css_248z$6);
 
-script$d.render = render$e;
-script$d.__file = "src/components/Test.vue";
+script$e.render = render$f;
+script$e.__file = "src/components/Test.vue";
 
 function unwrapExports (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -135,7 +130,7 @@ unwrapExports(defineProperty$4);
 var css_248z$5 = "\n.icon-wrapper {\n  display: inline-block;\n}\n.icon {\n  width: 100%;\n  height: 100%;\n  vertical-align: -0.15em;\n  fill: currentColor;\n  overflow: hidden;\n}\n";
 styleInject(css_248z$5);
 
-var script$c = {
+var script$d = {
   name: 'SvgAnimation',
   setup() {
     onMounted(() => {
@@ -145,7 +140,7 @@ var script$c = {
   }
 };
 
-function render$d(_ctx, _cache, $props, $setup, $data, $options) {
+function render$e(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", null, _cache[0] || (_cache[0] = [createStaticVNode("<div class=\"container\"><svg height=\"200\" viewBox=\"0 0 500 200\" width=\"500\"><!--      &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;50&quot; fill=&quot;red&quot; transform=&quot;translate(10,10) rotate(30) skewX(30) skewY(30) scale(1.5)&quot;&gt;&lt;/rect&gt;--><!--        [2,-1,50] =&gt; 2*x +(-1)*y + 50 = x\n                    [1,2,0] =&gt; 1*x +2*y + 0 = y\n                    计算用到的x，y是最开始的坐标\n\n        --><rect class=\"rect\" fill=\"none\" height=\"50\" stroke=\"#d1d3d7\" stroke-width=\"2\" transform=\"matrix(2 1 -1 2 50 0)\" width=\"100\" x=\"0\" y=\"0\"></rect></svg><div class=\"container\"><svg height=\"440\" viewBox=\"0 0 440 440\" width=\"440\"><circle cx=\"220\" cy=\"220\" fill=\"none\" r=\"200\" stroke=\"#d1d3d7\" stroke-width=\"20\"></circle><circle class=\"circle\" cx=\"220\" cy=\"220\" fill=\"none\" r=\"200\" stroke=\"#00a5e0\" stroke-width=\"20\" transform=\"matrix(0 -1 1 0 0 440)\"></circle></svg></div><div class=\"container\"><svg height=\"200\" viewBox=\"0 0 200 200\" width=\"200\"><rect fill=\"none\" height=\"200\" stroke=\"grey\" stroke-width=\"8\" width=\"200\" x=\"0\" y=\"0\"></rect><rect class=\"rect-process\" fill=\"none\" height=\"200\" stroke=\"blue\" stroke-width=\"8\" transform=\"matrix(0 1 -1 0 200 0)\" width=\"200\" x=\"0\" y=\"0\"></rect></svg></div></div>", 1), createElementVNode("div", {
     class: "container"
   }, [createElementVNode("svg", {
@@ -168,10 +163,10 @@ function render$d(_ctx, _cache, $props, $setup, $data, $options) {
 var css_248z$4 = ".bg-grey {\n  background-color: grey;\n}\n\n.container svg {\n  border: 1px solid #000000;\n}\n\n.rect {\n  stroke-dasharray: 10 20 30;\n}\n\n.circle {\n  animation: circle 5s linear infinite;\n}\n\n@keyframes circle {\n  from {\n    stroke-dasharray: 0 800;\n  }\n  to {\n    stroke-dasharray: 800 0;\n  }\n}\n.rect-process {\n  animation: rect-process 5s linear infinite;\n}\n\n@keyframes rect-process {\n  from {\n    stroke-dasharray: 0 1257;\n  }\n  to {\n    stroke-dasharray: 1257 0;\n  }\n}\n.logo {\n  fill: none;\n  stroke: #333;\n  stroke-width: 5;\n  animation: logo 5s linear 1 forwards;\n}\n\n@keyframes logo {\n  0% {\n    fill: white;\n    stroke-dasharray: 3908;\n    stroke-dashoffset: 3908;\n  }\n  50% {\n    fill: white;\n    stroke-dasharray: 3908;\n    stroke-dashoffset: 0;\n  }\n  75% {\n    fill: red;\n  }\n  100% {\n    fill: cyan;\n  }\n}\n.line {\n  stroke-dasharray: 400;\n  stroke-dashoffset: 400;\n  transition: stroke-dashoffset 0.5s ease-out;\n}\n\n.line-container:hover .line {\n  stroke-dashoffset: 0;\n}";
 styleInject(css_248z$4);
 
-script$c.render = render$d;
-script$c.__file = "src/components/SvgAnimation/SvgAnimation.vue";
+script$d.render = render$e;
+script$d.__file = "src/components/SvgAnimation/SvgAnimation.vue";
 
-var script$b = {
+var script$c = {
   name: 'ImoocLoading',
   props: {
     width: {
@@ -209,7 +204,7 @@ var script$b = {
   }
 };
 
-const _hoisted_1$a = {
+const _hoisted_1$b = {
   class: "imoocLoading"
 };
 const _hoisted_2$1 = ["height", "width"];
@@ -222,8 +217,8 @@ const _hoisted_8$1 = ["dur", "values"];
 const _hoisted_9$1 = {
   class: "imooc"
 };
-function render$c(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$a, [(openBlock(), createElementBlock("svg", {
+function render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$b, [(openBlock(), createElementBlock("svg", {
     height: $props.height,
     width: $props.width,
     preserveAspectRatio: "xMidYMid meet",
@@ -272,11 +267,11 @@ function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8 /* PROPS */, _hoisted_8$1)], 8 /* PROPS */, _hoisted_6$1)], 8 /* PROPS */, _hoisted_2$1)), createElementVNode("div", _hoisted_9$1, [renderSlot(_ctx.$slots, "default")])]);
 }
 
-script$b.render = render$c;
-script$b.__file = "src/components/ImoocLoading/ImoocLoading.vue";
+script$c.render = render$d;
+script$c.__file = "src/components/ImoocLoading/ImoocLoading.vue";
 
 function ImoocLoading (Vue) {
-  Vue.component(script$b.name, script$b);
+  Vue.component(script$c.name, script$c);
 }
 
 /**
@@ -332,7 +327,7 @@ function v4(options, buf, offset) {
   return unsafeStringify(rnds);
 }
 
-var script$a = {
+var script$b = {
   name: 'FlyBox',
   props: {
     duration: {
@@ -384,7 +379,7 @@ var script$a = {
   }
 };
 
-const _hoisted_1$9 = ["height", "width"];
+const _hoisted_1$a = ["height", "width"];
 const _hoisted_2 = ["id", "d"];
 const _hoisted_3 = ["id"];
 const _hoisted_4 = ["id"];
@@ -395,7 +390,7 @@ const _hoisted_8 = ["href", "mask", "stroke"];
 const _hoisted_9 = {
   class: "imooc-fly-box-content"
 };
-function render$b(_ctx, _cache, $props, $setup, $data, $options) {
+function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     id: "imooc-fly-box",
     ref: $setup.refName,
@@ -443,18 +438,18 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
     mask: "url(#".concat($setup.maskId, ")"),
     stroke: $props.starColor,
     "stroke-width": "3"
-  }, null, 8 /* PROPS */, _hoisted_8)], 8 /* PROPS */, _hoisted_1$9)), createElementVNode("div", _hoisted_9, [renderSlot(_ctx.$slots, "default")])], 512 /* NEED_PATCH */);
+  }, null, 8 /* PROPS */, _hoisted_8)], 8 /* PROPS */, _hoisted_1$a)), createElementVNode("div", _hoisted_9, [renderSlot(_ctx.$slots, "default")])], 512 /* NEED_PATCH */);
 }
 
 var css_248z$3 = ".imooc-fly-box[data-v-513cc2e2] {\n  position: relative;\n  height: 100%;\n  width: 100%;\n}\n.imooc-fly-box svg[data-v-513cc2e2] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n}\n.imooc-fly-box .imooc-fly-box-content[data-v-513cc2e2] {\n  height: 100%;\n  width: 100%;\n  padding: 2px;\n  box-sizing: border-box;\n}";
 styleInject(css_248z$3);
 
-script$a.render = render$b;
-script$a.__scopeId = "data-v-513cc2e2";
-script$a.__file = "src/components/FlyBox/FlyBox.vue";
+script$b.render = render$c;
+script$b.__scopeId = "data-v-513cc2e2";
+script$b.__file = "src/components/FlyBox/FlyBox.vue";
 
 function FlyBox (Vue) {
-  Vue.component(script$a.name, script$a);
+  Vue.component(script$b.name, script$b);
 }
 
 var global$1 = (typeof global !== "undefined" ? global :
@@ -28744,7 +28739,7 @@ var flushPendingActions;
 var triggerUpdatedEvent;
 var bindRenderedEvent;
 var bindMouseEvent;
-var render$a;
+var render$b;
 var renderComponents;
 var renderSeries;
 var createExtensionAPI;
@@ -29744,7 +29739,7 @@ var ECharts = /** @class */function (_super) {
         coordSysMgr.update(ecModel, api);
         clearColorPalette(ecModel);
         scheduler.performVisualTasks(ecModel, payload);
-        render$a(this, ecModel, api, payload, updateParams);
+        render$b(this, ecModel, api, payload, updateParams);
         // Set background
         var backgroundColor = ecModel.get('backgroundColor') || 'transparent';
         var darkMode = ecModel.get('darkMode');
@@ -29815,7 +29810,7 @@ var ECharts = /** @class */function (_super) {
         this._scheduler.performVisualTasks(ecModel, payload, {
           setDirty: true
         });
-        render$a(this, ecModel, this._api, payload, {});
+        render$b(this, ecModel, this._api, payload, {});
         lifecycle.trigger('afterupdate', ecModel, this._api);
       },
       updateVisual: function (payload) {
@@ -30108,7 +30103,7 @@ var ECharts = /** @class */function (_super) {
         });
       }
     }
-    render$a = function (ecIns, ecModel, api, payload, updateParams) {
+    render$b = function (ecIns, ecModel, api, payload, updateParams) {
       allocateZlevels(ecModel);
       renderComponents(ecIns, ecModel, api, payload, updateParams);
       each$f(ecIns._chartsViews, function (chart) {
@@ -47973,7 +47968,7 @@ var IndicatorAxis = /** @class */function (_super) {
   return IndicatorAxis;
 }(Axis);
 
-var Radar = /** @class */function () {
+var Radar$1 = /** @class */function () {
   function Radar(radarModel, ecModel, api) {
     /**
      *
@@ -48119,7 +48114,7 @@ var Radar = /** @class */function () {
 }();
 
 function install$$(registers) {
-  registers.registerCoordinateSystem('radar', Radar);
+  registers.registerCoordinateSystem('radar', Radar$1);
   registers.registerComponentModel(RadarModel);
   registers.registerComponentView(RadarView);
   registers.registerVisual({
@@ -132893,7 +132888,7 @@ function install(registers) {
 
 use(install);
 
-var script$9 = {
+var script$a = {
   name: 'Map',
   props: {
     data: Object
@@ -133531,11 +133526,11 @@ var script$9 = {
   }
 };
 
-const _hoisted_1$8 = {
+const _hoisted_1$9 = {
   class: "earth-wrapper"
 };
-function render$9(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$8, _cache[0] || (_cache[0] = [createElementVNode("div", {
+function render$a(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$9, _cache[0] || (_cache[0] = [createElementVNode("div", {
     id: "earth"
   }, null, -1 /* HOISTED */)]));
 }
@@ -133543,15 +133538,15 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
 var css_248z$2 = "#earth[data-v-10712789] {\n  width: 100%;\n  height: 100%;\n  background-color: rgb(17, 15, 35);\n}";
 styleInject(css_248z$2);
 
-script$9.render = render$9;
-script$9.__scopeId = "data-v-10712789";
-script$9.__file = "src/components/Map/Map.vue";
+script$a.render = render$a;
+script$a.__scopeId = "data-v-10712789";
+script$a.__file = "src/components/Map/Map.vue";
 
 function Map$1 (Vue) {
-  Vue.component(script$9.name, script$9);
+  Vue.component(script$a.name, script$a);
 }
 
-var script$8 = {
+var script$9 = {
   name: 'ImoocContainer',
   props: {
     options: Object
@@ -133658,7 +133653,7 @@ var script$8 = {
   }
 };
 
-function render$8(_ctx, _cache, $props, $setup, $data, $options) {
+function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     id: "imooc-container",
     ref: $setup.refName
@@ -133670,14 +133665,14 @@ function render$8(_ctx, _cache, $props, $setup, $data, $options) {
 var css_248z$1 = "#imooc-container {\n  position: fixed;\n  top: 0;\n  left: 0;\n  overflow: hidden;\n  transform-origin: left top;\n  z-index: 999;\n}";
 styleInject(css_248z$1);
 
-script$8.render = render$8;
-script$8.__file = "src/components/Container/Container.vue";
+script$9.render = render$9;
+script$9.__file = "src/components/Container/Container.vue";
 
 function Container (Vue) {
-  Vue.component(script$8.name, script$8);
+  Vue.component(script$9.name, script$9);
 }
 
-var script$7 = {
+var script$8 = {
   name: "Logo",
   setup() {},
   mounted() {
@@ -133730,25 +133725,25 @@ var script$7 = {
   }
 };
 
-const _hoisted_1$7 = {
+const _hoisted_1$8 = {
   id: "logo",
   style: {
     "width": "400px",
     "height": "400px"
   }
 };
-function render$7(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$7);
+function render$8(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$8);
 }
 
-script$7.render = render$7;
-script$7.__file = "src/components/Logo/Logo.vue";
+script$8.render = render$8;
+script$8.__file = "src/components/Logo/Logo.vue";
 
 function Logo (Vue) {
-  Vue.component(script$7.name, script$7);
+  Vue.component(script$8.name, script$8);
 }
 
-var script$6 = {
+var script$7 = {
   name: 'Calendar',
   setup() {
     onMounted(() => {
@@ -133804,25 +133799,25 @@ var script$6 = {
   }
 };
 
-const _hoisted_1$6 = {
+const _hoisted_1$7 = {
   id: "Calendar",
   style: {
     "width": "100%",
     "height": "100%"
   }
 };
-function render$6(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$6);
+function render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$7);
 }
 
-script$6.render = render$6;
-script$6.__file = "src/components/Calendar/Calendar.vue";
+script$7.render = render$7;
+script$7.__file = "src/components/Calendar/Calendar.vue";
 
 function Calendar (Vue) {
-  Vue.component(script$6.name, script$6);
+  Vue.component(script$7.name, script$7);
 }
 
-var script$5 = {
+var script$6 = {
   name: 'Line',
   setup() {
     onMounted(() => {
@@ -133886,25 +133881,25 @@ var script$5 = {
   }
 };
 
-const _hoisted_1$5 = {
+const _hoisted_1$6 = {
   id: "Line",
   style: {
     "width": "100%",
     "height": "100%"
   }
 };
-function render$5(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$5);
+function render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$6);
 }
 
-script$5.render = render$5;
-script$5.__file = "src/components/Line/Line.vue";
+script$6.render = render$6;
+script$6.__file = "src/components/Line/Line.vue";
 
 function Line (Vue) {
-  Vue.component(script$5.name, script$5);
+  Vue.component(script$6.name, script$6);
 }
 
-var script$4 = {
+var script$5 = {
   name: 'Lines',
   setup() {
     onMounted(() => {
@@ -133969,25 +133964,25 @@ var script$4 = {
   }
 };
 
-const _hoisted_1$4 = {
+const _hoisted_1$5 = {
   id: "Lines",
   style: {
     "width": "100%",
     "height": "100%"
   }
 };
-function render$4(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$4);
+function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$5);
 }
 
-script$4.render = render$4;
-script$4.__file = "src/components/Lines/Lines.vue";
+script$5.render = render$5;
+script$5.__file = "src/components/Lines/Lines.vue";
 
 function Lines (Vue) {
-  Vue.component(script$4.name, script$4);
+  Vue.component(script$5.name, script$5);
 }
 
-var script$3 = {
+var script$4 = {
   name: 'BarRace',
   setup() {
     onMounted(() => {
@@ -134055,25 +134050,25 @@ var script$3 = {
   }
 };
 
-const _hoisted_1$3 = {
+const _hoisted_1$4 = {
   id: "BarRace",
   style: {
     "width": "600px",
     "height": "200px"
   }
 };
-function render$3(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$3);
+function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$4);
 }
 
-script$3.render = render$3;
-script$3.__file = "src/components/BarRace/BarRace.vue";
+script$4.render = render$4;
+script$4.__file = "src/components/BarRace/BarRace.vue";
 
 function BarRace (Vue) {
-  Vue.component(script$3.name, script$3);
+  Vue.component(script$4.name, script$4);
 }
 
-var script$2 = {
+var script$3 = {
   name: 'DatasetLink',
   setup() {
     onMounted(() => {
@@ -134170,25 +134165,25 @@ var script$2 = {
   }
 };
 
-const _hoisted_1$2 = {
+const _hoisted_1$3 = {
   id: "DatasetLink",
   style: {
     "width": "600px",
     "height": "200px"
   }
 };
-function render$2(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$2);
+function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$3);
 }
 
-script$2.render = render$2;
-script$2.__file = "src/components/DatasetLink/DatasetLink.vue";
+script$3.render = render$3;
+script$3.__file = "src/components/DatasetLink/DatasetLink.vue";
 
 function DatasetLink (Vue) {
-  Vue.component(script$2.name, script$2);
+  Vue.component(script$3.name, script$3);
 }
 
-var script$1 = {
+var script$2 = {
   name: 'LineBar',
   setup() {
     onMounted(() => {
@@ -134287,22 +134282,22 @@ var script$1 = {
   }
 };
 
-const _hoisted_1$1 = {
+const _hoisted_1$2 = {
   id: "LineBar",
   style: {
     "width": "600px",
     "height": "200px"
   }
 };
-function render$1(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$1);
+function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$2);
 }
 
-script$1.render = render$1;
-script$1.__file = "src/components/LineBar/LineBar.vue";
+script$2.render = render$2;
+script$2.__file = "src/components/LineBar/LineBar.vue";
 
 function LineBar (Vue) {
-  Vue.component(script$1.name, script$1);
+  Vue.component(script$2.name, script$2);
 }
 
 extendSeriesModel({
@@ -135048,7 +135043,7 @@ extendChartView({
     }
 });
 
-var script = {
+var script$1 = {
   name: 'Gauge',
   props: {
     percentage: {
@@ -135174,11 +135169,11 @@ var script = {
   }
 };
 
-const _hoisted_1 = {
+const _hoisted_1$1 = {
   class: "waterball-chart"
 };
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", null, [createElementVNode("div", _hoisted_1, [createCommentVNode(" 用于渲染ECharts图表的DOM元素 "), createElementVNode("div", {
+function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", null, [createElementVNode("div", _hoisted_1$1, [createCommentVNode(" 用于渲染ECharts图表的DOM元素 "), createElementVNode("div", {
     ref: "chartContainer",
     style: normalizeStyle$1({
       width: $props.size + 'px',
@@ -135190,17 +135185,109 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 var css_248z = ".waterball-chart[data-v-82bb067a] {\n  display: inline-block;\n  position: relative;\n  width: 117px;\n  height: 167px;\n}";
 styleInject(css_248z);
 
-script.render = render;
-script.__scopeId = "data-v-82bb067a";
-script.__file = "src/components/Gauge/Gauge.vue";
+script$1.render = render$1;
+script$1.__scopeId = "data-v-82bb067a";
+script$1.__file = "src/components/Gauge/Gauge.vue";
 
 function Gauge (Vue) {
+  Vue.component(script$1.name, script$1);
+}
+
+var script = {
+  name: 'Radar',
+  setup() {
+    onMounted(() => {
+      var chartDom = document.getElementById('Radar');
+      var myChart = init$1(chartDom);
+      var option;
+      option = {
+        tooltip: {
+          trigger: 'item'
+        },
+        legend: {
+          type: 'scroll',
+          bottom: 10,
+          data: function () {
+            var list = [];
+            for (var i = 1; i <= 28; i++) {
+              list.push(i + 2000 + '');
+            }
+            return list;
+          }()
+        },
+        visualMap: {
+          top: 'middle',
+          right: 10,
+          color: ['red', 'yellow'],
+          calculable: true
+        },
+        radar: {
+          indicator: [{
+            text: 'IE8-',
+            max: 400
+          }, {
+            text: 'IE9+',
+            max: 400
+          }, {
+            text: 'Safari',
+            max: 400
+          }, {
+            text: 'Firefox',
+            max: 400
+          }, {
+            text: 'Chrome',
+            max: 400
+          }]
+        },
+        series: function () {
+          var series = [];
+          for (var i = 1; i <= 28; i++) {
+            series.push({
+              type: 'radar',
+              symbol: 'none',
+              lineStyle: {
+                width: 1
+              },
+              emphasis: {
+                areaStyle: {
+                  color: 'rgba(0,250,0,0.3)'
+                }
+              },
+              data: [{
+                value: [(40 - i) * 10, (38 - i) * 4 + 60, i * 5 + 10, i * 9, i * i / 2],
+                name: i + 2000 + ''
+              }]
+            });
+          }
+          return series;
+        }()
+      };
+      option && myChart.setOption(option);
+    });
+  }
+};
+
+const _hoisted_1 = {
+  id: "Radar",
+  style: {
+    "width": "100%",
+    "height": "100%"
+  }
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1);
+}
+
+script.render = render;
+script.__file = "src/components/Radar/Radar.vue";
+
+function Radar (Vue) {
   Vue.component(script.name, script);
 }
 
 function index (Vue) {
+  Vue.component(script$e.name, script$e);
   Vue.component(script$d.name, script$d);
-  Vue.component(script$c.name, script$c);
   Vue.use(ImoocLoading);
   Vue.use(FlyBox);
   Vue.use(Map$1);
@@ -135212,6 +135299,7 @@ function index (Vue) {
   Vue.use(DatasetLink);
   Vue.use(LineBar);
   Vue.use(Gauge);
+  Vue.use(Radar);
   Vue.use(Container);
 }
 

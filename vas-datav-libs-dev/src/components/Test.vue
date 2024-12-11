@@ -8,8 +8,9 @@
 <!--  &lt;!&ndash;    <base-scroll-list :config="{}" ></base-scroll-list>&ndash;&gt;-->
 <!--  &lt;!&ndash;<Gauge color="#4595eb" size="150" :percentSize="43" :unitSize="26" :padding="[10, 0, 0, 0]"></Gauge>&ndash;&gt;-->
 <!--    </imooc-container>-->
-  <Map style="width: 100%;height: 200%"></Map>
-
+<!--  <Map style="width: 100%;height: 200%"></Map>-->
+<!--<Radar></Radar>-->
+  <FlyBox>11111</FlyBox>
 </template>
 <script>
 import {computed, ref} from 'vue'

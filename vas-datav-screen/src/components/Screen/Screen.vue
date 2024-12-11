@@ -7,7 +7,7 @@ import Block from "@/components/Block/Block.vue";
 
 export default {
   name: 'Screen',
-  components: { Block, CarouseLTables, Kpi, CarouseLTable},
+  components: {Block, CarouseLTables, Kpi, CarouseLTable},
   setup() {
     let totalData = ref({
       "total": "6794739",
@@ -32,23 +32,29 @@ export default {
         <Logo style="width: 100%;height: 100%"></Logo>
       </div>
       <div class=" div2">
+        <FlyBox>
           <Kpi class="opacity-50 bg-slate-800 " :data="totalData"/>
+        </FlyBox>
       </div>
       <div class="div3">
         <Map style="width: 100%;height: 100%"></Map>
       </div>
       <div class="div4">
-        <Gauge color="#4595eb" size="190"  percentage="99" style="width: 99%;height: 80%"></Gauge>
+        <Gauge color="#4595eb" size="190" percentage="99" style="width: 99%;height: 80%"></Gauge>
       </div>
       <div class="div5">
-        <CarouseLTable style="width: 100%;height: 100%"></CarouseLTable>
+        <FlyBox>
+          <CarouseLTable style="width: 100%;height: 100%"></CarouseLTable>
+        </FlyBox>
       </div>
       <div class="div6">
-        <CarouseLTables style="width: 100%;height: 100%"></CarouseLTables>
+        <FlyBox>
+
+          <CarouseLTables style="width: 100%;height: 100%"></CarouseLTables>
+        </FlyBox>
       </div>
       <div class="div7">
         <Line style="width: 100%;height: 100%"></Line>
-
       </div>
       <div class="div8">
         <LineBar style="width: 100%;height: 100%"></LineBar>
@@ -64,54 +70,54 @@ export default {
       </div>
       <div class="div12">
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" title="债券简称" value="24国开15" ></Block>
+          <FlyBox>
+            <Block style="width: 100%;height: 40%" title="债券简称" value="24国开15"></Block>
+          </FlyBox>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" title="待偿期" value="9.60Y" ></Block>
+          <FlyBox>
+            <Block style="width: 100%;height: 40%" title="待偿期" value="9.60Y"></Block>
+          </FlyBox>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" title="成交" value="103.10" ></Block>
+          <FlyBox>
+            <Block style="width: 100%;height: 30%" title="成交" value="103.10"></Block>
+          </FlyBox>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" title="最新收益率" value="1.9025" ></Block>
+          <FlyBox>
+            <Block style="width: 100%;height: 40%" title="最新收益率" value="1.9025"></Block>
+          </FlyBox>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" title="涨跌(BP)" value="1.91" ></Block>
+          <FlyBox>
+            <Block style="width: 100%;height: 40%" title="涨跌(BP)" value="1.91"></Block>
+          </FlyBox>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" title="加权收益率" value="1.9205" ></Block>
+          <FlyBox>
+            <Block style="width: 100%;height: 40%" title="加权收益率" value="1.9205"></Block>
+          </FlyBox>
         </div>
-
-
+        <div style="display: flex">
+          <FlyBox>
+            <Block style="width: 100%;height: 40%" title="交易量" value="2443.03"></Block>
+          </FlyBox>
+        </div>
+        <div style="display: flex">
+          <FlyBox>
+            <Block style="width: 100%;height: 40%" title="买入" value="106.68"></Block>
+          </FlyBox>
+        </div>
+        <div style="display: flex">
+          <FlyBox>
+            <Block style="width: 100%;height: 40%" title="卖出" value="107.96"></Block>
+          </FlyBox>
+        </div>
 
       </div>
       <div class="div13">
-        <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
-          <Block style="width: 100%;height: 40%" ></Block>
-        </div>
-        <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
-          <Block style="width: 100%;height: 40%" ></Block>
-        </div>
-        <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
-          <Block style="width: 100%;height: 40%" ></Block>
-        </div>
-        <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
-          <Block style="width: 100%;height: 40%" ></Block>
-        </div>
-        <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
-          <Block style="width: 100%;height: 40%" ></Block>
-        </div>
-
-        <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
-          <Block style="width: 100%;height: 40%" ></Block>
-        </div>
-
+        <Radar style="width: 100%;height: 100%"></Radar>
       </div>
     </div>
 
