@@ -7,7 +7,6 @@
 <script>
 import * as echarts from 'echarts';
 import 'echarts-gl'
-import {watch, ref} from 'vue'
 
 export default {
   name: 'Map',
@@ -466,7 +465,7 @@ export default {
     }
     for (var n = 0; n < year.length; n++) {
       optionXyMap01.options.push({
-        backgroundColor: '#424446',
+        backgroundColor: '#110f23',
         title: [{
           text: '增值服务监控',
           subtext: '数据由上清所大数据提供',
@@ -649,7 +648,7 @@ export default {
         ]
       })
     }
-    echarts.init(document.getElementById('earth')).setOption(optionXyMap01)
+    echarts.init(document.getElementById('earth'),'dark').setOption(optionXyMap01)
   }
 }
 </script>
@@ -658,5 +657,6 @@ export default {
 #earth {
   width: 100%;
   height: 100%;
+  background-color: rgb(17, 15, 35);
 }
 </style>

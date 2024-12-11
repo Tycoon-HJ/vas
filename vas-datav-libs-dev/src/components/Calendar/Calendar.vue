@@ -1,13 +1,14 @@
 <script>
 import {onMounted} from 'vue'
 import * as echarts from 'echarts';
+
 export default {
   name: 'Calendar',
   setup() {
     onMounted(() => {
 
       var chartDom = document.getElementById('Calendar');
-      var myChart = echarts.init(chartDom);
+      var myChart = echarts.init(chartDom, 'dark');
       var option;
 
       function getVirtualData(year) {
@@ -23,6 +24,7 @@ export default {
         }
         return data;
       }
+
       option = {
         title: {
           top: 30,
@@ -47,7 +49,7 @@ export default {
           itemStyle: {
             borderWidth: 0.5
           },
-          yearLabel: { show: false }
+          yearLabel: {show: false}
         },
         series: {
           type: 'heatmap',
@@ -64,9 +66,9 @@ export default {
 </script>
 
 <template>
-<div id="Calendar" style="width: 100%;height: 100%"></div>
+  <div id="Calendar" style="width: 100%;height: 100%"></div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>

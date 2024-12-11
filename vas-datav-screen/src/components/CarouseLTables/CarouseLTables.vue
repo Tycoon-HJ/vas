@@ -73,7 +73,7 @@ export default defineComponent({
     onMounted(() => {
       intervalId = setInterval(() => {
         flag.value = !flag.value;
-      }, 90000); // 1000毫秒，即1秒
+      }, 5000); // 1000毫秒，即1秒
     });
     // 在组件卸载时清除定时器，防止内存泄漏
     onUnmounted(() => {

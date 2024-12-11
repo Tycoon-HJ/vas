@@ -7,7 +7,7 @@ export default {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('DatasetLink');
-      var myChart = echarts.init(chartDom);
+      var myChart = echarts.init(chartDom, 'dark');
       var option;
 
       setTimeout(function () {
@@ -26,33 +26,33 @@ export default {
               ['Walnut Brownie', 25.2, 37.1, 41.2, 18, 33.9, 49.1]
             ]
           },
-          xAxis: { type: 'category' },
-          yAxis: { gridIndex: 0 },
-          grid: { top: '55%' },
+          xAxis: {type: 'category'},
+          yAxis: {gridIndex: 0},
+          grid: {top: '55%'},
           series: [
             {
               type: 'line',
               smooth: true,
               seriesLayoutBy: 'row',
-              emphasis: { focus: 'series' }
+              emphasis: {focus: 'series'}
             },
             {
               type: 'line',
               smooth: true,
               seriesLayoutBy: 'row',
-              emphasis: { focus: 'series' }
+              emphasis: {focus: 'series'}
             },
             {
               type: 'line',
               smooth: true,
               seriesLayoutBy: 'row',
-              emphasis: { focus: 'series' }
+              emphasis: {focus: 'series'}
             },
             {
               type: 'line',
               smooth: true,
               seriesLayoutBy: 'row',
-              emphasis: { focus: 'series' }
+              emphasis: {focus: 'series'}
             },
             {
               type: 'pie',
@@ -105,6 +105,6 @@ export default {
   <div id="DatasetLink" style="width: 600px;height: 200px"></div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>

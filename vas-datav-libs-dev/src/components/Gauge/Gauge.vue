@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { ref, onMounted, watch } from 'vue';
+import {onMounted, ref, watch} from 'vue';
 import * as echarts from 'echarts';
 import 'echarts-liquidfill';
 
@@ -61,7 +61,7 @@ export default {
     );
 
     const drawWaterball = (percentage) => {
-      const chart = echarts.init(chartContainer.value);
+      const chart = echarts.init(chartContainer.value, 'dark');
 
       const option = {
         series: [
@@ -158,8 +158,8 @@ export default {
 .waterball-chart {
   display: inline-block;
   position: relative;
-  width: 214px;
-  height: 214px;
+  width: 117px;
+  height: 167px;
 }
 </style>
 

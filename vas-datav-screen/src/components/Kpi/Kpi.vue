@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6">
+  <div class="p-6" style="opacity:1;  background-color: rgb(15, 12, 40);">
     <div class="text-center text-slate-300">
       数据总量:
       <span ref="totalCountTarget" class="text-gradient font-[Electronic] text-7xl ml-2 mr-2 font-bold">679,473,929</span>

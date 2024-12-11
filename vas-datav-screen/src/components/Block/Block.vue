@@ -1,17 +1,16 @@
 <script setup>
-
+import {ref} from 'vue'
+let props = defineProps({
+  title: { type: String },
+  value: { type: String },
+});
 </script>
 
 <template>
   <div class="gradient-border">
-    <div class="block-title">利率</div>
-    <br />12233.00
+    <div class="block-title">{{title}}</div>
+    <br />{{value}}
   </div>
-  <div class="gradient-border">
-    <div class="block-title">利率</div>
-    <br />12233.00
-  </div>
-
 </template>
 
 <style scoped lang="scss">
@@ -19,7 +18,7 @@
   font-size: 18px;
 }
 .gradient-border {
-  margin: 3px;
+  margin: 8px;
   --border-width: 3px;
   position: relative;
   display: flex;

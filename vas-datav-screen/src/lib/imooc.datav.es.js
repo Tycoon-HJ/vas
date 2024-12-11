@@ -1,4 +1,4 @@
-import { ref, computed, resolveComponent, openBlock, createBlock, withCtx, createCommentVNode, createVNode as createVNode$1, onMounted, createElementBlock, createStaticVNode, createElementVNode, renderSlot, getCurrentInstance, onUnmounted, nextTick as nextTick$1, watch, normalizeStyle as normalizeStyle$1 } from 'vue';
+import { ref, computed, resolveComponent, openBlock, createElementBlock, Fragment, createCommentVNode, createVNode as createVNode$1, onMounted, createStaticVNode, createElementVNode, renderSlot, getCurrentInstance, onUnmounted, nextTick as nextTick$1, watch, normalizeStyle as normalizeStyle$1 } from 'vue';
 import 'core-js/modules/esnext.iterator.constructor.js';
 import 'core-js/modules/esnext.iterator.filter.js';
 import 'core-js/modules/esnext.iterator.for-each.js';
@@ -25,21 +25,12 @@ var script$d = {
 
 function render$e(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_Map = resolveComponent("Map");
-  const _component_imooc_container = resolveComponent("imooc-container");
-  return openBlock(), createBlock(_component_imooc_container, {
-    options: {
-      width: 3840,
-      height: 2160
+  return openBlock(), createElementBlock(Fragment, null, [createCommentVNode("    <imooc-container :options=\"{"), createCommentVNode("      width: 3840,"), createCommentVNode("      height: 2160"), createCommentVNode("    }\">"), createCommentVNode("  &lt;!&ndash;<Calendar></Calendar>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;    <base-scroll-list :config=\"{}\" ></base-scroll-list>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;<Gauge color=\"#4595eb\" size=\"150\" :percentSize=\"43\" :unitSize=\"26\" :padding=\"[10, 0, 0, 0]\"></Gauge>&ndash;&gt;"), createCommentVNode("    </imooc-container>"), createVNode$1(_component_Map, {
+    style: {
+      "width": "100%",
+      "height": "200%"
     }
-  }, {
-    default: withCtx(() => [createCommentVNode("<Calendar></Calendar>"), createCommentVNode("    <base-scroll-list :config=\"{}\" ></base-scroll-list>"), createCommentVNode("<Gauge color=\"#4595eb\" size=\"150\" :percentSize=\"43\" :unitSize=\"26\" :padding=\"[10, 0, 0, 0]\"></Gauge>"), createVNode$1(_component_Map, {
-      style: {
-        "width": "100px",
-        "height": "200px"
-      }
-    })]),
-    _: 1 /* STABLE */
-  });
+  })], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
 }
 
 function styleInject(css, ref) {
@@ -141,7 +132,7 @@ module.exports = _defineProperty, module.exports.__esModule = true, module.expor
 
 unwrapExports(defineProperty$4);
 
-var css_248z$5 = "\n.icon-wrapper{\n  display: inline-block;\n}\n.icon {\n  width: 100%;\n  height: 100%;\n  vertical-align: -0.15em;\n  fill: currentColor;\n  overflow: hidden;\n}\n";
+var css_248z$5 = "\n.icon-wrapper {\n  display: inline-block;\n}\n.icon {\n  width: 100%;\n  height: 100%;\n  vertical-align: -0.15em;\n  fill: currentColor;\n  overflow: hidden;\n}\n";
 styleInject(css_248z$5);
 
 var script$c = {
@@ -155,12 +146,12 @@ var script$c = {
 };
 
 function render$d(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", null, _cache[0] || (_cache[0] = [createStaticVNode("<div class=\"container\"><svg width=\"500\" height=\"200\" viewBox=\"0 0 500 200\"><!--      &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;50&quot; fill=&quot;red&quot; transform=&quot;translate(10,10) rotate(30) skewX(30) skewY(30) scale(1.5)&quot;&gt;&lt;/rect&gt;--><!--        [2,-1,50] =&gt; 2*x +(-1)*y + 50 = x\n                    [1,2,0] =&gt; 1*x +2*y + 0 = y\n                    计算用到的x，y是最开始的坐标\n\n        --><rect class=\"rect\" x=\"0\" y=\"0\" width=\"100\" height=\"50\" stroke-width=\"2\" stroke=\"#d1d3d7\" fill=\"none\" transform=\"matrix(2 1 -1 2 50 0)\"></rect></svg><div class=\"container\"><svg width=\"440\" height=\"440\" viewBox=\"0 0 440 440\"><circle cx=\"220\" cy=\"220\" r=\"200\" stroke-width=\"20\" stroke=\"#d1d3d7\" fill=\"none\"></circle><circle class=\"circle\" cx=\"220\" cy=\"220\" r=\"200\" stroke-width=\"20\" stroke=\"#00a5e0\" fill=\"none\" transform=\"matrix(0 -1 1 0 0 440)\"></circle></svg></div><div class=\"container\"><svg width=\"200\" height=\"200\" viewBox=\"0 0 200 200\"><rect x=\"0\" y=\"0\" width=\"200\" height=\"200\" stroke-width=\"8\" stroke=\"grey\" fill=\"none\"></rect><rect class=\"rect-process\" x=\"0\" y=\"0\" width=\"200\" height=\"200\" stroke-width=\"8\" stroke=\"blue\" fill=\"none\" transform=\"matrix(0 1 -1 0 200 0)\"></rect></svg></div></div>", 1), createElementVNode("div", {
+  return openBlock(), createElementBlock("div", null, _cache[0] || (_cache[0] = [createStaticVNode("<div class=\"container\"><svg height=\"200\" viewBox=\"0 0 500 200\" width=\"500\"><!--      &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;50&quot; fill=&quot;red&quot; transform=&quot;translate(10,10) rotate(30) skewX(30) skewY(30) scale(1.5)&quot;&gt;&lt;/rect&gt;--><!--        [2,-1,50] =&gt; 2*x +(-1)*y + 50 = x\n                    [1,2,0] =&gt; 1*x +2*y + 0 = y\n                    计算用到的x，y是最开始的坐标\n\n        --><rect class=\"rect\" fill=\"none\" height=\"50\" stroke=\"#d1d3d7\" stroke-width=\"2\" transform=\"matrix(2 1 -1 2 50 0)\" width=\"100\" x=\"0\" y=\"0\"></rect></svg><div class=\"container\"><svg height=\"440\" viewBox=\"0 0 440 440\" width=\"440\"><circle cx=\"220\" cy=\"220\" fill=\"none\" r=\"200\" stroke=\"#d1d3d7\" stroke-width=\"20\"></circle><circle class=\"circle\" cx=\"220\" cy=\"220\" fill=\"none\" r=\"200\" stroke=\"#00a5e0\" stroke-width=\"20\" transform=\"matrix(0 -1 1 0 0 440)\"></circle></svg></div><div class=\"container\"><svg height=\"200\" viewBox=\"0 0 200 200\" width=\"200\"><rect fill=\"none\" height=\"200\" stroke=\"grey\" stroke-width=\"8\" width=\"200\" x=\"0\" y=\"0\"></rect><rect class=\"rect-process\" fill=\"none\" height=\"200\" stroke=\"blue\" stroke-width=\"8\" transform=\"matrix(0 1 -1 0 200 0)\" width=\"200\" x=\"0\" y=\"0\"></rect></svg></div></div>", 1), createElementVNode("div", {
     class: "container"
   }, [createElementVNode("svg", {
+    height: "200",
     viewBox: "0 0 1024 1024",
-    width: "200",
-    height: "200"
+    width: "200"
   }, [createElementVNode("path", {
     class: "logo",
     d: "M411.26 739.49c-45.99 0-91.96-1.86-137.62-5.58-93.82-7.92-160-73.91-161.01-160.47-0.49-42.65 15.56-83.19 45.2-114.17 29.66-30.99 69.46-48.79 112.08-50.11 61.66-1.91 118.3 30.53 147.83 84.67 4.63 8.48 1.5 19.12-6.98 23.74-8.49 4.63-19.11 1.5-23.74-6.98-23.18-42.48-67.64-67.95-116.02-66.45-33.4 1.04-64.61 15-87.88 39.32-23.27 24.32-35.87 56.13-35.49 89.57 0.39 33.69 13.02 63.55 36.54 86.36 23.17 22.48 55.98 36.56 92.37 39.63 88.83 7.24 178.96 7.28 267.84 0.13l1.97-0.16c130.46-8.42 221.76-99.07 222.01-220.44 0.12-58.95-22.5-114.35-63.7-156-41.2-41.65-96.35-64.86-155.28-65.36h-1.94c-34.26 0-67.09 7.63-97.6 22.69-29.64 14.63-56.1 36.18-76.52 62.31l-0.28 0.35c-0.16 0.2-17.31 21.18-24.16 39.17-3.44 9.03-13.55 13.56-22.58 10.12-9.03-3.44-13.56-13.55-10.12-22.58 8.61-22.6 27.62-46.22 29.7-48.78 23.62-30.18 54.21-55.07 88.48-71.99 36.04-17.79 74.85-26.67 115.33-26.3 68.24 0.57 132.12 27.47 179.87 75.75 47.74 48.27 73.96 112.43 73.81 180.68-0.07 34.54-6.51 67.52-19.15 98.01-12.32 29.75-30.21 56.4-53.18 79.22-22.82 22.68-50 40.92-80.76 54.2-31.24 13.49-65.4 21.51-101.54 23.86l-1.56 0.12c-45.09 3.63-90.5 5.44-135.91 5.44z",
@@ -171,7 +162,7 @@ function render$d(_ctx, _cache, $props, $setup, $data, $options) {
     d: "M781.38 734.62c-13.41 0-33.48-0.93-58.57-4.83-9.55-1.49-16.09-10.43-14.6-19.98s10.43-16.08 19.98-14.6c41.75 6.49 67.92 3.89 68.18 3.86l0.73-0.06c25.35-1.64 46.44-10.36 60.99-25.21 14-14.29 21.41-33.69 21.41-56.1 0-44.81-36.46-81.27-81.27-81.27-9.67 0-17.5-7.83-17.5-17.5s7.83-17.5 17.5-17.5c64.11 0 116.27 52.16 116.27 116.27s-46.12 111.62-114.82 116.21c-1.74 0.17-8.09 0.71-18.3 0.71zM836.82 833.02H212.78c-9.67 0-17.5-7.83-17.5-17.5s7.83-17.5 17.5-17.5h624.04c9.67 0 17.5 7.83 17.5 17.5s-7.83 17.5-17.5 17.5z",
     fill: "#333333",
     "p-id": "1406"
-  })])], -1 /* HOISTED */), createStaticVNode("<div class=\"container\"><svg class=\"line-container\" viewBox=\"0 0 400 400\" width=\"400\" height=\"400\"><line class=\"line\" x1=\"0\" y1=\"20\" x2=\"400\" y2=\"20\" fill=\"none\" stroke-width=\"20\" stroke=\"red\"></line> / </svg></div><div class=\"container\"><svg width=\"200\" height=\"200\"><rect x=\"0\" y=\"0\" fill=\"red\" width=\"100\" height=\"50\"><set attributeName=\"x\" attributeType=\"XML\" to=\"10\" begin=\"1s\"></set><set attributeName=\"x\" attributeType=\"XML\" to=\"20\" begin=\"2s\"></set><set attributeName=\"fill\" attributeType=\"XML\" to=\"blue\" begin=\"2s\"></set></rect></svg></div><div class=\"container\"><svg width=\"200\" height=\"200\"><circle r=\"30\" cx=\"0\" cy=\"0\" stroke=\"black\" stroke-width=\"1\"><!--          &lt;animate attributeName=&quot;cx&quot; attributeType=&quot;XML&quot; from=&quot;0&quot; to=&quot;100&quot; dur=&quot;5s&quot; fill=&quot;freeze&quot;--><!--                   repeatCount=&quot;indefinite&quot;&gt;&lt;/animate&gt;--><!--          &lt;animate attributeName=&quot;cy&quot; attributeType=&quot;XML&quot; from=&quot;0&quot; to=&quot;50&quot; dur=&quot;5s&quot; fill=&quot;freeze&quot;--><!--                   repeatCount=&quot;indefinite&quot;&gt;&lt;/animate&gt;--><animateTransform attributeName=\"transform\" attributeType=\"XML\" begin=\"0\" dur=\"3s\" type=\"scale\" from=\"1\" to=\"2\" repeatCount=\"indefinite\"></animateTransform></circle> / </svg></div><div class=\"container\"><svg width=\"400\" height=\"400\"><polygon points=\"30 30 70 30 90 70 10 70\" fill=\"#fcc\" stroke=\"black\"><animate attributeName=\"points\" attributeType=\"XML\" to=\"50 30 70 50 50 90 30 50\" dur=\"5s\" fill=\"freeze\" repeatCount=\"1\"></animate></polygon></svg></div><div class=\"container\"><svg width=\"200\" height=\"200\"><rect x=\"0\" y=\"0\" fill=\"red\" width=\"10\" height=\"10\"><animateMotion id=\"forward-rect\" path=\"M10 10 L110 10 L110 110 L10 110\" dur=\"2s\" rotate=\"0\" fill=\"freeze\" begin=\"0; backward-rect.end + 0.5s\"></animateMotion><animateMotion id=\"backward-rect\" path=\"M10 100 L110 100 L110 10 L10 10\" dur=\"2s\" rotate=\"0\" fill=\"freeze\" begin=\"forward-rect.end + 0.5s\"></animateMotion><animate id=\"red-to-blue\" attributeName=\"fill\" attributeType=\"XML\" from=\"red\" to=\"blue\" dur=\"2s\" fill=\"freeze\" begin=\"0; blue-to-red.end+0.5s\"></animate><animate id=\"blue-to-red\" attributeName=\"fill\" attributeType=\"XML\" from=\"blue\" to=\"red\" dur=\"2s\" fill=\"freeze\" begin=\"red-to-blue.end+0.5s\"></animate></rect><path d=\"M10 10 L110 10 L110 110 L10 110\" fill=\"none\" stroke=\"green\"></path></svg></div><div class=\"container\"><svg viewBox=\"0 0 200 200\" width=\"200\" height=\"200\"><g id=\"rect1\"><rect x=\"0\" y=\"0\" rx=\"0\" ry=\"0\" width=\"100\" height=\"100\" fill=\"red\"><animate attributeType=\"XML\" attributeName=\"fill\" from=\"red\" to=\"green\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\"></animate></rect></g><animateTransform attributeType=\"XML\" attributeName=\"transform\" type=\"translate\" from=\"0, 0\" to=\"50, 50\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\"></animateTransform><rect x=\"0\" y=\"100\" width=\"100\" height=\"100\" fill=\"blue\"><animate attributeType=\"XML\" attributeName=\"fill\" from=\"blue\" to=\"green\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\"></animate></rect></svg></div><div class=\"container bg-grey\"><svg width=\"400\" height=\"400\"><defs><mask id=\"test-mask\"><rect x=\"5\" y=\"5\" width=\"390\" height=\"390\" fill=\"green\"></rect></mask><linearGradient id=\"test-line-gradient\"><stop offset=\"0%\" stop-color=\"red\"></stop><stop offset=\"50%\" stop-color=\"green\"></stop><stop offset=\"100%\" stop-color=\"blue\" stop-opacity=\"0.5\"></stop></linearGradient><radialGradient id=\"test-radialGradient\" r=\"50%\" cx=\"50%\" cy=\"50%\" fx=\"55%\" fy=\"50%\"><stop offset=\"0%\" stop-color=\"#fff\" stop-opacity=\"1\"></stop><stop offset=\"100%\" stop-color=\"#fff\" stop-opacity=\"0\"></stop></radialGradient></defs><!--        &lt;rect x=&quot;5&quot; y=&quot;5&quot; width=&quot;390&quot; height=&quot;390&quot; fill=&quot;url(#test-radialGradient)&quot;&gt;&lt;/rect&gt;--><circle cx=\"200\" cy=\"200\" r=\"150\" fill=\"url(#test-radialGradient)\"></circle><!--        &lt;rect x=&quot;5&quot; y=&quot;5&quot; width=&quot;390&quot; height=&quot;390&quot; fill=&quot;blue&quot; mask=&quot;url(#test-mask)&quot;&gt;&lt;/rect&gt;--></svg></div>", 7)]));
+  })])], -1 /* HOISTED */), createStaticVNode("<div class=\"container\"><svg class=\"line-container\" height=\"400\" viewBox=\"0 0 400 400\" width=\"400\"><line class=\"line\" fill=\"none\" stroke=\"red\" stroke-width=\"20\" x1=\"0\" x2=\"400\" y1=\"20\" y2=\"20\"></line> / </svg></div><div class=\"container\"><svg height=\"200\" width=\"200\"><rect fill=\"red\" height=\"50\" width=\"100\" x=\"0\" y=\"0\"><set attributeName=\"x\" attributeType=\"XML\" begin=\"1s\" to=\"10\"></set><set attributeName=\"x\" attributeType=\"XML\" begin=\"2s\" to=\"20\"></set><set attributeName=\"fill\" attributeType=\"XML\" begin=\"2s\" to=\"blue\"></set></rect></svg></div><div class=\"container\"><svg height=\"200\" width=\"200\"><circle cx=\"0\" cy=\"0\" r=\"30\" stroke=\"black\" stroke-width=\"1\"><!--          &lt;animate attributeName=&quot;cx&quot; attributeType=&quot;XML&quot; from=&quot;0&quot; to=&quot;100&quot; dur=&quot;5s&quot; fill=&quot;freeze&quot;--><!--                   repeatCount=&quot;indefinite&quot;&gt;&lt;/animate&gt;--><!--          &lt;animate attributeName=&quot;cy&quot; attributeType=&quot;XML&quot; from=&quot;0&quot; to=&quot;50&quot; dur=&quot;5s&quot; fill=&quot;freeze&quot;--><!--                   repeatCount=&quot;indefinite&quot;&gt;&lt;/animate&gt;--><animateTransform attributeName=\"transform\" attributeType=\"XML\" begin=\"0\" dur=\"3s\" from=\"1\" repeatCount=\"indefinite\" to=\"2\" type=\"scale\"></animateTransform></circle> / </svg></div><div class=\"container\"><svg height=\"400\" width=\"400\"><polygon fill=\"#fcc\" points=\"30 30 70 30 90 70 10 70\" stroke=\"black\"><animate attributeName=\"points\" attributeType=\"XML\" dur=\"5s\" fill=\"freeze\" repeatCount=\"1\" to=\"50 30 70 50 50 90 30 50\"></animate></polygon></svg></div><div class=\"container\"><svg height=\"200\" width=\"200\"><rect fill=\"red\" height=\"10\" width=\"10\" x=\"0\" y=\"0\"><animateMotion id=\"forward-rect\" begin=\"0; backward-rect.end + 0.5s\" dur=\"2s\" fill=\"freeze\" path=\"M10 10 L110 10 L110 110 L10 110\" rotate=\"0\"></animateMotion><animateMotion id=\"backward-rect\" begin=\"forward-rect.end + 0.5s\" dur=\"2s\" fill=\"freeze\" path=\"M10 100 L110 100 L110 10 L10 10\" rotate=\"0\"></animateMotion><animate id=\"red-to-blue\" attributeName=\"fill\" attributeType=\"XML\" begin=\"0; blue-to-red.end+0.5s\" dur=\"2s\" fill=\"freeze\" from=\"red\" to=\"blue\"></animate><animate id=\"blue-to-red\" attributeName=\"fill\" attributeType=\"XML\" begin=\"red-to-blue.end+0.5s\" dur=\"2s\" fill=\"freeze\" from=\"blue\" to=\"red\"></animate></rect><path d=\"M10 10 L110 10 L110 110 L10 110\" fill=\"none\" stroke=\"green\"></path></svg></div><div class=\"container\"><svg height=\"200\" viewBox=\"0 0 200 200\" width=\"200\"><g id=\"rect1\"><rect fill=\"red\" height=\"100\" rx=\"0\" ry=\"0\" width=\"100\" x=\"0\" y=\"0\"><animate attributeName=\"fill\" attributeType=\"XML\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\" from=\"red\" to=\"green\"></animate></rect></g><animateTransform attributeName=\"transform\" attributeType=\"XML\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\" from=\"0, 0\" to=\"50, 50\" type=\"translate\"></animateTransform><rect fill=\"blue\" height=\"100\" width=\"100\" x=\"0\" y=\"100\"><animate attributeName=\"fill\" attributeType=\"XML\" begin=\"rect1.click\" dur=\"2s\" fill=\"freeze\" from=\"blue\" to=\"green\"></animate></rect></svg></div><div class=\"container bg-grey\"><svg height=\"400\" width=\"400\"><defs><mask id=\"test-mask\"><rect fill=\"green\" height=\"390\" width=\"390\" x=\"5\" y=\"5\"></rect></mask><linearGradient id=\"test-line-gradient\"><stop offset=\"0%\" stop-color=\"red\"></stop><stop offset=\"50%\" stop-color=\"green\"></stop><stop offset=\"100%\" stop-color=\"blue\" stop-opacity=\"0.5\"></stop></linearGradient><radialGradient id=\"test-radialGradient\" cx=\"50%\" cy=\"50%\" fx=\"55%\" fy=\"50%\" r=\"50%\"><stop offset=\"0%\" stop-color=\"#fff\" stop-opacity=\"1\"></stop><stop offset=\"100%\" stop-color=\"#fff\" stop-opacity=\"0\"></stop></radialGradient></defs><!--        &lt;rect x=&quot;5&quot; y=&quot;5&quot; width=&quot;390&quot; height=&quot;390&quot; fill=&quot;url(#test-radialGradient)&quot;&gt;&lt;/rect&gt;--><circle cx=\"200\" cy=\"200\" fill=\"url(#test-radialGradient)\" r=\"150\"></circle><!--        &lt;rect x=&quot;5&quot; y=&quot;5&quot; width=&quot;390&quot; height=&quot;390&quot; fill=&quot;blue&quot; mask=&quot;url(#test-mask)&quot;&gt;&lt;/rect&gt;--></svg></div>", 7)]));
 }
 
 var css_248z$4 = ".bg-grey {\n  background-color: grey;\n}\n\n.container svg {\n  border: 1px solid #000000;\n}\n\n.rect {\n  stroke-dasharray: 10 20 30;\n}\n\n.circle {\n  animation: circle 5s linear infinite;\n}\n\n@keyframes circle {\n  from {\n    stroke-dasharray: 0 800;\n  }\n  to {\n    stroke-dasharray: 800 0;\n  }\n}\n.rect-process {\n  animation: rect-process 5s linear infinite;\n}\n\n@keyframes rect-process {\n  from {\n    stroke-dasharray: 0 1257;\n  }\n  to {\n    stroke-dasharray: 1257 0;\n  }\n}\n.logo {\n  fill: none;\n  stroke: #333;\n  stroke-width: 5;\n  animation: logo 5s linear 1 forwards;\n}\n\n@keyframes logo {\n  0% {\n    fill: white;\n    stroke-dasharray: 3908;\n    stroke-dashoffset: 3908;\n  }\n  50% {\n    fill: white;\n    stroke-dasharray: 3908;\n    stroke-dashoffset: 0;\n  }\n  75% {\n    fill: red;\n  }\n  100% {\n    fill: cyan;\n  }\n}\n.line {\n  stroke-dasharray: 400;\n  stroke-dashoffset: 400;\n  transition: stroke-dashoffset 0.5s ease-out;\n}\n\n.line-container:hover .line {\n  stroke-dashoffset: 0;\n}";
@@ -221,62 +212,62 @@ var script$b = {
 const _hoisted_1$a = {
   class: "imoocLoading"
 };
-const _hoisted_2$1 = ["width", "height"];
+const _hoisted_2$1 = ["height", "width"];
 const _hoisted_3$1 = ["stroke"];
 const _hoisted_4$1 = ["dur"];
-const _hoisted_5$1 = ["values", "dur"];
+const _hoisted_5$1 = ["dur", "values"];
 const _hoisted_6$1 = ["stroke"];
 const _hoisted_7$1 = ["dur"];
-const _hoisted_8$1 = ["values", "dur"];
+const _hoisted_8$1 = ["dur", "values"];
 const _hoisted_9$1 = {
   class: "imooc"
 };
 function render$c(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", _hoisted_1$a, [(openBlock(), createElementBlock("svg", {
-    width: $props.width,
     height: $props.height,
-    viewBox: "0 0 50 50",
-    preserveAspectRatio: "xMidYMid meet"
+    width: $props.width,
+    preserveAspectRatio: "xMidYMid meet",
+    viewBox: "0 0 50 50"
   }, [createCommentVNode("      stroke-dasharray = 2pir/4 = 2*3.1415926*22/4=34"), createElementVNode("circle", {
+    stroke: $props.outSideColor,
     cx: "25",
     cy: "25",
-    r: "22",
     fill: "none",
-    stroke: $props.outSideColor,
-    "stroke-width": "3",
+    r: "22",
     "stroke-dasharray": "34",
-    "stroke-linecap": "round"
+    "stroke-linecap": "round",
+    "stroke-width": "3"
   }, [createElementVNode("animateTransform", {
-    attributeName: "transform",
-    type: "rotate",
-    from: "0 25 25",
-    to: "360 25 25",
     dur: "".concat($props.duration, "s"),
-    repeatCount: "indefinite"
+    attributeName: "transform",
+    from: "0 25 25",
+    repeatCount: "indefinite",
+    to: "360 25 25",
+    type: "rotate"
   }, null, 8 /* PROPS */, _hoisted_4$1), createElementVNode("animate", {
-    attributeName: "stroke",
-    values: $setup.inSideColorAnimation,
     dur: "".concat(+$props.duration * 2, "s"),
+    values: $setup.inSideColorAnimation,
+    attributeName: "stroke",
     repeatCount: "indefinite"
   }, null, 8 /* PROPS */, _hoisted_5$1)], 8 /* PROPS */, _hoisted_3$1), createElementVNode("circle", {
+    stroke: $props.inSideColor,
     cx: "25",
     cy: "25",
-    r: "12",
     fill: "none",
-    stroke: $props.inSideColor,
-    "stroke-width": "3",
+    r: "12",
     "stroke-dasharray": "19",
-    "stroke-linecap": "round"
+    "stroke-linecap": "round",
+    "stroke-width": "3"
   }, [createCommentVNode("        values=\"0 25 25;360 25 25\"========= to=\"0 25 25\" from=\"360 25 25\""), createElementVNode("animateTransform", {
-    attributeName: "transform",
-    type: "rotate",
-    values: "360 25 25;0 25 25",
     dur: "".concat($props.duration, "s"),
-    repeatCount: "indefinite"
+    attributeName: "transform",
+    repeatCount: "indefinite",
+    type: "rotate",
+    values: "360 25 25;0 25 25"
   }, null, 8 /* PROPS */, _hoisted_7$1), createElementVNode("animate", {
-    attributeName: "stroke",
-    values: $setup.outSideColorAnimation,
     dur: "".concat(+$props.duration * 2, "s"),
+    values: $setup.outSideColorAnimation,
+    attributeName: "stroke",
     repeatCount: "indefinite"
   }, null, 8 /* PROPS */, _hoisted_8$1)], 8 /* PROPS */, _hoisted_6$1)], 8 /* PROPS */, _hoisted_2$1)), createElementVNode("div", _hoisted_9$1, [renderSlot(_ctx.$slots, "default")])]);
 }
@@ -393,36 +384,36 @@ var script$a = {
   }
 };
 
-const _hoisted_1$9 = ["width", "height"];
+const _hoisted_1$9 = ["height", "width"];
 const _hoisted_2 = ["id", "d"];
 const _hoisted_3 = ["id"];
 const _hoisted_4 = ["id"];
-const _hoisted_5 = ["r", "fill"];
+const _hoisted_5 = ["fill", "r"];
 const _hoisted_6 = ["dur", "path"];
 const _hoisted_7 = ["href", "stroke"];
-const _hoisted_8 = ["href", "stroke", "mask"];
+const _hoisted_8 = ["href", "mask", "stroke"];
 const _hoisted_9 = {
   class: "imooc-fly-box-content"
 };
 function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
-    class: "imooc-fly-box",
+    id: "imooc-fly-box",
     ref: $setup.refName,
-    id: "imooc-fly-box"
+    class: "imooc-fly-box"
   }, [(openBlock(), createElementBlock("svg", {
-    width: $setup.width,
-    height: $setup.height
+    height: $setup.height,
+    width: $setup.width
   }, [createElementVNode("defs", null, [createElementVNode("path", {
     id: $setup.pathId,
     d: $setup.path,
     fill: "none"
   }, null, 8 /* PROPS */, _hoisted_2), createElementVNode("radialGradient", {
     id: $setup.radialGradientId,
-    r: "50%",
     cx: "50%",
     cy: "50%",
     fx: "100%",
-    fy: "50%"
+    fy: "50%",
+    r: "50%"
   }, _cache[0] || (_cache[0] = [createElementVNode("stop", {
     offset: "0%",
     "stop-color": "#fff",
@@ -434,24 +425,24 @@ function render$b(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, -1 /* HOISTED */)]), 8 /* PROPS */, _hoisted_3), createElementVNode("mask", {
     id: $setup.maskId
   }, [createElementVNode("circle", {
+    fill: "url(#".concat($setup.radialGradientId, ")"),
     r: $props.starLength,
     cx: "0",
-    cy: "0",
-    fill: "url(#".concat($setup.radialGradientId, ")")
+    cy: "0"
   }, [createElementVNode("animateMotion", {
     dur: $setup.dur,
     path: $setup.path,
-    rotate: "auto",
-    repeatCount: "indefinite"
+    repeatCount: "indefinite",
+    rotate: "auto"
   }, null, 8 /* PROPS */, _hoisted_6)], 8 /* PROPS */, _hoisted_5)], 8 /* PROPS */, _hoisted_4)]), createElementVNode("use", {
     href: "#".concat($setup.pathId),
-    "stroke-width": "1",
-    stroke: $props.lineColor
+    stroke: $props.lineColor,
+    "stroke-width": "1"
   }, null, 8 /* PROPS */, _hoisted_7), createElementVNode("use", {
     href: "#".concat($setup.pathId),
-    "stroke-width": "3",
+    mask: "url(#".concat($setup.maskId, ")"),
     stroke: $props.starColor,
-    mask: "url(#".concat($setup.maskId, ")")
+    "stroke-width": "3"
   }, null, 8 /* PROPS */, _hoisted_8)], 8 /* PROPS */, _hoisted_1$9)), createElementVNode("div", _hoisted_9, [renderSlot(_ctx.$slots, "default")])], 512 /* NEED_PATCH */);
 }
 
@@ -133344,7 +133335,7 @@ var script$9 = {
     };
     for (var n = 0; n < year.length; n++) {
       optionXyMap01.options.push({
-        backgroundColor: '#424446',
+        backgroundColor: '#110f23',
         title: [{
           text: '增值服务监控',
           subtext: '数据由上清所大数据提供',
@@ -133536,7 +133527,7 @@ var script$9 = {
         }]
       });
     }
-    init$1(document.getElementById('earth')).setOption(optionXyMap01);
+    init$1(document.getElementById('earth'), 'dark').setOption(optionXyMap01);
   }
 };
 
@@ -133549,7 +133540,7 @@ function render$9(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, -1 /* HOISTED */)]));
 }
 
-var css_248z$2 = "#earth[data-v-10712789] {\n  width: 100%;\n  height: 100%;\n}";
+var css_248z$2 = "#earth[data-v-10712789] {\n  width: 100%;\n  height: 100%;\n  background-color: rgb(17, 15, 35);\n}";
 styleInject(css_248z$2);
 
 script$9.render = render$9;
@@ -133691,7 +133682,7 @@ var script$7 = {
   setup() {},
   mounted() {
     var chartDom = document.getElementById('logo');
-    var myChart = init$1(chartDom);
+    var myChart = init$1(chartDom, 'dark');
     var option;
     option = {
       graphic: {
@@ -133706,7 +133697,7 @@ var script$7 = {
             lineDash: [0, 200],
             lineDashOffset: 0,
             fill: 'transparent',
-            stroke: '#000',
+            stroke: '#fff',
             lineWidth: 1
           },
           keyframeAnimation: {
@@ -133728,7 +133719,7 @@ var script$7 = {
             }, {
               percent: 1,
               style: {
-                fill: 'black'
+                fill: 'white'
               }
             }]
           }
@@ -133762,7 +133753,7 @@ var script$6 = {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('Calendar');
-      var myChart = init$1(chartDom);
+      var myChart = init$1(chartDom, 'dark');
       var option;
       function getVirtualData(year) {
         const date = +parseDate(year + '-01-01');
@@ -133836,19 +133827,58 @@ var script$5 = {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('Line');
-      var myChart = init$1(chartDom);
+      var myChart = init$1(chartDom, 'dark');
       var option;
+      let base = +new Date(1988, 9, 3);
+      let oneDay = 24 * 3600 * 1000;
+      let data = [[base, Math.random() * 300]];
+      for (let i = 1; i < 20000; i++) {
+        let now = new Date(base += oneDay);
+        data.push([+now, Math.round((Math.random() - 0.5) * 20 + data[i - 1][1])]);
+      }
       option = {
+        tooltip: {
+          trigger: 'axis',
+          position: function position(pt) {
+            return [pt[0], '10%'];
+          }
+        },
+        // title: {
+        //   left: 'center',
+        //   text: 'Large Ara Chart'
+        // },
+        toolbox: {
+          feature: {
+            dataZoom: {
+              yAxisIndex: 'none'
+            },
+            restore: {},
+            saveAsImage: {}
+          }
+        },
         xAxis: {
-          type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          type: 'time',
+          boundaryGap: false
         },
         yAxis: {
-          type: 'value'
+          type: 'value',
+          boundaryGap: [0, '100%']
         },
+        dataZoom: [{
+          type: 'inside',
+          start: 0,
+          end: 20
+        }, {
+          start: 0,
+          end: 20
+        }],
         series: [{
-          data: [150, 230, 224, 218, 135, 147, 260],
-          type: 'line'
+          name: 'Fake Data',
+          type: 'line',
+          smooth: true,
+          symbol: 'none',
+          areaStyle: {},
+          data: data
         }]
       };
       option && myChart.setOption(option);
@@ -133879,12 +133909,9 @@ var script$4 = {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('Lines');
-      var myChart = init$1(chartDom);
+      var myChart = init$1(chartDom, 'dark');
       var option;
       option = {
-        title: {
-          text: 'Stacked Line'
-        },
         tooltip: {
           trigger: 'axis'
         },
@@ -133965,7 +133992,7 @@ var script$3 = {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('BarRace');
-      var myChart = init$1(chartDom);
+      var myChart = init$1(chartDom, 'dark');
       var option;
       const data = [];
       for (let i = 0; i < 5; ++i) {
@@ -134051,7 +134078,7 @@ var script$2 = {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('DatasetLink');
-      var myChart = init$1(chartDom);
+      var myChart = init$1(chartDom, 'dark');
       var option;
       setTimeout(function () {
         option = {
@@ -134166,7 +134193,7 @@ var script$1 = {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('LineBar');
-      var myChart = init$1(chartDom);
+      var myChart = init$1(chartDom, 'dark');
       var option;
       option = {
         tooltip: {
@@ -135064,7 +135091,7 @@ var script = {
       drawWaterball(newValue);
     });
     const drawWaterball = percentage => {
-      const chart = init$1(chartContainer.value);
+      const chart = init$1(chartContainer.value, 'dark');
       const option = {
         series: [{
           type: 'liquidFill',
@@ -135160,7 +135187,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 4 /* STYLE */)])]);
 }
 
-var css_248z = ".waterball-chart[data-v-82bb067a] {\n  display: inline-block;\n  position: relative;\n  width: 214px;\n  height: 214px;\n}";
+var css_248z = ".waterball-chart[data-v-82bb067a] {\n  display: inline-block;\n  position: relative;\n  width: 117px;\n  height: 167px;\n}";
 styleInject(css_248z);
 
 script.render = render;

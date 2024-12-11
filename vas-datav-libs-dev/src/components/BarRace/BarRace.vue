@@ -7,7 +7,7 @@ export default {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('BarRace');
-      var myChart = echarts.init(chartDom);
+      var myChart = echarts.init(chartDom, 'dark');
       var option;
 
       const data = [];
@@ -47,6 +47,7 @@ export default {
         animationEasing: 'linear',
         animationEasingUpdate: 'linear'
       };
+
       function run() {
         for (var i = 0; i < data.length; ++i) {
           if (Math.random() > 0.9) {
@@ -64,6 +65,7 @@ export default {
           ]
         });
       }
+
       setTimeout(function () {
         run();
       }, 0);
@@ -83,6 +85,6 @@ export default {
   <div id="BarRace" style="width: 600px;height: 200px"></div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>

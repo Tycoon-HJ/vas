@@ -1,14 +1,15 @@
 <template>
-  <imooc-container :options="{
-    width: 3840,
-    height: 2160
-  }">
-<!--<Calendar></Calendar>-->
+<!--    <imooc-container :options="{-->
+<!--      width: 3840,-->
+<!--      height: 2160-->
+<!--    }">-->
+<!--  &lt;!&ndash;<Calendar></Calendar>&ndash;&gt;-->
 
-<!--    <base-scroll-list :config="{}" ></base-scroll-list>-->
-<!--<Gauge color="#4595eb" size="150" :percentSize="43" :unitSize="26" :padding="[10, 0, 0, 0]"></Gauge>-->
-    <Map style="width: 100px;height: 200px"></Map>
-  </imooc-container>
+<!--  &lt;!&ndash;    <base-scroll-list :config="{}" ></base-scroll-list>&ndash;&gt;-->
+<!--  &lt;!&ndash;<Gauge color="#4595eb" size="150" :percentSize="43" :unitSize="26" :padding="[10, 0, 0, 0]"></Gauge>&ndash;&gt;-->
+<!--    </imooc-container>-->
+  <Map style="width: 100%;height: 200%"></Map>
+
 </template>
 <script>
 import {computed, ref} from 'vue'

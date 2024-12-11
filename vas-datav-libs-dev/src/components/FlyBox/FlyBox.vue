@@ -1,8 +1,8 @@
 <template>
-  <div class="imooc-fly-box" :ref="refName" id="imooc-fly-box">
+  <div id="imooc-fly-box" :ref="refName" class="imooc-fly-box">
     <svg
-        :width="width"
         :height="height"
+        :width="width"
     >
       <defs>
         <path
@@ -12,11 +12,11 @@
         ></path>
         <radialGradient
             :id="radialGradientId"
-            r="50%"
             cx="50%"
             cy="50%"
             fx="100%"
             fy="50%"
+            r="50%"
         >
           <stop
               offset="0%"
@@ -31,30 +31,30 @@
         </radialGradient>
         <mask :id="maskId">
           <circle
+              :fill="`url(#${radialGradientId})`"
               :r="starLength"
               cx="0"
               cy="0"
-              :fill="`url(#${radialGradientId})`"
           >
             <animateMotion
                 :dur="dur"
                 :path="path"
-                rotate="auto"
                 repeatCount="indefinite"
+                rotate="auto"
             ></animateMotion>
           </circle>
         </mask>
       </defs>
       <use
           :href="`#${pathId}`"
-          stroke-width="1"
           :stroke="lineColor"
+          stroke-width="1"
       ></use>
       <use
           :href="`#${pathId}`"
-          stroke-width="3"
-          :stroke="starColor"
           :mask="`url(#${maskId})`"
+          :stroke="starColor"
+          stroke-width="3"
       ></use>
     </svg>
     <div class="imooc-fly-box-content">
@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import {computed, ref, onMounted, getCurrentInstance} from 'vue'
+import {computed, getCurrentInstance, onMounted, ref} from 'vue'
 import {v4 as uuidv4} from 'uuid'
 
 export default {

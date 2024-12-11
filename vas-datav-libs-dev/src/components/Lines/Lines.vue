@@ -7,13 +7,10 @@ export default {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('Lines');
-      var myChart = echarts.init(chartDom);
+      var myChart = echarts.init(chartDom, 'dark');
       var option;
 
       option = {
-        title: {
-          text: 'Stacked Line'
-        },
         tooltip: {
           trigger: 'axis'
         },
@@ -85,6 +82,6 @@ export default {
   <div id="Lines" style="width: 100%;height: 100%"></div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>

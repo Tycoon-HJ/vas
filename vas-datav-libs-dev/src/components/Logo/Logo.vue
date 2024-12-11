@@ -1,5 +1,6 @@
 <script>
 import * as echarts from 'echarts';
+
 export default {
   name: "Logo",
   setup() {
@@ -7,7 +8,7 @@ export default {
   },
   mounted() {
     var chartDom = document.getElementById('logo');
-    var myChart = echarts.init(chartDom);
+    var myChart = echarts.init(chartDom,'dark');
     var option;
 
     option = {
@@ -24,7 +25,7 @@ export default {
               lineDash: [0, 200],
               lineDashOffset: 0,
               fill: 'transparent',
-              stroke: '#000',
+              stroke: '#fff',
               lineWidth: 1
             },
             keyframeAnimation: {
@@ -49,7 +50,7 @@ export default {
                 {
                   percent: 1,
                   style: {
-                    fill: 'black'
+                    fill: 'white'
                   }
                 }
               ]
@@ -66,8 +67,8 @@ export default {
 </script>
 
 <template>
-<div id="logo" style="width: 400px;height: 400px"></div>
+  <div id="logo" style="width: 400px;height: 400px"></div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 </style>

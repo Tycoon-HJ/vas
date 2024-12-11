@@ -1,5 +1,5 @@
 <template>
-  <div class="icon-wrapper" :style="{...style}">
+  <div :style="{...style}" class="icon-wrapper">
     <svg class="icon">
       <use :href="iconName"></use>
     </svg>
@@ -28,9 +28,10 @@ export default {
 </script>
 
 <style>
-.icon-wrapper{
+.icon-wrapper {
   display: inline-block;
 }
+
 .icon {
   width: 100%;
   height: 100%;

@@ -38,7 +38,7 @@ export default {
         <Map style="width: 100%;height: 100%"></Map>
       </div>
       <div class="div4">
-        <Gauge color="#4595eb" size="200"  style="width: 100%;height: 100%"></Gauge>
+        <Gauge color="#4595eb" size="190"  percentage="99" style="width: 99%;height: 80%"></Gauge>
       </div>
       <div class="div5">
         <CarouseLTable style="width: 100%;height: 100%"></CarouseLTable>
@@ -64,29 +64,24 @@ export default {
       </div>
       <div class="div12">
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" title="债券简称" value="24国开15" ></Block>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" title="待偿期" value="9.60Y" ></Block>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" title="成交" value="103.10" ></Block>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" title="最新收益率" value="1.9025" ></Block>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" title="涨跌(BP)" value="1.91" ></Block>
         </div>
         <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
+          <Block style="width: 100%;height: 40%" title="加权收益率" value="1.9205" ></Block>
         </div>
-        <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
-        </div>
-        <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
-        </div>
+
 
 
       </div>
@@ -116,10 +111,7 @@ export default {
           <Block style="width: 100%;height: 40%" ></Block>
           <Block style="width: 100%;height: 40%" ></Block>
         </div>
-        <div style="display: flex">
-          <Block style="width: 100%;height: 40%" ></Block>
-          <Block style="width: 100%;height: 40%" ></Block>
-        </div>
+
       </div>
     </div>
 
@@ -137,7 +129,7 @@ export default {
   grid-row-gap: 0px;
   border: black solid 1px;
   color: white;
-  background-color: rgb(30, 43, 38);
+  background-color: rgb(15, 12, 40);
 }
 
 .div1 {

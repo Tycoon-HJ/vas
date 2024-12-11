@@ -109,7 +109,7 @@ export default {
     })
 
     function debounce(delay, callback) {
-      console.log("debounce", delay,callback)
+      console.log("debounce", delay, callback)
       let task
       return function () {
         clearTimeout(task)

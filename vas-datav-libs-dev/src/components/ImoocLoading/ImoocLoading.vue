@@ -1,20 +1,20 @@
 <template>
   <div class="imoocLoading">
-    <svg :width="width" :height="height" viewBox="0 0 50 50" preserveAspectRatio="xMidYMid meet">
+    <svg :height="height" :width="width" preserveAspectRatio="xMidYMid meet" viewBox="0 0 50 50">
       <!--      stroke-dasharray = 2pir/4 = 2*3.1415926*22/4=34-->
-      <circle cx="25" cy="25" r="22" fill="none" :stroke="outSideColor" stroke-width="3" stroke-dasharray="34"
-              stroke-linecap="round">
-        <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" :dur="`${duration}s`"
-                          repeatCount="indefinite"></animateTransform>
-        <animate attributeName="stroke" :values=inSideColorAnimation :dur="`${+duration *2}s`"
+      <circle :stroke="outSideColor" cx="25" cy="25" fill="none" r="22" stroke-dasharray="34" stroke-linecap="round"
+              stroke-width="3">
+        <animateTransform :dur="`${duration}s`" attributeName="transform" from="0 25 25" repeatCount="indefinite" to="360 25 25"
+                          type="rotate"></animateTransform>
+        <animate :dur="`${+duration *2}s`" :values=inSideColorAnimation attributeName="stroke"
                  repeatCount="indefinite"></animate>
       </circle>
-      <circle cx="25" cy="25" r="12" fill="none" :stroke="inSideColor" stroke-width="3" stroke-dasharray="19"
-              stroke-linecap="round">
+      <circle :stroke="inSideColor" cx="25" cy="25" fill="none" r="12" stroke-dasharray="19" stroke-linecap="round"
+              stroke-width="3">
         <!--        values="0 25 25;360 25 25"========= to="0 25 25" from="360 25 25"-->
-        <animateTransform attributeName="transform" type="rotate" values="360 25 25;0 25 25" :dur="`${duration}s`"
-                          repeatCount="indefinite"></animateTransform>
-        <animate attributeName="stroke" :values="outSideColorAnimation" :dur="`${+duration *2}s`"
+        <animateTransform :dur="`${duration}s`" attributeName="transform" repeatCount="indefinite" type="rotate"
+                          values="360 25 25;0 25 25"></animateTransform>
+        <animate :dur="`${+duration *2}s`" :values="outSideColorAnimation" attributeName="stroke"
                  repeatCount="indefinite"></animate>
 
       </circle>
@@ -66,6 +66,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>

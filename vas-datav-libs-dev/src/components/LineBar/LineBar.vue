@@ -7,7 +7,7 @@ export default {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('LineBar');
-      var myChart = echarts.init(chartDom);
+      var myChart = echarts.init(chartDom, 'dark');
       var option;
 
       option = {
@@ -22,10 +22,10 @@ export default {
         },
         toolbox: {
           feature: {
-            dataView: { show: true, readOnly: false },
-            magicType: { show: true, type: ['line', 'bar'] },
-            restore: { show: true },
-            saveAsImage: { show: true }
+            dataView: {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore: {show: true},
+            saveAsImage: {show: true}
           }
         },
         legend: {
@@ -112,6 +112,6 @@ export default {
   <div id="LineBar" style="width: 600px;height: 200px"></div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>

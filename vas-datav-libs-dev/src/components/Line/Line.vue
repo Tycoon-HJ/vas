@@ -7,24 +7,69 @@ export default {
   setup() {
     onMounted(() => {
       var chartDom = document.getElementById('Line');
-      var myChart = echarts.init(chartDom);
+      var myChart = echarts.init(chartDom, 'dark');
       var option;
 
+      let base = +new Date(1988, 9, 3);
+      let oneDay = 24 * 3600 * 1000;
+      let data = [[base, Math.random() * 300]];
+      for (let i = 1; i < 20000; i++) {
+        let now = new Date((base += oneDay));
+        data.push([+now, Math.round((Math.random() - 0.5) * 20 + data[i - 1][1])]);
+      }
       option = {
+
+        tooltip: {
+          trigger: 'axis',
+          position: function (pt) {
+            return [pt[0], '10%'];
+          }
+        },
+        // title: {
+        //   left: 'center',
+        //   text: 'Large Ara Chart'
+        // },
+        toolbox: {
+          feature: {
+            dataZoom: {
+              yAxisIndex: 'none'
+            },
+            restore: {},
+            saveAsImage: {}
+          }
+        },
         xAxis: {
-          type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          type: 'time',
+          boundaryGap: false
         },
         yAxis: {
-          type: 'value'
+          type: 'value',
+          boundaryGap: [0, '100%']
         },
+        dataZoom: [
+          {
+            type: 'inside',
+            start: 0,
+            end: 20
+          },
+          {
+            start: 0,
+            end: 20
+          }
+        ],
         series: [
           {
-            data: [150, 230, 224, 218, 135, 147, 260],
-            type: 'line'
-          }
+            name: 'Fake Data',
+            type: 'line',
+            smooth: true,
+            symbol: 'none',
+            areaStyle: {},
+            data: data
+          },
+
         ]
       };
+
 
       option && myChart.setOption(option);
 
@@ -37,6 +82,6 @@ export default {
   <div id="Line" style="width: 100%;height: 100%"></div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>
