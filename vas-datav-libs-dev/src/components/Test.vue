@@ -10,7 +10,8 @@
 <!--    </imooc-container>-->
 <!--  <Map style="width: 100%;height: 200%"></Map>-->
 <!--<Radar></Radar>-->
-  <FlyBox>11111</FlyBox>
+<!--  <FlyBox>11111</FlyBox>-->
+<LineBar></LineBar>
 </template>
 <script>
 import {computed, ref} from 'vue'

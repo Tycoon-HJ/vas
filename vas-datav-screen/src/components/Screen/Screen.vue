@@ -54,10 +54,10 @@ export default {
         </FlyBox>
       </div>
       <div class="div7">
-        <Line style="width: 100%;height: 100%"></Line>
+        <LineBar style="width: 100%;height: 100%"></LineBar>
       </div>
       <div class="div8">
-        <LineBar style="width: 100%;height: 100%"></LineBar>
+        <Line style="width: 100%;height: 100%"></Line>
       </div>
       <div class="div9">
         <Calendar style="width: 100%;height: 100%"></Calendar>

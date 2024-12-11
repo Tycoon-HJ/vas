@@ -24,8 +24,8 @@ var script$e = {
 };
 
 function render$f(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_Radar = resolveComponent("Radar");
-  return openBlock(), createElementBlock(Fragment, null, [createCommentVNode("    <imooc-container :options=\"{"), createCommentVNode("      width: 3840,"), createCommentVNode("      height: 2160"), createCommentVNode("    }\">"), createCommentVNode("  &lt;!&ndash;<Calendar></Calendar>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;    <base-scroll-list :config=\"{}\" ></base-scroll-list>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;<Gauge color=\"#4595eb\" size=\"150\" :percentSize=\"43\" :unitSize=\"26\" :padding=\"[10, 0, 0, 0]\"></Gauge>&ndash;&gt;"), createCommentVNode("    </imooc-container>"), createCommentVNode("  <Map style=\"width: 100%;height: 200%\"></Map>"), createVNode$1(_component_Radar)], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
+  const _component_LineBar = resolveComponent("LineBar");
+  return openBlock(), createElementBlock(Fragment, null, [createCommentVNode("    <imooc-container :options=\"{"), createCommentVNode("      width: 3840,"), createCommentVNode("      height: 2160"), createCommentVNode("    }\">"), createCommentVNode("  &lt;!&ndash;<Calendar></Calendar>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;    <base-scroll-list :config=\"{}\" ></base-scroll-list>&ndash;&gt;"), createCommentVNode("  &lt;!&ndash;<Gauge color=\"#4595eb\" size=\"150\" :percentSize=\"43\" :unitSize=\"26\" :padding=\"[10, 0, 0, 0]\"></Gauge>&ndash;&gt;"), createCommentVNode("    </imooc-container>"), createCommentVNode("  <Map style=\"width: 100%;height: 200%\"></Map>"), createCommentVNode("<Radar></Radar>"), createCommentVNode("  <FlyBox>11111</FlyBox>"), createVNode$1(_component_LineBar)], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
 }
 
 function styleInject(css, ref) {
@@ -134191,6 +134191,9 @@ var script$2 = {
       var myChart = init$1(chartDom, 'dark');
       var option;
       option = {
+        grid: {
+          bottom: 50 // 图表距离容器下方边距
+        },
         tooltip: {
           trigger: 'axis',
           axisPointer: {
@@ -134285,8 +134288,8 @@ var script$2 = {
 const _hoisted_1$2 = {
   id: "LineBar",
   style: {
-    "width": "600px",
-    "height": "200px"
+    "width": "100%",
+    "height": "100%"
   }
 };
 function render$2(_ctx, _cache, $props, $setup, $data, $options) {

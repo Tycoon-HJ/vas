@@ -11,6 +11,9 @@ export default {
       var option;
 
       option = {
+        grid: {
+          bottom: 50 // 图表距离容器下方边距
+        },
         tooltip: {
           trigger: 'axis',
           axisPointer: {
@@ -109,7 +112,7 @@ export default {
 </script>
 
 <template>
-  <div id="LineBar" style="width: 600px;height: 200px"></div>
+  <div id="LineBar" style="width: 100%;height: 100%"></div>
 </template>
 
 <style lang="scss" scoped>
