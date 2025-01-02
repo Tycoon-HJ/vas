@@ -4,7 +4,7 @@
 
 ## 效果图
 
-![image-20250102202132419](vas/datav-project/imgs/image-20250102202132419.png)
+![image-20250102202132419](https://github.com/Tycoon-HJ/vas/blob/vas/imgs/image-20250102202132419.png)
 
 ## 项目工程
 
